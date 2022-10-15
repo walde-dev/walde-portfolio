@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  .container {
+    @apply mx-auto px-4;
+  }
+
+  .gradient {
+    @apply bg-gradient-to-r from-[#b92b27] to-[#1565C0];
+  }
+}
