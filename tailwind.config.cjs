@@ -6,10 +6,10 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
+      animation: {
+        "spin-once": "spin 300ms linear normal",
+      },
     },
   },
-  plugins: [
-    'postcss-import',
-    'tailwindcss/nesting'
-  ],
+  plugins: ["postcss-import", "tailwindcss/nesting"],
 };

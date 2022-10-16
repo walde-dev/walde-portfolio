@@ -12,7 +12,7 @@
   }
 
   .logo {
-    @apply fill-gray-300 transition-all duration-300 hover:fill-violet-500 cursor-pointer;
+    @apply cursor-pointer fill-gray-300 transition-all duration-300 hover:h-8 hover:w-8 hover:animate-spin-once hover:fill-violet-500;
   }
 }
 
@@ -27,6 +27,10 @@ a.underline-gradient {
 a:where(:hover, :focus-visible).underline-gradient {
   background-size: 100% var(--bg-h);
   background-position-x: left;
+}
+
+.gradient-bg {
+  background: linear-gradient(83.2deg, #965de9 10.8%, #6358ee 94.3%);
 }
 
 .underline-gradient-only {

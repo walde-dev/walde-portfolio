@@ -11,7 +11,7 @@ export default function Header() {
             </a>
           </Link>
         </h1>
-        <div className="flex flex-row gap-6 font-extralight ">
+        <div className="flex flex-row gap-6 font-light ">
           <Link href="/work">
             <a className="underline-gradient-only underline-gradient hover:text-white">
               My Work
