@@ -4,7 +4,7 @@ import Header from "../Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-black py-2 text-white ">
+    <div className="flex min-h-screen flex-col items-center bg-gradient-to-b from-black via-[#12132D] to-[#131530] py-2 text-gray-300 ">
       <Head>
         <title>waldemar.dev</title>
         <link rel="icon" href="/favicon.ico" />
