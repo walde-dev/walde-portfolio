@@ -8,9 +8,10 @@ const Home: NextPage = () => {
         <h1 className="gradient mt-2 bg-clip-text text-6xl font-bold text-transparent">
           Waldemar Panin<span className="text-gray-300">.</span>
         </h1>
-        <h2 className="text-6xl font-bold pb-6">
+        <h2 className="pb-6 text-6xl font-bold">
           I build things for the{" "}
           <span className="gradient bg-clip-text text-transparent">web</span>
+          <span className="text-gray-300">.</span>
         </h2>
         <p className="mt-2 w-3/5 text-xl font-light">
           I&apos;m a software engineer based in Munich, Germany. I specialize in
@@ -22,7 +23,12 @@ const Home: NextPage = () => {
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
-          <a href="mailto:katharina.mitrov@web.de" className="button-text text-violet-400">Get in touch</a>
+          <a
+            href="mailto:info@waldemar.dev"
+            className="button-text text-violet-400"
+          >
+            Get in touch
+          </a>
         </button>
       </div>
     </div>
