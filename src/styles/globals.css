@@ -12,8 +12,26 @@
   }
 
   .logo {
-    @apply cursor-pointer fill-gray-300 transition-all duration-300 hover:h-8 hover:w-8 hover:animate-spin-once hover:fill-violet-500;
+    @apply cursor-pointer fill-gray-300 transition-all duration-300 group-hover:h-8 group-hover:w-8 group-hover:animate-spin-once group-hover:fill-violet-500;
   }
+
+  .hover-box {
+    @apply invisible absolute -ml-2 rounded-lg py-4 px-6 opacity-0 group-hover:visible group-hover:border-2 group-hover:border-violet-500 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300 group-hover:ease-in;
+  }
+}
+
+.hover-box-text {
+  background: linear-gradient(83.2deg, #965de9 10.8%, #6358ee 94.3%) no-repeat
+    right bottom / 0 var(--bg-h);
+  transition: background-size 1000ms ease-out, color 350ms;
+  --bg-h: 2px;
+  white-space: nowrap;
+}
+
+.hover-box:hover .hover-box-text {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+  padding-bottom: 2px;
 }
 
 a.gradient {
@@ -25,6 +43,11 @@ a.underline-gradient {
   transition: background-size 350ms, color 350ms;
 }
 a:where(:hover, :focus-visible).underline-gradient {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+a.underline-gradient-on-group-hover {
   background-size: 100% var(--bg-h);
   background-position-x: left;
 }

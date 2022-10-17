@@ -7,7 +7,7 @@ module.exports = {
         sans: ["Inter", "sans-serif"],
       },
       animation: {
-        "spin-once": "spin 300ms linear normal",
+        "spin-once": "spin 150ms linear normal",
       },
     },
   },
