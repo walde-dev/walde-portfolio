@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex w-full justify-center py-4">
-      <div className="flex w-full max-w-5xl flex-row items-center justify-between">
+    <header className="flex w-full justify-center px-6 md:px-20 py-4">
+      <div className="flex md:max-w-5xl w-full flex-row items-center justify-between">
         <h1 className="text-lg">
           <Link href="/">
             <a className="underline-gradient gradient cursor-pointer px-3 py-1">

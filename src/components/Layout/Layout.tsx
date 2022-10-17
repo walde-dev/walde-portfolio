@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <Header />
       <Sidebar />
-      <main className="flex w-full min-h-screen flex-1 flex-col items-center px-20 text-center">
+      <main className="flex w-full min-h-screen flex-1 flex-col items-center px-6 md:px-20 text-center">
         {children}
       </main>
       <Footer />

@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div className="fixed left-0 flex h-full w-full max-w-[128px] flex-col justify-end py-2">
+    <div className="hidden fixed left-0 md:flex h-full w-full max-w-[128px] flex-col justify-end py-2">
       <div className="flex h-full flex-col items-center justify-center">
         <div className="mx-auto mb-12 h-full border-l border-violet-500" />
 
@@ -71,10 +71,10 @@ function SocialLogo({
   text: string;
 }) {
   return (
-    <a href={href} className="group relative flex flex-row items-center">
+    <a href={href} className="logo-wrapper group relative flex flex-row items-center w-8 h-8">
       {logo}
       <div className="hover-box">
-        <span className="hover-box-text ml-8 text-lg font-normal">{text}</span>
+        <span className="hover-box-text text-lg text-left w-full font-normal">{text}</span>
       </div>
     </a>
   );
