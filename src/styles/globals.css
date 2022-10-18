@@ -11,12 +11,26 @@
     @apply bg-gradient-to-r from-[#965de9] to-[#6358ee];
   }
 
+  .gradient-bright {
+    @apply bg-gradient-to-br from-[hsl(264,100%,60%)] to-[hsl(244,100%,60%)];
+  }
+
   .logo {
-    @apply ml-1 group-hover:ml-0 cursor-pointer fill-gray-300 transition-all duration-300 group-hover:h-8 group-hover:w-8 group-hover:animate-flip-once group-hover:fill-violet-500;
+    @apply ml-1 cursor-pointer fill-gray-300 transition-all duration-300 group-hover:ml-0 group-hover:h-8 group-hover:w-8 group-hover:animate-flip-once group-hover:fill-violet-500;
   }
 
   .hover-box {
     @apply invisible absolute ml-[32px] rounded-lg py-4 px-6 opacity-0 group-hover:visible group-hover:border-2 group-hover:border-violet-500 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300 group-hover:ease-in;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
   }
 }
 
