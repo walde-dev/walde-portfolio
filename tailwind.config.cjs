@@ -8,7 +8,7 @@ module.exports = {
       },
       animation: {
         "flip-once": "flip 350ms linear normal",
-        wiggle: "wiggle 4s ease-in-out infinite",
+        wiggle: "wiggle 7s ease-in-out infinite",
       },
       keyframes: {
         flip: {

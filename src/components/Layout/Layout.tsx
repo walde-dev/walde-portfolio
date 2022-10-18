@@ -5,7 +5,7 @@ import Sidebar from "../Sidebar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative flex min-h-screen flex-col items-center bg-[hsl(238,43%,5%)]  text-gray-300 ">
+    <div className="relative flex min-h-screen flex-col items-center bg-[hsl(235,44%,5%)]  text-gray-300 ">
       <Head>
         <title>waldemar.dev</title>
         <link rel="icon" href="/favicon.ico" />

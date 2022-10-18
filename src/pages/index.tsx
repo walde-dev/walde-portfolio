@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Fade, Zoom } from "react-awesome-reveal";
 import FancyTitle from "../components/FancyTitle";
 import TextContainer from "../components/TextContainer";
 
@@ -9,52 +10,55 @@ const Home: NextPage = () => {
     <div className="flex w-full max-w-5xl flex-1 flex-col pb-[1000px]">
       <div className="flex h-full flex-col justify-between md:h-screen ">
         <div className="relative mt-12 w-full text-left md:mt-40">
-          <BackgroundGlow className="gradient -right-24 top-24 h-[500px] w-[500px] rounded-full animation-delay-2000" />
-          <BackgroundGlow className="gradient right-24 top-0 h-[550px] w-[550px] rounded-full " />
-          <BackgroundGlow className="gradient right-0 -top-24 h-[450px] w-[450px] rounded-full animation-delay-4000" />
-          <span className="flex-nowrap text-xl font-extralight">
-            Hi, my name is
-          </span>
-          <div className="">
-            <h1 className="gradient bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
-              Waldemar Panin<span className="text-gray-300">.</span>
-            </h1>
-            <h2 className="pb-6 text-5xl font-bold md:text-6xl">
-              I build things for the{" "}
-              <span className="gradient bg-clip-text text-transparent">
-                web
-              </span>
-              <span className="text-gray-300">.</span>
-            </h2>
-          </div>
-          <p className="mt-2 text-xl font-light md:w-3/5">
-            I&apos;m a software engineer based in Munich, Germany. I specialize
-            in building (and occasionally designing) exceptional websites,
-            applications, and everything in between. <br /> <br />
-            <span>Let&apos;s build something together. </span>
-          </p>
-          <div className="flex items-center justify-center md:block">
-            <button className="learn-more mt-10">
-              <span className="circle" aria-hidden="true">
-                <span className="icon arrow"></span>
-              </span>
-              <a
-                href="mailto:info@waldemar.dev"
-                className="button-text text-violet-400"
-              >
-                Get in touch
-              </a>
-            </button>
-          </div>
+          <Fade cascade damping={0.5} triggerOnce>
+            <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
+            <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full " />
+            <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
+            <span className="flex-nowrap text-xl font-extralight uppercase tracking-wide">
+              Hi, my name is
+            </span>
+            <div className="">
+              <h1 className="gradient bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
+                Waldemar Panin<span className="text-gray-300">.</span>
+              </h1>
+              <h2 className="pb-6 text-5xl font-bold md:text-6xl">
+                I build things for the{" "}
+                <span className="gradient bg-clip-text text-transparent">
+                  web
+                </span>
+                <span className="text-gray-300">.</span>
+              </h2>
+            </div>
+            <p className="mt-2 text-xl font-light md:w-3/5">
+              I&apos;m a software engineer based in Munich, Germany. I
+              specialize in building (and occasionally designing) exceptional
+              websites, applications, and everything in between. <br /> <br />
+              <span>Let&apos;s build something together. </span>
+            </p>
+            <div className="flex items-center justify-center md:block">
+              <button className="learn-more mt-10">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
+                </span>
+                <a
+                  href="mailto:info@waldemar.dev"
+                  className="button-text text-violet-400"
+                >
+                  Get in touch
+                </a>
+              </button>
+            </div>
+          </Fade>
         </div>
         {/** animated scroll indicator */}
         <a href="#aboutme" className="">
-          <div className=" group mt-12 flex flex-col items-center justify-center gap-4 md:mt-0 md:mb-24">
+          <Zoom cascade damping={0.3} delay={5000} triggerOnce className=" group mt-12 flex flex-col items-center justify-center gap-4 md:mt-0 md:mb-24">
             <span className="font-light uppercase tracking-widest">Scroll</span>
             <div className="mx-auto h-[48px] border-l border-violet-500 transition-all duration-300 ease-in-out group-hover:h-[128px]" />
-          </div>
+          </Zoom>
         </a>
       </div>
+
       <div className="mt-[128px] flex flex-col gap-48">
         <AboutMe />
         <Skillset />
@@ -71,11 +75,9 @@ function AboutMe() {
       id="aboutme"
       className="relative flex flex-col justify-center md:scroll-m-20"
     >
-      <BackgroundGlow className="gradient -bottom-12 -left-12 h-[300px] w-[300px] rounded-full " />
       <div className="relative rounded-xl px-12 pb-12 pt-6">
         <div className="absolute right-20 -top-6">
-          <div className="gradient absolute -inset-0.5 rounded-full opacity-20 blur-3xl" />
-          <div className="gradient absolute inset-6 rounded-full opacity-20 blur-3xl" />
+          <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
           <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
           <Image
             src="/images/walde_portrait.jpeg"
@@ -173,10 +175,10 @@ function Skillset() {
   );
 }
 
-function BackgroundGlow({ className }: { className?: string }) {
+export function BackgroundGlow({ className }: { className?: string }) {
   return (
     <div
-      className={`absolute animate-wiggle opacity-20 blur-3xl ${className}`}
+      className={`absolute animate-wiggle opacity-20 blur-xl ${className}`}
     />
   );
 }

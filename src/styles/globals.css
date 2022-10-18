@@ -34,6 +34,13 @@
   }
 }
 
+.glass-bg {
+  background: hsla(235, 44%, 29%, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+}
+
 .hover-box-text {
   background: linear-gradient(83.2deg, #965de9 10.8%, #6358ee 94.3%) no-repeat
     right bottom / 0 var(--bg-h);
