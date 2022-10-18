@@ -51,15 +51,21 @@ const Home: NextPage = () => {
           </Fade>
         </div>
         {/** animated scroll indicator */}
-        <a href="#aboutme" className="">
-          <Zoom cascade damping={0.3} delay={5000} triggerOnce className=" group mt-12 flex flex-col items-center justify-center gap-4 md:mt-0 md:mb-24">
+        <a href="#aboutme" className="group">
+          <Zoom
+            cascade
+            damping={0.3}
+            delay={5000}
+            triggerOnce
+            className="mt-12 flex flex-col items-center justify-center gap-4 md:mt-0 md:mb-24"
+          >
             <span className="font-light uppercase tracking-widest">Scroll</span>
             <div className="mx-auto h-[48px] border-l border-violet-500 transition-all duration-300 ease-in-out group-hover:h-[128px]" />
           </Zoom>
         </a>
       </div>
 
-      <div className="mt-[128px] flex flex-col gap-48">
+      <div className="mt-[128px] flex flex-col gap-4">
         <AboutMe />
         <Skillset />
       </div>
@@ -75,25 +81,37 @@ function AboutMe() {
       id="aboutme"
       className="relative flex flex-col justify-center md:scroll-m-20"
     >
-      <div className="relative rounded-xl px-12 pb-12 pt-6">
-        <div className="absolute right-20 -top-6">
-          <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
-          <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
-          <Image
-            src="/images/walde_portrait.jpeg"
-            alt="Waldemar Panin"
-            width={300}
-            height={300}
-            className="rounded-full "
-          />
+      <div className="relative rounded-xl pb-12 pt-6">
+        <div className="absolute right-20 -top-6 z-10">
+          <div className="relative">
+            <Fade triggerOnce delay={1000}>
+              <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
+              <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
+              <Image
+                src="/images/walde_portrait.jpeg"
+                alt="Waldemar Panin"
+                width={300}
+                height={300}
+                className="rounded-full "
+              />
+            </Fade>
+          </div>
         </div>
-        <div className="flex flex-row items-center md:w-3/4">
-          <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
-            About me
-          </span>
-          <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
-        </div>
-        <div className="mt-8 flex flex-col gap-4 text-left text-lg font-light md:w-1/2">
+        <Fade triggerOnce>
+          <div className="flex flex-row items-center md:w-3/4">
+            <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
+              About me
+            </span>
+            <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
+          </div>
+        </Fade>
+        <Fade
+          triggerOnce
+          cascade
+          damping={0.5}
+          delay={1000}
+          className="mt-8 flex flex-col gap-4 text-left text-lg font-light md:w-1/2"
+        >
           <p>
             Hey! My name is{" "}
             <span className="font-normal text-white">Waldemar</span>. I&apos;m a{" "}
@@ -117,7 +135,7 @@ function AboutMe() {
             working on some hip-hop beats, inside the gym, or trying to rank up
             in some videogame.
           </p>
-        </div>
+        </Fade>
       </div>
     </div>
   );
@@ -130,16 +148,14 @@ function Skillset() {
 
   function Skill({ name, icon }: { name: string; icon: string }) {
     return (
-      <div className="flex flex-col items-center gap-4">
-        <div className="flex h-20 w-20 flex-col items-center justify-center rounded-full bg-violet-500/10">
-          <Image
-            src={`/images/icons/${icon}.svg`}
-            alt={name}
-            width={40}
-            height={40}
-          />
+      <div className="relative flex flex-col items-center gap-4">
+        <div className="relative flex h-20 w-20 flex-col items-center justify-center rounded-full ">
+          <div className="gradient absolute -inset-0.5 rounded-full border blur-sm" />
+          <div className="bg-[hsl(235,44%,5%)] relative w-full h-full rounded-full flex justify-center items-center">
+            <Image src={icon} alt={name} width={40} height={40} />
+          </div>
         </div>
-        <span className="text-lg font-light">{name}</span>
+        <span className="text-lg font-light uppercase tracking-widest">{name}</span>
       </div>
     );
   }
@@ -149,19 +165,18 @@ function Skillset() {
       id="skills"
       className="relative flex flex-col items-end justify-center md:scroll-m-20"
     >
-      <div className="flex flex-row items-center md:w-3/4">
-        <hr className="mr-12 w-4/5 border-violet-500/30" />
+      <div className="flex w-full flex-row items-center">
+        <hr className="mr-12 w-4/5 border-2 border-violet-500/30" />
         <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
-          What I work with
+          SKILLS
         </span>
       </div>
-      <div className="flex flex-col items-center justify-center gap-24">
-        <div className="mt-12 grid w-full grid-cols-3 flex-row items-center justify-evenly gap-8">
-          <FancyTitle>Design</FancyTitle>
-          <FancyTitle>Frontend</FancyTitle>
-          <FancyTitle>Backend</FancyTitle>
-        </div>
-        <TextContainer>
+      <div className="mt-12 grid w-full grid-cols-2">
+        <span className="text-lg uppercase tracking-widest ">Design</span>
+        <span className="text-lg uppercase tracking-widest">Engineering</span>
+      </div>
+      <div className="mt-12 grid w-full grid-cols-2 gap-8">
+        <p className="text-justify font-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -169,7 +184,19 @@ function Skillset() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
-        </TextContainer>
+        </p>
+        <p className="text-justify  font-light">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div className="mt-12 grid w-full grid-cols-2 gap-8">
+        <Skill icon="/logos/figma.svg" name="Figma" />
       </div>
     </div>
   );

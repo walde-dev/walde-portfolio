@@ -7,7 +7,7 @@ export default function TextContainer({
 }) {
   return (
     <div
-      className={`flex items-center justify-center font-light rounded-2xl border border-violet-500 p-12 shadow-xl ${className}`}
+      className={`glass-bg flex items-center justify-center font-light rounded-2xl p-12 shadow-xl ${className}`}
     >
       {children}
     </div>
