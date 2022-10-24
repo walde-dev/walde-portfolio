@@ -4,7 +4,6 @@ import { BackgroundGlow } from "../pages";
 export default function Sidebar() {
   return (
     <div className="fixed left-0 hidden h-full w-full max-w-[128px] flex-col justify-end py-2 md:flex">
-      <BackgroundGlow className="gradient animation-delay-2000 bottom-24 h-[200px] w-[200px] rounded-full opacity-5" />
       <div className="flex h-full flex-col items-center justify-center">
         <div className="mx-auto mb-12 h-full border-l border-violet-500" />
         <div className="flex flex-col items-center justify-center gap-12">

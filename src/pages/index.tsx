@@ -15,12 +15,12 @@ const Home: NextPage = () => {
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full " />
             <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
             <span className="flex-nowrap text-xl font-extralight uppercase tracking-wide">
-              Hi, my name is
+              Hi, my name is{" "}
+              <span className="gradient bg-clip-text font-semibold text-transparent">
+                Waldemar Panin
+              </span>
             </span>
             <div className="">
-              <h1 className="gradient bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
-                Waldemar Panin<span className="text-gray-300">.</span>
-              </h1>
               <h2 className="pb-6 text-5xl font-bold md:text-6xl">
                 I build things for the{" "}
                 <span className="gradient bg-clip-text text-transparent">
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                   href="mailto:info@waldemar.dev"
                   className="button-text text-violet-400"
                 >
-                  Get in touch
+                  View my work
                 </a>
               </button>
             </div>
@@ -66,6 +66,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="mt-[128px] flex flex-col gap-4">
+        <MyWork />
         <AboutMe />
         <Skillset />
       </div>
@@ -74,6 +75,36 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+function MyWork() {
+  function Project({ title, href, image }: { title: string; href: string, image?: string }) {
+    return (
+      <div className="rounded-xl p-8 flex flex-col justify-center">123 </div>
+    );
+  }
+
+  return (
+    <div
+      id="aboutme"
+      className="relative flex flex-col justify-center md:scroll-m-20 mb-40"
+    >
+      <div className="relative rounded-xl pb-12 pt-6">
+        <Fade triggerOnce>
+          <div className="flex flex-row items-center md:w-3/4">
+            <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
+              My Work
+            </span>
+            <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
+          </div>
+        </Fade>
+      </div>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+        <Project title="Personal Portfolio" href="https://waldemar.dev" />
+        <Project title="Coinkit Webwallet" href="https://app.coinkit.de" />
+      </div>
+    </div>
+  );
+}
 
 function AboutMe() {
   return (
@@ -151,11 +182,13 @@ function Skillset() {
       <div className="relative flex flex-col items-center gap-4">
         <div className="relative flex h-20 w-20 flex-col items-center justify-center rounded-full ">
           <div className="gradient absolute -inset-0.5 rounded-full border blur-sm" />
-          <div className="bg-[hsl(235,44%,5%)] relative w-full h-full rounded-full flex justify-center items-center">
+          <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[hsl(235,44%,5%)]">
             <Image src={icon} alt={name} width={40} height={40} />
           </div>
         </div>
-        <span className="text-lg font-light uppercase tracking-widest">{name}</span>
+        <span className="text-lg font-light uppercase tracking-widest">
+          {name}
+        </span>
       </div>
     );
   }
@@ -203,9 +236,5 @@ function Skillset() {
 }
 
 export function BackgroundGlow({ className }: { className?: string }) {
-  return (
-    <div
-      className={`absolute animate-wiggle opacity-20 blur-xl ${className}`}
-    />
-  );
+  return <div className={`absolute opacity-20 blur-xl ${className}`} />;
 }
