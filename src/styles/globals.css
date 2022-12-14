@@ -158,3 +158,28 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
   color: #fff;
 }
+
+.purple-filter {
+  position: relative;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.purple-filter:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(130, 52, 246, 0.587);
+  opacity: 100%;
+  mix-blend-mode: multiply;
+  transition: opacity 300ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.project-card:hover .purple-filter:after {
+  opacity: 0%;
+}

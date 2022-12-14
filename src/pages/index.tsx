@@ -1,9 +1,10 @@
+import { ClassNames } from "@emotion/react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Fade, Zoom } from "react-awesome-reveal";
-import FancyTitle from "../components/FancyTitle";
-import TextContainer from "../components/TextContainer";
+import classNames from "classnames";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -77,16 +78,74 @@ const Home: NextPage = () => {
 export default Home;
 
 function MyWork() {
-  function Project({ title, href, image }: { title: string; href: string, image?: string }) {
+  function Project({
+    title,
+    href,
+    image,
+    imageClassName,
+    projectTitle,
+    description,
+    techStack,
+  }: {
+    title: string;
+    href: string;
+    image: string;
+    imageClassName?: string;
+    projectTitle?: string;
+    description?: string;
+    techStack?: string[];
+  }) {
     return (
-      <div className="rounded-xl p-8 flex flex-col justify-center">123 </div>
+      <div className="project-card flex w-full flex-row justify-between space-x-5 rounded-xl py-8">
+        <div className="flex w-3/5 flex-col items-start justify-between pb-4 text-left">
+          <div className="flex flex-col">
+            <span className="text-xl font-light uppercase tracking-widest text-violet-500">
+              {projectTitle}
+            </span>
+            <span className="text-4xl font-black text-gray-300">{title}</span>
+            <span className="mt-4 text-lg text-gray-300">{description}</span>
+            {techStack && (
+              <div
+                className="mt-4 grid w-[350px] grid-cols-[repeat(10,_1fr)] gap-x-2 gap-y-1"
+              >
+                {techStack.map((tech) => (
+                  <span key={tech} className="text-lg font-light text-gray-400">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="mt-10">
+            <Link href={href}>
+              <a className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl hover:text-white">
+                View Project
+              </a>
+            </Link>
+          </div>
+        </div>
+        <div
+          className={classNames(
+            "purple-filter relative rounded-lg",
+            imageClassName
+          )}
+        >
+          <Image
+            src={image}
+            alt={title + "_image"}
+            height={450}
+            width={600}
+            className="rounded-2xl object-contain "
+          />
+        </div>
+      </div>
     );
   }
 
   return (
     <div
       id="aboutme"
-      className="relative flex flex-col justify-center md:scroll-m-20 mb-40"
+      className="relative mb-40 flex flex-col justify-center md:scroll-m-20"
     >
       <div className="relative rounded-xl pb-12 pt-6">
         <Fade triggerOnce>
@@ -98,9 +157,34 @@ function MyWork() {
           </div>
         </Fade>
       </div>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-        <Project title="Personal Portfolio" href="https://waldemar.dev" />
-        <Project title="Coinkit Webwallet" href="https://app.coinkit.de" />
+      <div className="flex flex-col-reverse space-y-7">
+        {/* <Project title="Personal Portfolio" href="https://waldemar.dev" /> */}
+        <Project
+          title="Your Social Crypto Wallet - The Future of Tipping"
+          projectTitle="CoinKit"
+          description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
+          techStack={["React", "Next.js", "TypeScript", "TailwindCSS"]}
+          href="https://app.coinkit.de"
+          image="/images/coinkit_app.png"
+          imageClassName=""
+        />
+        <Project
+          title="The First Web3 Winestore"
+          projectTitle="Cryptograpes"
+          description="Cryptograpes is the first web3 winestore that allows you to buy wine with your custom NFT label on it. Verify your ownership with a wallet of your choice and get it delivered to your door."
+          techStack={[
+            "React",
+            "Next.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Web3",
+            "Node.js",
+            "Strapi",
+          ]}
+          href="https://cryptograpes.club"
+          image="/images/cryptograpes_club.png"
+          imageClassName=""
+        />
       </div>
     </div>
   );
