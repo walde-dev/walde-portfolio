@@ -1,7 +1,6 @@
-import { ClassNames } from "@emotion/react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Fade, Zoom } from "react-awesome-reveal";
 import classNames from "classnames";
 import Link from "next/link";
