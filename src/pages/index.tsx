@@ -8,7 +8,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <div className="flex w-full max-w-5xl flex-1 flex-col">
-      <div className="flex h-full flex-col justify-between md:h-screen ">
+      <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative mt-12 w-full text-left md:mt-40">
           <Fade cascade damping={0.5} triggerOnce>
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
@@ -67,6 +67,7 @@ const Home: NextPage = () => {
           <MyWork />
         </Fade>
         <AboutMe />
+        <Contact />
         {/* <Skillset /> */}
       </div>
     </div>
@@ -385,6 +386,38 @@ function Skillset() {
   );
 }
 
+function Contact() {
+  return (
+    <Fade triggerOnce delay={1000}>
+      <div
+        id="contact"
+        className="relative flex flex-col justify-center md:scroll-m-20"
+      >
+        <div className="flex flex-row items-center md:w-3/4">
+          <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
+            Contact
+          </span>
+          <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
+        </div>
+        <div className="mt-8 md:w-1/2 text-left text-lg">
+          <p>
+            I&apos;m excited to hear from you! Whether you have a question,
+            comment, think we should work together or just want to connect,
+            I&apos;d love to hear from you. Please feel free to contact me
+            through my email or any socials linked on the left side!
+          </p>
+          <button className="mt-8">
+            <a href="mailto:info@waldemar.dev">
+              <span className="gradient-bg rounded-md px-3 py-1 text-2xl font-semibold text-gray-200">
+                info@waldemar.dev
+              </span>
+            </a>
+          </button>
+        </div>
+      </div>
+    </Fade>
+  );
+}
 export function BackgroundGlow({ className }: { className?: string }) {
   return (
     <div

@@ -17,13 +17,13 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className="glass-bg fixed top-0 z-10 flex w-full  px-2 md:px-20">
+    <header className="glass-bg  fixed top-0 z-50 flex w-full  px-2 md:px-20">
       <Fade
         big
         cascade
         triggerOnce
         delay={1000}
-        className={`flex w-full rounded-b-lg transition-all duration-300 ease-in-out md:px-32 ${
+        className={`flex w-full rounded-b-lg justify-center transition-all duration-300 ease-in-out md:px-32 ${
           animateHeader
             ? "bg-[#2a2f6b]/0 py-4 text-base"
             : "bg-[#2a2f6b]/5 py-5 text-lg"
@@ -38,16 +38,18 @@ export default function Header() {
             </Link>
           </h1>
           <div className="flex flex-row gap-6 font-light">
-            <Link href="work">
-              <a className="underline-gradient-only underline-gradient hover:text-white">
-                My Work
-              </a>
-            </Link>
-            <Link href="contact">
-              <a className="underline-gradient-only underline-gradient hover:text-white">
-                Contact
-              </a>
-            </Link>
+            <a
+              href="#work"
+              className="underline-gradient-only underline-gradient hover:text-white"
+            >
+              My Work
+            </a>
+            <a
+              href="#contact"
+              className="underline-gradient-only underline-gradient hover:text-white"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </Fade>
