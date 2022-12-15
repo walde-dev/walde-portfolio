@@ -15,14 +15,14 @@ const Home: NextPage = () => {
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full " />
             <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
-            <span className="flex-nowrap text-lg md:text-xl font-extralight uppercase tracking-wide">
+            <span className="flex-nowrap text-lg font-extralight uppercase tracking-wide md:text-xl">
               Hi, my name is{" "}
               <span className="gradient whitespace-nowrap bg-clip-text font-semibold text-transparent">
                 Waldemar Panin
               </span>
             </span>
             <div className="">
-              <h2 className="pb-6 text-4xl sm:text-5xl font-bold md:text-6xl">
+              <h2 className="pb-6 text-4xl font-bold sm:text-5xl md:text-6xl">
                 I build things for the{" "}
                 <span className="gradient bg-clip-text text-transparent">
                   web
@@ -41,10 +41,7 @@ const Home: NextPage = () => {
                 <span className="circle" aria-hidden="true">
                   <span className="icon arrow"></span>
                 </span>
-                <a
-                  href="#work"
-                  className="button-text text-violet-400"
-                >
+                <a href="#work" className="button-text text-violet-400">
                   View my work
                 </a>
               </button>
@@ -105,7 +102,7 @@ function MyWork() {
   }) {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
-        <div className="project-card  relative flex w-full flex-col-reverse md:flex-row justify-between space-x-0 md:space-x-5  rounded-xl py-8">
+        <div className="project-card  relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  md:flex-row md:space-x-5">
           <div className=" flex w-3/5 flex-col  items-start pb-4 text-left">
             <div className="flex flex-col">
               {pinned && (
@@ -123,7 +120,6 @@ function MyWork() {
                       fill="rgb(139 92 246)"
                     />
                   </svg>
-              
                 </span>
               )}
               <span className="text-xl font-light uppercase tracking-widest text-violet-500">
@@ -135,7 +131,7 @@ function MyWork() {
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
               {techStack && (
-                <div className="mt-4 grid w-[350px] grid-cols-[_auto_auto_auto] md:grid-cols-[repeat(10,_1fr)] gap-x-2 gap-y-1">
+                <div className="mt-4 grid w-[350px] grid-cols-[_auto_auto_auto] gap-x-2 gap-y-1 md:grid-cols-[repeat(10,_1fr)]">
                   {techStack.map((tech) => (
                     <span
                       key={tech}
@@ -149,7 +145,11 @@ function MyWork() {
             </div>
             <div className="mt-8">
               <Link href={href}>
-                <a className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl hover:text-white">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl hover:text-white"
+                >
                   View Project
                 </a>
               </Link>
@@ -157,7 +157,7 @@ function MyWork() {
           </div>
           <div
             className={classNames(
-              "flex justify-center items-center relative h-[300px] mb-8 md:mb-0 md:w-[450px] w-full  rounded-lg",
+              "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg md:mb-0  md:w-[450px]",
               imageClassName
             )}
           >
@@ -249,7 +249,7 @@ function AboutMe() {
       className="relative flex flex-col justify-center md:scroll-m-20"
     >
       <div className="relative rounded-xl pb-12 pt-6">
-        <div className="md:absolute md:right-20 md:-top-6 z-10">
+        <div className="z-10 md:absolute md:right-20 md:-top-6">
           <div className="relative">
             <Fade triggerOnce delay={1000}>
               <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
@@ -312,7 +312,7 @@ function AboutMe() {
             want to improve the user experience of your existing site, I&apos;m
             ready to help you achieve your goals.
           </p>
-          <p className="mt-4">
+          <p>
             When I&apos;m not coding and/or designing, you&apos;ll find me
             working on some hip-hop beats, inside the gym, or trying to rank up
             in some videogame.
@@ -387,5 +387,9 @@ function Skillset() {
 }
 
 export function BackgroundGlow({ className }: { className?: string }) {
-  return <div className={`absolute opacity-20 blur-xl hidden lg:flex ${className}`} />;
+  return (
+    <div
+      className={`absolute hidden opacity-20 blur-xl lg:flex ${className}`}
+    />
+  );
 }
