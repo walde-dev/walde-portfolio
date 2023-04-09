@@ -65,9 +65,9 @@ const Home: NextPage = () => {
       <div className="mt-[128px] flex flex-col gap-4">
         <Fade cascade damping={0.5} triggerOnce>
           <MyWork />
+          <AboutMe />
+          <Contact />
         </Fade>
-        <AboutMe />
-        <Contact />
         {/* <Skillset /> */}
       </div>
     </div>
@@ -275,8 +275,8 @@ function AboutMe() {
         <Fade
           triggerOnce
           cascade
-          damping={0.5}
-          delay={1000}
+          damping={0.1}
+          delay={500}
           className="mt-8 flex flex-col gap-4 text-left text-lg font-light md:w-1/2"
         >
           <p>
@@ -399,7 +399,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
         </div>
-        <div className="mt-8 md:w-1/2 text-left text-lg">
+        <div className="mt-8 text-left text-lg md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question,
             comment, think we should work together or just want to connect,
