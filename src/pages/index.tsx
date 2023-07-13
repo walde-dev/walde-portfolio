@@ -31,7 +31,7 @@ const Home: NextPage = () => {
             </div>
             <p className="mt-2 text-xl font-light md:w-3/5">
               I&apos;m a software engineer based in Munich, Germany. I
-              specialize in building (and occasionally designing) exceptional
+              specialize in building & designing exceptional
               websites, applications, and everything in between. <br /> <br />
               <span>Let&apos;s build something together. </span>
             </p>
@@ -113,7 +113,7 @@ function MyWork() {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
         <div className="project-card  relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
-          <div className=" flex w-full flex-col  items-start pb-4 text-left">
+          <div className=" flex w-full lg:w-2/3 flex-col  items-start pb-4 text-left">
             <div className="flex flex-col">
               {pinned && (
                 <span className="absolute right-0 top-0 flex flex-row">
