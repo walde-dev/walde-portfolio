@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import InfoBanner from "./InfoBanner";
+import ThemeButton from "./ThemeButton";
 
 export default function Header() {
   const [animateHeader, setAnimateHeader] = useState(false);
@@ -26,8 +27,8 @@ export default function Header() {
         delay={1000}
         className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out md:px-32 ${
           animateHeader
-            ? "bg-[#2a2f6b]/0 py-4 text-base"
-            : "bg-[#2a2f6b]/5 py-5 text-lg"
+            ? "dark:bg-[#2a2f6b]/0 py-4 text-base"
+            : "dark:bg-[#2a2f6b]/5 py-5 text-lg"
         }`}
       >
         <div className="flex w-full flex-row items-center justify-center md:max-w-5xl md:justify-between">
@@ -38,19 +39,20 @@ export default function Header() {
               </a>
             </Link>
           </h1>
-          <div className="flex flex-row gap-6 font-light">
+          <div className="flex flex-row items-center gap-6 font-light">
             <a
               href="#work"
-              className="underline-gradient-only underline-gradient hover:text-white"
+              className="underline-gradient-only underline-gradient hover:dark:text-white hover:text-black"
             >
               My Work
             </a>
             <a
               href="#contact"
-              className="underline-gradient-only underline-gradient hover:text-white"
+              className="underline-gradient-only underline-gradient hover:dark:text-white hover:text-black"
             >
               Contact
             </a>
+            <ThemeButton shrink={animateHeader}/>
           </div>
         </div>
       </Fade>

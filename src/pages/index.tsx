@@ -4,6 +4,11 @@ import { useState } from "react";
 import { Fade, Zoom } from "react-awesome-reveal";
 import classNames from "classnames";
 import Link from "next/link";
+import ThemeButton from "../components/ThemeButton";
+import FrontendIcon from "../components/icons/FrontendIcon";
+import BackendIcon from "../components/icons/BackendIcon";
+import DesignIcon from "../components/icons/DesignIcon";
+import BlockchainIcon from "../components/icons/BlockchainIcon";
 
 const Home: NextPage = () => {
   return (
@@ -31,8 +36,8 @@ const Home: NextPage = () => {
             </div>
             <p className="mt-2 text-xl font-light md:w-3/5">
               I&apos;m a software engineer based in Munich, Germany. I
-              specialize in building & designing exceptional
-              websites, applications, and everything in between. <br /> <br />
+              specialize in building & designing exceptional websites,
+              applications, and everything in between. <br /> <br />
               <span>Let&apos;s build something together. </span>
             </p>
             <div className="flex items-center justify-center md:block">
@@ -77,11 +82,13 @@ const Home: NextPage = () => {
 export default Home;
 
 type Tag = "Frontend" | "Backend" | "Design" | "Blockchain";
-const tagColors: Record<Tag, string> = {
-  Frontend: "bg-red-400 ",
-  Backend: "bg-blue-400",
-  Design: "bg-yellow-400",
-  Blockchain: "bg-green-400",
+
+//icon for each tag
+const tagIcons = {
+  Frontend: <FrontendIcon className="text-zinc-800 dark:text-zinc-300" />,
+  Backend: <BackendIcon className="text-zinc-800 dark:text-zinc-300" />,
+  Design: <DesignIcon className="text-zinc-800 dark:text-zinc-300" />,
+  Blockchain: <BlockchainIcon className="text-zinc-800 dark:text-zinc-300" />,
 };
 
 function MyWork() {
@@ -113,7 +120,7 @@ function MyWork() {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
         <div className="project-card  relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
-          <div className=" flex w-full lg:w-2/3 flex-col  items-start pb-4 text-left">
+          <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
             <div className="flex flex-col">
               {pinned && (
                 <span className="absolute right-0 top-0 flex flex-row">
@@ -135,8 +142,10 @@ function MyWork() {
               <span className="text-xl font-light uppercase tracking-widest text-violet-500">
                 {projectTitle}
               </span>
-              <span className="text-4xl font-black text-gray-300">{title}</span>
-              <span className="mt-4 text-lg text-gray-300">
+              <span className="text-4xl font-black text-gray-800 dark:text-gray-300">
+                {title}
+              </span>
+              <span className="mt-4 text-lg text-gray-800 dark:text-gray-300">
                 {description}{" "}
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
@@ -155,22 +164,21 @@ function MyWork() {
               )} */}
               {tags && (
                 <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto_auto] flex-row gap-3 md:grid-cols-[_auto_auto_auto_auto]">
-                  {tags.map((tag) => (
-                    <div
-                      key={tag}
-                      className={classNames(
-                        "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-zinc-800 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-300 shadow-xl backdrop-blur-lg"
-                      )}
-                    >
-                      <Image
-                        src={`/icons/${tag}.svg`}
-                        alt="tag"
-                        width={15}
-                        height={15}
-                      />
-                      <span>{tag}</span>
-                    </div>
-                  ))}
+                  {tags.map((tag) => {
+                    const icon = tagIcons[tag];
+
+                    return (
+                      <div
+                        key={tag}
+                        className={classNames(
+                          "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-zinc-800 dark:text-zinc-300"
+                        )}
+                      >
+                        {icon}
+                        <span>{tag}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -328,13 +336,13 @@ function AboutMe() {
         >
           <p>
             Hey! My name is{" "}
-            <span className="font-normal text-white">Waldemar</span>. I&apos;m a{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-200">
+            <span className="font-normal dark:text-white text-black">Waldemar</span>. I&apos;m a{" "}
+            <span className="underline-gradient-no-hover px-1 font-semibold dark:text-gray-200 text-gray-800">
               full-stack web developer
             </span>{" "}
             located in Munich, Germany. I have a huge passion for creating
             intuitive and interactive{" "}
-            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold dark:text-gray-200 text-gray-800">
               user experiences
             </span>
             .
@@ -343,11 +351,11 @@ function AboutMe() {
             From solo-projects to working in a team, I have experience in all
             aspects of the development cycle. I&apos;m always looking for
             opportunities to work on{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold dark:text-gray-200 text-gray-800">
               meaningful projects
             </span>{" "}
             with{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold dark:text-gray-200 text-gray-800">
               like minded people
             </span>
             .
@@ -458,7 +466,7 @@ function Contact() {
           </p>
           <button className="mt-8">
             <a href="mailto:hello@waldemar.dev">
-              <span className="gradient-bg rounded-md px-3 py-1 text-2xl font-semibold text-gray-200">
+              <span className="gradient-bg rounded-md px-3 py-1 text-2xl font-semibold text-white">
                 hello@waldemar.dev
               </span>
             </a>

@@ -16,7 +16,7 @@
   }
 
   .logo {
-    @apply ml-1 cursor-pointer fill-gray-300 transition-all duration-300 group-hover:ml-0 group-hover:h-8 group-hover:w-8 group-hover:animate-flip-once group-hover:fill-violet-500;
+    @apply ml-1 cursor-pointer dark:fill-gray-300 fill-gray-800 transition-all duration-300 group-hover:ml-0 group-hover:h-8 group-hover:w-8 group-hover:animate-flip-once group-hover:fill-violet-500;
   }
 
   .hover-box {

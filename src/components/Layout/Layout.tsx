@@ -5,8 +5,10 @@ import Sidebar from "../Sidebar";
 import InfoBanner from "../InfoBanner";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+ 
+
   return (
-    <div className="relative flex min-h-screen w-screen flex-col items-center overflow-hidden  bg-[hsl(240,43%,1%)] text-gray-300">
+    <div className="relative flex min-h-screen w-screen flex-col items-center overflow-hidden  dark:bg-[hsl(240,43%,1%)] dark:text-gray-300 text-gray-800">
       <Head>
         <title>Waldemar Panin - Freelance Full Stack Web Developer</title>
         <meta
