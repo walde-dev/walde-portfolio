@@ -6,7 +6,7 @@ import InfoBanner from "../InfoBanner";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative flex min-h-screen w-screen flex-col items-center overflow-hidden  bg-[hsl(240,41%,3%)] text-gray-300">
+    <div className="relative flex min-h-screen w-screen flex-col items-center overflow-hidden  bg-[hsl(240,43%,1%)] text-gray-300">
       <Head>
         <title>Waldemar Panin - Freelance Full Stack Web Developer</title>
         <meta
