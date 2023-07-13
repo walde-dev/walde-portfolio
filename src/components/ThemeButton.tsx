@@ -30,7 +30,7 @@ const ThemeButton = ({ shrink }: { shrink: boolean }) => {
                 : "translate-x-1 bg-zinc-200"
             } ${
               shrink ? "h-3 w-5" : "h-4 w-6"
-            } inline-block h-4 w-6 transform rounded-full  transition-all`}
+            } inline-block transform rounded-full  transition-all`}
           />
           <MoonIcon
             className={`absolute text-zinc-200 ${
