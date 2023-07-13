@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex w-full max-w-5xl flex-1 flex-col">
       <div className="flex h-full flex-col justify-between md:h-screen">
-        <div className="relative mt-12 w-full text-left md:mt-40">
+        <div className="relative mt-12 w-full text-left md:mt-56">
           <Fade cascade damping={0.5} triggerOnce>
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full " />
@@ -76,6 +76,14 @@ const Home: NextPage = () => {
 
 export default Home;
 
+type Tag = "Frontend" | "Backend" | "Design" | "Blockchain";
+const tagColors: Record<Tag, string> = {
+  Frontend: "bg-red-400 ",
+  Backend: "bg-blue-400",
+  Design: "bg-yellow-400",
+  Blockchain: "bg-green-400",
+};
+
 function MyWork() {
   function Project({
     title,
@@ -88,6 +96,7 @@ function MyWork() {
     counter,
     year,
     pinned = false,
+    tags,
   }: {
     title: string;
     href: string;
@@ -99,6 +108,7 @@ function MyWork() {
     counter: number;
     year: string;
     pinned?: boolean;
+    tags?: Tag[];
   }) {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
@@ -130,8 +140,9 @@ function MyWork() {
                 {description}{" "}
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
+
               {techStack && (
-                <div className="mt-4 grid w-[350px] grid-cols-[_auto_auto_auto] gap-x-2 gap-y-1 md:grid-cols-[repeat(10,_1fr)]">
+                <div className="mt-2 grid w-[350px] grid-cols-[_auto_auto_auto] gap-x-2 gap-y-1 md:grid-cols-[repeat(10,_1fr)]">
                   {techStack.map((tech) => (
                     <span
                       key={tech}
@@ -139,6 +150,26 @@ function MyWork() {
                     >
                       {tech}
                     </span>
+                  ))}
+                </div>
+              )}
+              {tags && (
+                <div className="mt-2 flex flex-row max-w-min space-x-3">
+                  {tags.map((tag) => (
+                    <div
+                      key={tag}
+                      className={classNames(
+                        "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-zinc-800 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-300 shadow-xl backdrop-blur-lg"
+                      )}
+                    >
+                      <Image
+                        src={`/icons/${tag}.svg`}
+                        alt="tag"
+                        width={15}
+                        height={15}
+                      />
+                      <span>{tag}</span>
+                    </div>
                   ))}
                 </div>
               )}
@@ -205,6 +236,7 @@ function MyWork() {
           image="/images/cashrain.png"
           counter={1}
           year="2022"
+          tags={["Frontend", "Design", "Blockchain"]}
           pinned
         />
         <Project
@@ -224,6 +256,7 @@ function MyWork() {
           image="/images/cryptograpes_club.png"
           counter={2}
           year="2022"
+          tags={["Frontend", "Design", "Backend", "Blockchain"]}
           pinned
         />
         <Project
@@ -235,6 +268,7 @@ function MyWork() {
           image="/images/coinkit_app.png"
           counter={3}
           year="2021"
+          tags={["Frontend", "Design", "Blockchain"]}
           pinned
         />
       </div>
@@ -282,12 +316,12 @@ function AboutMe() {
           <p>
             Hey! My name is{" "}
             <span className="font-normal text-white">Waldemar</span>. I&apos;m a{" "}
-            <span className="gradient-bg px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-200">
               full-stack web developer
             </span>{" "}
             located in Munich, Germany. I have a huge passion for creating
             intuitive and interactive{" "}
-            <span className="gradient-bg whitespace-nowrap px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold text-gray-200">
               user experiences
             </span>
             .
@@ -296,11 +330,11 @@ function AboutMe() {
             From solo-projects to working in a team, I have experience in all
             aspects of the development cycle. I&apos;m always looking for
             opportunities to work on{" "}
-            <span className="gradient-bg px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-200">
               meaningful projects
             </span>{" "}
             with{" "}
-            <span className="gradient-bg px-1 font-semibold text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-200">
               like minded people
             </span>
             .
@@ -401,15 +435,18 @@ function Contact() {
         </div>
         <div className="mt-8 text-left text-lg md:w-1/2">
           <p>
-            I&apos;m excited to hear from you! Whether you have a question,
-            comment, think we should work together or just want to connect,
-            I&apos;d love to hear from you. Please feel free to contact me
-            through my email or any socials linked on the left side!
+            I&apos;m excited to hear from you! Whether you have a question or
+            just want to say hi, I&apos;ll try my best to get back to you!
+          </p>
+          <p className="mt-4">
+            If you have any problems that I can help you solve or if you have a
+            project that you want to discuss, please feel free to reach out to
+            me.
           </p>
           <button className="mt-8">
-            <a href="mailto:info@waldemar.dev">
+            <a href="mailto:hello@waldemar.dev">
               <span className="gradient-bg rounded-md px-3 py-1 text-2xl font-semibold text-gray-200">
-                info@waldemar.dev
+                hello@waldemar.dev
               </span>
             </a>
           </button>

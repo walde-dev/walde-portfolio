@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import InfoBanner from "./InfoBanner";
 
 export default function Header() {
   const [animateHeader, setAnimateHeader] = useState(false);
@@ -17,13 +18,13 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className="glass-bg  fixed top-0 z-50 flex w-full  px-2 md:px-20">
+    <header className="glass-bg fixed top-0 z-50 flex w-full  px-2 md:px-20">
       <Fade
         big
         cascade
         triggerOnce
         delay={1000}
-        className={`flex w-full rounded-b-lg justify-center transition-all duration-300 ease-in-out md:px-32 ${
+        className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out md:px-32 ${
           animateHeader
             ? "bg-[#2a2f6b]/0 py-4 text-base"
             : "bg-[#2a2f6b]/5 py-5 text-lg"

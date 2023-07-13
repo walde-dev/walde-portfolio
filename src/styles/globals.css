@@ -22,6 +22,14 @@
   .hover-box {
     @apply invisible absolute ml-[32px] rounded-lg py-4 px-6 opacity-0 group-hover:visible group-hover:border-2 group-hover:border-violet-500 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300 group-hover:ease-in;
   }
+
+  .underline-gradient-no-hover {
+    @apply gradient bg-[length:100%_2px] bg-bottom bg-no-repeat;
+  }
+
+  .text-gradient {
+    @apply gradient-bright bg-clip-text text-transparent;
+  }
 }
 
 @layer utilities {
