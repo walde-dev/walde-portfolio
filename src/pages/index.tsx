@@ -112,8 +112,8 @@ function MyWork() {
   }) {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
-        <div className="project-card  relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  md:flex-row md:space-x-5">
-          <div className=" flex w-3/5 flex-col  items-start pb-4 text-left">
+        <div className="project-card  relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
+          <div className=" flex w-full flex-col  items-start pb-4 text-left">
             <div className="flex flex-col">
               {pinned && (
                 <span className="absolute right-0 top-0 flex flex-row">
@@ -141,7 +141,7 @@ function MyWork() {
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
 
-              {techStack && (
+              {/* {techStack && (
                 <div className="mt-2 grid w-[350px] grid-cols-[_auto_auto_auto] gap-x-2 gap-y-1 md:grid-cols-[repeat(10,_1fr)]">
                   {techStack.map((tech) => (
                     <span
@@ -152,9 +152,9 @@ function MyWork() {
                     </span>
                   ))}
                 </div>
-              )}
+              )} */}
               {tags && (
-                <div className="mt-2 flex max-w-min flex-row space-x-3">
+                <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto_auto] flex-row gap-3 md:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => (
                     <div
                       key={tag}
@@ -189,7 +189,7 @@ function MyWork() {
           {!!image && (
             <div
               className={classNames(
-                "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg md:mb-0  md:w-[450px]",
+                "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg lg:mb-0  lg:w-[450px]",
                 imageClassName
               )}
             >
