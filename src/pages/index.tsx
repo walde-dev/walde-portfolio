@@ -119,7 +119,7 @@ function MyWork() {
   }) {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
-        <div className="project-card  relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
+        <div className="project-card  group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
           <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
             <div className="flex flex-col">
               {pinned && (
@@ -205,7 +205,7 @@ function MyWork() {
                 src={image}
                 alt={title + "_image"}
                 layout="fill"
-                className="rounded-2xl object-cover"
+                className="rounded-2xl object-cover transition-all duration-300 ease-in-out group-hover:opacity-100 opacity-60"
               />
             </div>
           )}
@@ -336,13 +336,16 @@ function AboutMe() {
         >
           <p>
             Hey! My name is{" "}
-            <span className="font-normal dark:text-white text-black">Waldemar</span>. I&apos;m a{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold dark:text-gray-200 text-gray-800">
+            <span className="font-normal text-black dark:text-white">
+              Waldemar
+            </span>
+            . I&apos;m a{" "}
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-800 dark:text-gray-200">
               full-stack web developer
             </span>{" "}
             located in Munich, Germany. I have a huge passion for creating
             intuitive and interactive{" "}
-            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold dark:text-gray-200 text-gray-800">
+            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold text-gray-800 dark:text-gray-200">
               user experiences
             </span>
             .
@@ -351,11 +354,11 @@ function AboutMe() {
             From solo-projects to working in a team, I have experience in all
             aspects of the development cycle. I&apos;m always looking for
             opportunities to work on{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold dark:text-gray-200 text-gray-800">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-800 dark:text-gray-200">
               meaningful projects
             </span>{" "}
             with{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold dark:text-gray-200 text-gray-800">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-800 dark:text-gray-200">
               like minded people
             </span>
             .
