@@ -100,7 +100,7 @@ function MyWork() {
   }: {
     title: string;
     href: string;
-    image: string;
+    image?: string;
     imageClassName?: string;
     projectTitle?: string;
     description?: string;
@@ -154,7 +154,7 @@ function MyWork() {
                 </div>
               )}
               {tags && (
-                <div className="mt-2 flex flex-row max-w-min space-x-3">
+                <div className="mt-2 flex max-w-min flex-row space-x-3">
                   {tags.map((tag) => (
                     <div
                       key={tag}
@@ -186,19 +186,21 @@ function MyWork() {
               </Link>
             </div>
           </div>
-          <div
-            className={classNames(
-              "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg md:mb-0  md:w-[450px]",
-              imageClassName
-            )}
-          >
-            <Image
-              src={image}
-              alt={title + "_image"}
-              layout="fill"
-              className="rounded-2xl object-cover"
-            />
-          </div>
+          {!!image && (
+            <div
+              className={classNames(
+                "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg md:mb-0  md:w-[450px]",
+                imageClassName
+              )}
+            >
+              <Image
+                src={image}
+                alt={title + "_image"}
+                layout="fill"
+                className="rounded-2xl object-cover"
+              />
+            </div>
+          )}
         </div>
       </Fade>
     );
@@ -240,6 +242,29 @@ function MyWork() {
           pinned
         />
         <Project
+          title="Your Social Crypto Wallet - The Future of Tipping"
+          projectTitle="CoinKit"
+          description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
+          techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
+          href="https://app.coinkit.de"
+          image="/images/coinkit_app.png"
+          counter={2}
+          year="2021"
+          tags={["Frontend", "Design", "Blockchain"]}
+          pinned
+        />
+        <Project
+          title="My Portfolio"
+          projectTitle="waldemar.dev"
+          description="My portfolio website (the one you are currently at). I built & designed this website to showcase my work and connect with clients."
+          techStack={["React", "Next.js", "TypeScript", "TailwindCSS"]}
+          href="https://waldemar.dev"
+          counter={3}
+          year="2023"
+          tags={["Frontend", "Design"]}
+          pinned
+        />
+        <Project
           title="The First Web3 Winestore"
           projectTitle="Cryptograpes"
           description="Cryptograpes is the first web3 winestore that allows you to buy wine with your custom NFT label on it. Verify your ownership with a wallet of your choice and get it delivered to your door."
@@ -254,21 +279,9 @@ function MyWork() {
           ]}
           href="https://cryptograpes.club"
           image="/images/cryptograpes_club.png"
-          counter={2}
+          counter={4}
           year="2022"
           tags={["Frontend", "Design", "Backend", "Blockchain"]}
-          pinned
-        />
-        <Project
-          title="Your Social Crypto Wallet - The Future of Tipping"
-          projectTitle="CoinKit"
-          description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
-          techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
-          href="https://app.coinkit.de"
-          image="/images/coinkit_app.png"
-          counter={3}
-          year="2021"
-          tags={["Frontend", "Design", "Blockchain"]}
           pinned
         />
       </div>
