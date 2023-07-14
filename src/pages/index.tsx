@@ -142,10 +142,10 @@ function MyWork() {
               <span className="text-xl font-light uppercase tracking-widest text-violet-500">
                 {projectTitle}
               </span>
-              <span className="text-4xl font-black text-gray-800 dark:text-gray-300">
+              <span className="text-4xl font-black text-gray-900 dark:text-gray-300">
                 {title}
               </span>
-              <span className="mt-4 text-lg text-gray-800 dark:text-gray-300 font-medium">
+              <span className="mt-4 text-lg text-gray-900 dark:text-gray-300 font-medium">
                 {description}{" "}
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
@@ -340,12 +340,12 @@ function AboutMe() {
               Waldemar
             </span>
             . I&apos;m a{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-800 dark:text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-900 dark:text-gray-200">
               full-stack web developer
             </span>{" "}
             located in Munich, Germany. I have a huge passion for creating
             intuitive and interactive{" "}
-            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold text-gray-800 dark:text-gray-200">
+            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold text-gray-900 dark:text-gray-200">
               user experiences
             </span>
             .
@@ -354,11 +354,11 @@ function AboutMe() {
             From solo-projects to working in a team, I have experience in all
             aspects of the development cycle. I&apos;m always looking for
             opportunities to work on{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-800 dark:text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-900 dark:text-gray-200">
               meaningful projects
             </span>{" "}
             with{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-800 dark:text-gray-200">
+            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-900 dark:text-gray-200">
               like minded people
             </span>
             .

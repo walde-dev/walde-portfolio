@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
  
 
   return (
-    <div className="relative flex min-h-screen w-screen flex-col items-center overflow-hidden  dark:bg-[hsl(240,43%,1%)] dark:text-gray-300 text-gray-800">
+    <div className="relative flex min-h-screen w-screen flex-col items-center overflow-hidden  dark:bg-[hsl(240,43%,1%)] dark:text-gray-300 text-gray-900">
       <Head>
         <title>Waldemar Panin - Freelance Full Stack Web Developer</title>
         <meta
