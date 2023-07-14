@@ -34,7 +34,7 @@ const Home: NextPage = () => {
                 <span className="text-gray-300">.</span>
               </h2>
             </div>
-            <p className="mt-2 text-xl font-light md:w-3/5">
+            <p className="mt-2 text-xl dark:font-light font-normal md:w-3/5">
               I&apos;m a software engineer based in Munich, Germany. I
               specialize in building & designing exceptional websites,
               applications, and everything in between. <br /> <br />
@@ -145,7 +145,7 @@ function MyWork() {
               <span className="text-4xl font-black text-gray-800 dark:text-gray-300">
                 {title}
               </span>
-              <span className="mt-4 text-lg text-gray-800 dark:text-gray-300">
+              <span className="mt-4 text-lg text-gray-800 dark:text-gray-300 font-medium">
                 {description}{" "}
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
@@ -187,7 +187,7 @@ function MyWork() {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl hover:text-white"
+                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl dark:hover:text-white hover:text-black"
                 >
                   View Project
                 </a>
@@ -332,7 +332,7 @@ function AboutMe() {
           cascade
           damping={0.1}
           delay={500}
-          className="mt-8 flex flex-col gap-4 text-left text-lg font-light md:w-1/2"
+          className="mt-8 flex flex-col gap-4 text-left text-lg dark:font-normal font-medium md:w-1/2"
         >
           <p>
             Hey! My name is{" "}
@@ -457,7 +457,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
         </div>
-        <div className="mt-8 text-left text-lg md:w-1/2">
+        <div className="mt-8 text-left text-lg dark:font-normal font-medium md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
