@@ -26,7 +26,7 @@ const ThemeButton = ({ shrink }: { shrink: boolean }) => {
           <span
             className={`${
               checked
-                ? `${shrink ? "translate-x-8" : "translate-x-9"} bg-zinc-800 `
+                ? `${shrink ? "translate-x-8" : "translate-x-8 sm:translate-x-9"} bg-zinc-800 `
                 : "translate-x-1 bg-zinc-200"
             } ${
               shrink ? "h-3 w-5" : "h-3 w-5 sm:h-4 sm:w-6"

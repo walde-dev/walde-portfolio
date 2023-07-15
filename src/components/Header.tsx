@@ -25,13 +25,13 @@ export default function Header() {
         cascade
         triggerOnce
         delay={1000}
-        className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out md:px-32 ${
+        className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out lg:px-32 ${
           animateHeader
             ? "dark:bg-[#2a2f6b]/0 py-2 sm:py-4 text-base"
             : "dark:bg-[#2a2f6b]/5 py-3 sm:py-5 sm:text-lg"
         }`}
       >
-        <div className="flex w-full flex-row items-center justify-between sm:justify-center md:max-w-5xl md:justify-between">
+        <div className="flex w-full flex-row items-center justify-between md:max-w-5xl">
           <h1 className="text-lg">
             <Link href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">
