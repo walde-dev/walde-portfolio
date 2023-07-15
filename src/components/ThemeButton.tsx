@@ -19,7 +19,7 @@ const ThemeButton = ({ shrink }: { shrink: boolean }) => {
       {({ checked }) => (
         <button
           className={`${checked ? "bg-zinc-200" : "bg-zinc-800"} ${
-            shrink ? "h-6 w-14" : "h-7 w-16"
+            shrink ? "h-6 w-14" : "h-6 w-14 sm:h-7 sm:w-16"
           } duration-350 relative inline-flex items-center justify-between  rounded-full transition-all ease-in-out`}
         >
           <span className="sr-only">enable light mode</span>
@@ -29,7 +29,7 @@ const ThemeButton = ({ shrink }: { shrink: boolean }) => {
                 ? `${shrink ? "translate-x-8" : "translate-x-9"} bg-zinc-800 `
                 : "translate-x-1 bg-zinc-200"
             } ${
-              shrink ? "h-3 w-5" : "h-4 w-6"
+              shrink ? "h-3 w-5" : "h-3 w-5 sm:h-4 sm:w-6"
             } inline-block transform rounded-full  transition-all`}
           />
           <MoonIcon

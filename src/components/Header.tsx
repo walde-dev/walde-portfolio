@@ -27,11 +27,11 @@ export default function Header() {
         delay={1000}
         className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out md:px-32 ${
           animateHeader
-            ? "dark:bg-[#2a2f6b]/0 py-4 text-base"
-            : "dark:bg-[#2a2f6b]/5 py-5 text-lg"
+            ? "dark:bg-[#2a2f6b]/0 py-2 sm:py-4 text-base"
+            : "dark:bg-[#2a2f6b]/5 py-3 sm:py-5 sm:text-lg"
         }`}
       >
-        <div className="flex w-full flex-row items-center justify-center md:max-w-5xl md:justify-between">
+        <div className="flex w-full flex-row items-center justify-between sm:justify-center md:max-w-5xl md:justify-between">
           <h1 className="text-lg">
             <Link href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">
@@ -39,7 +39,7 @@ export default function Header() {
               </a>
             </Link>
           </h1>
-          <div className="flex flex-row items-center gap-6 font-light dark:text-zinc-200 text-zinc-800">
+          <div className="flex flex-row items-center gap-2 sm:gap-6 font-light dark:text-zinc-200 text-zinc-800">
             <a
               href="#work"
               className="underline-gradient-only underline-gradient hover:dark:text-white hover:text-black"
