@@ -52,8 +52,8 @@ const ThemeButton = ({ shrink }: { shrink: boolean }) => {
             <SunIcon
               className={`absolute text-zinc-200 ${
                 checked
-                  ? "invisible -translate-y-1/2 translate-x-full rotate-45 border border-red-500 opacity-0"
-                  : "duration-[600ms] visible right-2 translate-x-0 translate-y-0 rotate-0 border border-blue-500  opacity-100 transition-all ease-in"
+                  ? "invisible -translate-y-1/2 translate-x-full rotate-45opacity-0"
+                  : "duration-[600ms] visible right-2 translate-x-0 translate-y-0 rotate-0 opacity-100 transition-all ease-in"
               }`}
             />
             <MoonIcon
