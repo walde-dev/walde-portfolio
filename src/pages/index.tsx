@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           <Zoom
             cascade
             damping={0.3}
-            delay={5000}
+            delay={6000}
             triggerOnce
             className="mt-12 flex flex-col items-center justify-center gap-4 md:mt-0 md:mb-24"
           >
