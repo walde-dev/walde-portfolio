@@ -27,8 +27,8 @@ export default function Header() {
         delay={1000}
         className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out lg:px-32 ${
           animateHeader
-            ? "dark:bg-[#2a2f6b]/0 py-2 sm:py-4 text-base"
-            : "dark:bg-[#2a2f6b]/5 py-3 sm:py-5 sm:text-lg"
+            ? "py-2 text-base dark:bg-[#2a2f6b]/0 sm:py-4"
+            : "py-3 dark:bg-[#2a2f6b]/5 sm:py-5 sm:text-lg"
         }`}
       >
         <div className="flex w-full flex-row items-center justify-between md:max-w-5xl">
@@ -39,20 +39,20 @@ export default function Header() {
               </a>
             </Link>
           </h1>
-          <div className="flex flex-row items-center gap-2 sm:gap-6 font-light dark:text-zinc-200 text-zinc-800">
+          <div className="flex flex-row items-center gap-2 font-light text-zinc-800 dark:text-zinc-200 sm:gap-6">
             <a
               href="#work"
-              className="underline-gradient-only underline-gradient hover:dark:text-white hover:text-black"
+              className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
             >
               My Work
             </a>
             <a
               href="#contact"
-              className="underline-gradient-only underline-gradient hover:dark:text-white hover:text-black"
+              className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
             >
               Contact
             </a>
-            <ThemeButton shrink={animateHeader}/>
+            <ThemeButton shrink={animateHeader} />
           </div>
         </div>
       </Fade>
