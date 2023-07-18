@@ -5,7 +5,7 @@ export default function Sidebar() {
     <div className="fixed left-0 hidden h-full w-full max-w-[128px] flex-col justify-end py-2 md:flex">
       <div className="flex h-full flex-col items-center justify-center">
         <div className="mx-auto mb-12 h-full border-l border-violet-500" />
-        <div className="flex flex-col items-center justify-center gap-12">
+        <div className="flex flex-col items-center justify-center gap-8">
           <Fade direction="left" delay={3500} triggerOnce cascade damping={0.5}>
             <SocialLogo
               logo={
