@@ -9,6 +9,7 @@ import FrontendIcon from "../components/icons/FrontendIcon";
 import BackendIcon from "../components/icons/BackendIcon";
 import DesignIcon from "../components/icons/DesignIcon";
 import BlockchainIcon from "../components/icons/BlockchainIcon";
+import { SocialList } from "../components/Sidebar";
 
 const Home: NextPage = () => {
   return (
@@ -34,7 +35,7 @@ const Home: NextPage = () => {
                 <span className="text-gray-300">.</span>
               </h2>
             </div>
-            <p className="mt-2 text-xl dark:font-light font-normal md:w-3/5">
+            <p className="mt-2 text-xl font-normal dark:font-light md:w-3/5">
               I&apos;m a software engineer based in Munich, Germany. I
               specialize in building & designing exceptional websites,
               applications, and everything in between. <br /> <br />
@@ -57,9 +58,9 @@ const Home: NextPage = () => {
           <Zoom
             cascade
             damping={0.3}
-            delay={6000}
+            delay={4000}
             triggerOnce
-            className="mt-12 flex flex-col items-center justify-center gap-4 md:mt-0 md:mb-24"
+            className="mt-12 flex flex-col items-center justify-center gap-4 md:mb-24 md:mt-0"
           >
             <span className="font-light uppercase tracking-widest">Scroll</span>
             <div className="mx-auto h-[48px] border-l border-violet-500 transition-all duration-300 ease-in-out group-hover:h-[128px]" />
@@ -121,7 +122,7 @@ function MyWork() {
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
         <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
           <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
-            <div className="flex flex-col max-w-full">
+            <div className="flex max-w-full flex-col">
               {pinned && (
                 <span className="absolute right-0 top-0 flex flex-row">
                   <svg
@@ -145,7 +146,7 @@ function MyWork() {
               <span className="text-4xl font-black text-gray-900 dark:text-gray-300">
                 {title}
               </span>
-              <span className="mt-4 text-lg text-gray-900 dark:text-gray-300 font-medium">
+              <span className="mt-4 text-lg font-medium text-gray-900 dark:text-gray-300">
                 {description}{" "}
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
@@ -163,7 +164,7 @@ function MyWork() {
                 </div>
               )} */}
               {tags && (
-                <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto] xs:grid-cols-[_auto_auto_auto] flex-row gap-3 md:grid-cols-[_auto_auto_auto_auto]">
+                <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto] flex-row gap-3 xs:grid-cols-[_auto_auto_auto] md:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => {
                     const icon = tagIcons[tag];
 
@@ -187,7 +188,7 @@ function MyWork() {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl dark:hover:text-white hover:text-black"
+                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl hover:text-black dark:hover:text-white"
                 >
                   View Project
                 </a>
@@ -205,7 +206,7 @@ function MyWork() {
                 src={image}
                 alt={title + "_image"}
                 layout="fill"
-                className="rounded-2xl object-cover transition-all duration-300 ease-in-out group-hover:opacity-100 opacity-60"
+                className="rounded-2xl object-cover opacity-60 transition-all duration-300 ease-in-out group-hover:opacity-100"
               />
             </div>
           )}
@@ -304,7 +305,7 @@ function AboutMe() {
       className="relative flex flex-col justify-center md:scroll-m-20"
     >
       <div className="relative rounded-xl pb-12 pt-6">
-        <div className="z-10 md:absolute md:right-20 md:-top-6">
+        <div className="z-10 md:absolute md:-top-6 md:right-20">
           <div className="relative">
             <Fade triggerOnce delay={1000}>
               <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
@@ -332,7 +333,7 @@ function AboutMe() {
           cascade
           damping={0.1}
           delay={500}
-          className="mt-8 flex flex-col gap-4 text-left text-lg dark:font-normal font-medium md:w-1/2"
+          className="mt-8 flex flex-col gap-4 text-left text-lg font-medium dark:font-normal md:w-1/2"
         >
           <p>
             Hey! My name is{" "}
@@ -457,7 +458,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
         </div>
-        <div className="mt-8 text-left text-lg dark:font-normal font-medium md:w-1/2">
+        <div className="mt-8 text-left text-lg font-medium dark:font-normal md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
@@ -474,6 +475,9 @@ function Contact() {
               </span>
             </a>
           </button>
+        </div>
+        <div className="flex md:hidden mt-12 w-full justify-center">
+          <SocialList className="flex-row" />
         </div>
       </div>
     </Fade>
