@@ -13,6 +13,7 @@ module.exports = {
       },
       screens: {
         "xs": "400px",
+        "2xs": "350px",
       },
       keyframes: {
         flip: {
