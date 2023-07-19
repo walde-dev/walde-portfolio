@@ -32,14 +32,14 @@ export default function Header() {
         }`}
       >
         <div className="flex w-full flex-row items-center justify-between md:max-w-5xl">
-          <h1 className="text-sm sm:text-lg">
+          <h1 className="text-sm xs:text-lg">
             <Link href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">
                 waldemar.dev
               </a>
             </Link>
           </h1>
-          <div className="text-sm sm:text-base flex flex-row items-center gap-2 font-light text-zinc-800 dark:text-zinc-200 sm:gap-6">
+          <div className="text-sm xs:text-base flex flex-row items-center gap-2 font-light text-zinc-800 dark:text-zinc-200 sm:gap-6">
             <a
               href="#work"
               className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
