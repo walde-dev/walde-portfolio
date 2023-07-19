@@ -258,7 +258,7 @@ function MyWork() {
           image="/images/coinkit_app.png"
           counter={2}
           year="2021"
-          tags={["Frontend", "Design", "Blockchain"]}
+          tags={["Frontend", "Blockchain"]}
           pinned
         />
         <Project
