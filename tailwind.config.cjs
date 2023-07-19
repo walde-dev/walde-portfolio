@@ -11,6 +11,9 @@ module.exports = {
         "flip-once": "flip 350ms linear normal",
         wiggle: "wiggle 7s ease-in-out infinite",
       },
+      screens: {
+        "xs": "400px",
+      },
       keyframes: {
         flip: {
           "0%": { transform: "rotateY(0deg)" },

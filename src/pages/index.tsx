@@ -119,9 +119,9 @@ function MyWork() {
   }) {
     return (
       <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
-        <div className="project-card  group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
+        <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
           <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
-            <div className="flex flex-col">
+            <div className="flex flex-col max-w-full">
               {pinned && (
                 <span className="absolute right-0 top-0 flex flex-row">
                   <svg
@@ -163,7 +163,7 @@ function MyWork() {
                 </div>
               )} */}
               {tags && (
-                <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto_auto] flex-row gap-3 md:grid-cols-[_auto_auto_auto_auto]">
+                <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto] xs:grid-cols-[_auto_auto_auto] flex-row gap-3 md:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => {
                     const icon = tagIcons[tag];
 
