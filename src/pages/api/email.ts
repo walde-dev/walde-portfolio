@@ -13,8 +13,6 @@ export default async function handler(
 ) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  console.log(process.env.RESEND_API_KEY)
-
   const name = req.body.name;
   const email = req.body.email;
   const html = req.body.html;
