@@ -29,12 +29,13 @@ export default async function handler(
   try {
     await limiter.check(res, 10, "CACHE_TOKEN"); // 10 request per minute
     try {
-      resend.emails.send({
+      const res = await resend.emails.send({
         from: "portfolio@waldemar.dev",
         to: "hello@waldemar.dev",
         subject: "New message from your portfolio",
         html: html + `<br/><br/>Name: ${name}<br/>Email: ${email}`,
       });
+      console.log(res);
     } catch (error) {
       console.log(error);
       res.status(500).json({ message: "Internal server error", error: error });

@@ -57,7 +57,7 @@ export default function ContactForm() {
       <span
         className={`${
           emailSent && !rateLimited ? "opacity-100" : "-mt-4 opacity-0"
-        } text-left font-medium transition-all duration-500 ease-in`}
+        } dark:text-gray-200 text-gray-700 text-left font-medium transition-all duration-500 ease-in`}
       >
         Your message has been sent. Thank you!
       </span>
