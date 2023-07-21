@@ -10,6 +10,7 @@ import BackendIcon from "../components/icons/BackendIcon";
 import DesignIcon from "../components/icons/DesignIcon";
 import BlockchainIcon from "../components/icons/BlockchainIcon";
 import { SocialList } from "../components/Sidebar";
+import ContactForm from "../components/ContactForm";
 
 const Home: NextPage = () => {
   return (
@@ -458,7 +459,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
         </div>
-        <div className="mt-8 text-left text-lg font-medium dark:font-normal md:w-1/2">
+        <div className="mt-4 text-left text-gray-400 font-medium dark:font-normal md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
@@ -468,15 +469,11 @@ function Contact() {
             project that you want to discuss, please feel free to reach out to
             me.
           </p>
-          <button className="mt-8">
-            <a href="mailto:hello@waldemar.dev">
-              <span className="gradient-bg rounded-md px-3 py-1 text-2xl font-semibold text-white">
-                hello@waldemar.dev
-              </span>
-            </a>
-          </button>
         </div>
-        <div className="flex md:hidden mt-12 w-full justify-center">
+        <div className="mt-8 w-full md:mt-12 md:w-1/2">
+          <ContactForm />
+        </div>
+        <div className="mt-12 flex w-full justify-center md:hidden">
           <SocialList className="flex-row" />
         </div>
       </div>
