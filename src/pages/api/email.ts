@@ -17,6 +17,8 @@ export default async function handler(
   const email = req.body.email;
   const html = req.body.html;
 
+  console.log("name", name, "email", email, "html", html);
+
   if (!name || !email || !html) {
     res.status(400).json({
       error: "Missing required fields",
@@ -34,6 +36,7 @@ export default async function handler(
         html: html + `<br/><br/>Name: ${name}<br/>Email: ${email}`,
       });
     } catch (error) {
+      console.log(error);
       res.status(500).json({ message: "Internal server error", error: error });
     }
   } catch {
