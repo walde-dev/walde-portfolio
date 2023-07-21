@@ -76,7 +76,7 @@ export default function ContactForm() {
           </label>
           <input
             id="name"
-            className="rounded-md border-2 border-gray-600 bg-black px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
+            className="rounded-md border-2 dark:border-gray-600 border-gray-800 dark:bg-black bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
             type="text"
             placeholder="John"
             {...register("name", { required: true })}
@@ -88,7 +88,7 @@ export default function ContactForm() {
           </label>
           <input
             id="email"
-            className="rounded-md border-2 border-gray-600 bg-black px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
+            className="rounded-md border-2 dark:border-gray-600 border-gray-800 dark:bg-black bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
             type="email"
             placeholder="john@company.co"
             {...register("email", { required: true })}
@@ -101,7 +101,7 @@ export default function ContactForm() {
           <textarea
             {...register("html", { required: true })}
             id={"html"}
-            className="rounded-md border-2 border-gray-600 bg-black px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
+            className="rounded-md border-2 dark:border-gray-600 border-gray-800 dark:bg-black bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
             placeholder={
               "Hey! Great work! Lets get together and build something!"
             }
@@ -109,7 +109,7 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-          className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700 disabled:opacity-30 md:w-[150px]"
+          className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-3 py-2 focus:shadow-none focus:outline-violet-700 font-medium text-gray-200  focus:ring-violet-700 disabled:opacity-30 md:w-[150px]"
           disabled={sendEmailLoading || sendEmailSuccess || rateLimited}
         >
           {sendEmailLoading ? (
