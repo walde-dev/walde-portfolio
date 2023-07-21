@@ -11,7 +11,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const resend = new Resend("re_f9e5nhic_3Gr38LExRGKtBMojpRoMsbit");
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const name = req.body.name;
   const email = req.body.email;
