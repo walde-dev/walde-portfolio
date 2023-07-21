@@ -26,17 +26,21 @@ export default async function handler(
 
   try {
     await limiter.check(res, 10, "CACHE_TOKEN"); // 10 request per minute
-    resend.emails.send({
-      from: "portfolio@waldemar.dev",
-      to: "hello@waldemar.dev",
-      subject: "New message from your portfolio",
-      html: html + `<br/><br/>Name: ${name}<br/>Email: ${email}`,
-    });
+    try {
+      resend.emails.send({
+        from: "portfolio@waldemar.dev",
+        to: "hello@waldemar.dev",
+        subject: "New message from your portfolio",
+        html: html + `<br/><br/>Name: ${name}<br/>Email: ${email}`,
+      });
+    } catch (error) {
+      res.status(500).json({ message: "Internal server error", error: error });
+    }
   } catch {
     res.status(429).json({ error: "Rate limit exceeded" });
   }
 
-  res.status(200).json({ name: name, email: email, html: html });
+  res.status(200).json({ success: true });
 }
 
 type Options = {
