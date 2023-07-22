@@ -6,7 +6,7 @@ export default function Sidebar() {
     <div className="fixed left-0 hidden h-full w-full max-w-[128px] flex-col justify-end py-2 md:flex">
       <div className="flex h-full flex-col items-center justify-center">
         <div className="mx-auto mb-12 h-full border-l border-violet-500" />
-        <Fade direction="left" delay={3500} triggerOnce cascade damping={0.5}>
+        <Fade direction="left" delay={1500} triggerOnce cascade damping={0.5}>
           <SocialList className="flex-col"/>
         </Fade>
         <div className="mx-auto mt-12 h-[128px] border-l border-violet-500" />

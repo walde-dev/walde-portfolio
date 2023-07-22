@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     <div className="flex w-full max-w-5xl flex-1 flex-col">
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative mt-12 w-full text-left md:mt-56">
-          <Fade cascade damping={0.5} triggerOnce>
+          <Fade cascade damping={0.2} triggerOnce>
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full " />
             <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
           <Zoom
             cascade
             damping={0.3}
-            delay={4000}
+            delay={1600}
             triggerOnce
             className="mt-12 flex flex-col items-center justify-center gap-4 md:mb-24 md:mt-0"
           >
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="mt-[128px] flex flex-col gap-4">
-        <Fade cascade damping={0.5} triggerOnce>
+        <Fade cascade damping={0.2} triggerOnce>
           <MyWork />
           <AboutMe />
           <Contact />
@@ -120,7 +120,7 @@ function MyWork() {
     tags?: Tag[];
   }) {
     return (
-      <Fade cascade damping={0.5} delay={250 * counter} triggerOnce>
+      <Fade cascade damping={0.5} delay={100 * counter} triggerOnce>
         <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
           <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
             <div className="flex max-w-full flex-col">
@@ -308,7 +308,7 @@ function AboutMe() {
       <div className="relative rounded-xl pb-12 pt-6">
         <div className="z-10 md:absolute md:-top-6 md:right-20">
           <div className="relative">
-            <Fade triggerOnce delay={1000}>
+            <Fade triggerOnce delay={200}>
               <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
               <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
               <Image
@@ -333,7 +333,7 @@ function AboutMe() {
           triggerOnce
           cascade
           damping={0.1}
-          delay={500}
+          delay={300}
           className="mt-8 flex flex-col gap-4 text-left text-lg font-medium dark:font-normal md:w-1/2"
         >
           <p>

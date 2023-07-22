@@ -24,7 +24,7 @@ export default function Header() {
         big
         cascade
         triggerOnce
-        delay={1000}
+        delay={0}
         className={`flex w-full justify-center rounded-b-lg transition-all duration-300 ease-in-out lg:px-32 ${
           animateHeader
             ? "py-2 text-base dark:bg-[#2a2f6b]/0 sm:py-4"
