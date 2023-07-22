@@ -53,11 +53,11 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex min-h-[300px] flex-col items-center justify-center">
+    <div className="flex min-h-[300px] flex-col items-center">
       <span
         className={`${
           emailSent && !rateLimited ? "opacity-100" : "-mt-4 opacity-0"
-        } dark:text-gray-200 text-gray-700 text-left font-medium transition-all duration-500 ease-in`}
+        } text-left font-medium text-gray-700 transition-all duration-500 ease-in dark:text-gray-200`}
       >
         Your message has been sent. Thank you!
       </span>
@@ -71,45 +71,34 @@ export default function ContactForm() {
         } flex w-full flex-col space-y-4 transition-all duration-100 ease-in`}
       >
         <div className="flex flex-col justify-center space-y-2">
-          <label className="text-left text-lg font-medium" htmlFor={"name"}>
-            Your Name
-          </label>
-          <input
-            id="name"
-            className="rounded-md border-2 dark:border-gray-600 border-gray-800 dark:bg-black bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
-            type="text"
-            placeholder="John"
-            {...register("name", { required: true })}
-          />
+          <div className="flex flex-row space-x-4">
+            <input
+              id="name"
+              className="w-full rounded-md border-2 border-gray-800 bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700 dark:border-gray-600 dark:bg-black"
+              type="text"
+              placeholder="Your Name"
+              {...register("name", { required: true })}
+            />
+            <input
+              id="email"
+              className="w-full rounded-md border-2 border-gray-800 bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700 dark:border-gray-600 dark:bg-black"
+              type="email"
+              placeholder="Your Email"
+              {...register("email", { required: true })}
+            />
+          </div>
         </div>
         <div className="flex flex-col justify-center space-y-2">
-          <label className="text-left text-lg font-medium" htmlFor={"email"}>
-            Your Email
-          </label>
-          <input
-            id="email"
-            className="rounded-md border-2 dark:border-gray-600 border-gray-800 dark:bg-black bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
-            type="email"
-            placeholder="john@company.co"
-            {...register("email", { required: true })}
-          />
-        </div>
-        <div className="flex flex-col justify-center space-y-2">
-          <label className="text-left text-lg font-medium" htmlFor={"html"}>
-            Your Message
-          </label>
           <textarea
             {...register("html", { required: true })}
             id={"html"}
-            className="rounded-md border-2 dark:border-gray-600 border-gray-800 dark:bg-black bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700"
-            placeholder={
-              "Hey! Great work! Lets get together and build something!"
-            }
+            className="rounded-md border-2 border-gray-800 bg-white px-3 py-2 focus:shadow-none focus:outline-violet-700 focus:ring-violet-700 dark:border-gray-600 dark:bg-black"
+            placeholder={"Your Message"}
           />
         </div>
         <button
           type="submit"
-          className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-3 py-2 focus:shadow-none focus:outline-violet-700 font-medium text-gray-200  focus:ring-violet-700 disabled:opacity-30 md:w-[150px]"
+          className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-3 py-2 font-medium text-gray-200 focus:shadow-none focus:outline-violet-700  focus:ring-violet-700 disabled:opacity-30 md:w-[150px]"
           disabled={sendEmailLoading || sendEmailSuccess || rateLimited}
         >
           {sendEmailLoading ? (

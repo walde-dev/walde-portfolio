@@ -334,7 +334,7 @@ function AboutMe() {
           cascade
           damping={0.1}
           delay={300}
-          className="mt-8 flex flex-col gap-4 text-left text-lg font-medium dark:font-normal md:w-1/2"
+          className="mt-8 flex flex-col gap-4 text-left text-lg font-normal md:w-1/2"
         >
           <p>
             Hey! My name is{" "}
@@ -459,7 +459,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
         </div>
-        <div className="mt-4 text-left dark:text-gray-400 text-gray-700 font-medium dark:font-normal md:w-1/2">
+        <div className="mt-4 text-left dark:text-gray-200 text-gray-800 font-medium dark:font-normal md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
