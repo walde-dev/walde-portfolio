@@ -19,7 +19,7 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className="glass-bg fixed top-0 z-50 flex w-full  px-2 md:px-20">
+    <header className="glass-bg fixed top-0 z-50 flex w-full overflow-hidden px-2 md:px-20">
       <Fade
         big
         cascade
@@ -31,7 +31,7 @@ export default function Header() {
             : "py-3 dark:bg-[#2a2f6b]/5 sm:py-5 sm:text-lg"
         }`}
       >
-        <div className="flex w-full flex-row items-center justify-between md:max-w-5xl">
+        <div className="flex w-full flex-row  items-center justify-between md:max-w-5xl">
           <h1 className="text-sm xs:text-lg">
             <Link href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">

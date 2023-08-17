@@ -7,7 +7,7 @@ export default function Sidebar() {
       <div className="flex h-full flex-col items-center justify-center">
         <div className="mx-auto mb-12 h-full border-l border-violet-500" />
         <Fade direction="left" delay={1500} triggerOnce cascade damping={0.5}>
-          <SocialList className="flex-col"/>
+          <SocialList className="flex-col" />
         </Fade>
         <div className="mx-auto mt-12 h-[128px] border-l border-violet-500" />
       </div>
@@ -38,8 +38,8 @@ function SocialLogo({
       href={href}
       className="logo-wrapper group relative flex h-8 w-8 flex-row items-center"
     >
-      {logo}
-      <div className="hidden md:block hover-box">
+      <>{logo}</>
+      <div className="hover-box hidden md:block">
         <span className="hover-box-text w-full text-left text-lg font-normal">
           {text}
         </span>
