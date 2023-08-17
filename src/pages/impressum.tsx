@@ -17,7 +17,7 @@ export default function Impressum() {
       </p>
       <p className="mt-2">
         <strong>Kontakt:</strong> <br />
-        Telefon: +49 15735788285
+        Telefon: Kein Telefonsupport
         <br />
         E-Mail:{" "}
         <a href="mailto:impressum@waldemar.dev "> impressum@waldemar.dev </a>
