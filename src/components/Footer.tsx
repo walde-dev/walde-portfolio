@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center py-4 text-sm uppercase tracking-widest space-y-4">
-      <p className="flex flex-col dark:font-normal font-medium md:flex-row items-center justify-center gap-4 text-gray-600">
+    <footer className="flex flex-col items-center justify-center space-y-4 py-4 text-sm uppercase tracking-widest">
+      <p className="flex flex-col items-center justify-center gap-4 font-medium text-gray-600 dark:font-normal md:flex-row">
         designed and build with{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -18,15 +20,9 @@ export default function Footer() {
           @walde-dev
         </a>
       </p>
-      {/* <p className="text-violet-500">
-        <a className="" href="">
-          Privacy Policy
-        </a>
-        <a>
-          <span className="mx-2 text-white">|</span>
-          Imprint
-        </a>
-      </p> */}
+      <p className="text-violet-500">
+        <Link href={"/impressum"}>Imprint</Link>{" "}
+      </p>
     </footer>
   );
 }
