@@ -17,20 +17,20 @@ const Home: NextPage = () => {
     <div className="flex w-full max-w-5xl flex-1 flex-col">
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative mt-12 w-full text-left md:mt-56">
-          <Fade cascade damping={0.2} triggerOnce>
-            <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
-            <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full " />
-            <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
+          <Fade cascade damping={0.2} triggerOnce className="">
+            <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
+            <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] -right-12 top-52 h-[400px] w-[400px] rounded-full " />
+            <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
             <span className="flex-nowrap text-lg font-extralight uppercase tracking-wide md:text-xl">
               Hi, my name is{" "}
-              <span className="gradient whitespace-nowrap bg-clip-text font-semibold text-transparent">
+              <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] whitespace-nowrap bg-clip-text font-semibold text-transparent">
                 Waldemar Panin
               </span>
             </span>
             <div className="">
               <h2 className="pb-6 text-4xl font-bold sm:text-5xl md:text-6xl">
                 I build things for the{" "}
-                <span className="gradient bg-clip-text text-transparent">
+                <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text text-transparent">
                   web
                 </span>
                 <span className="text-gray-300">.</span>
@@ -309,7 +309,7 @@ function AboutMe() {
         <div className="z-10 md:absolute md:-top-6 md:right-20">
           <div className="relative">
             <Fade triggerOnce delay={200}>
-              <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
+              <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
               <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
               <Image
                 src="/images/walde_portrait.jpeg"
@@ -392,7 +392,7 @@ function Skillset() {
     return (
       <div className="relative flex flex-col items-center gap-4">
         <div className="relative flex h-20 w-20 flex-col items-center justify-center rounded-full ">
-          <div className="gradient absolute -inset-0.5 rounded-full border blur-sm" />
+          <div className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] absolute -inset-0.5 rounded-full border blur-sm" />
           <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[hsl(235,44%,5%)]">
             <Image src={icon} alt={name} width={40} height={40} />
           </div>
