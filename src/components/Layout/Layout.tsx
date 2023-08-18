@@ -19,7 +19,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <InfoBanner />
       <Sidebar />
       <main className="flex min-h-screen overflow-hidden w-full flex-1 flex-col items-center py-12 px-6 text-center md:mb-24 md:py-0 md:px-20">
         {children}

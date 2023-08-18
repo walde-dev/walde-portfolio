@@ -1,6 +1,6 @@
 export default function Impressum() {
   return (
-    <div className="mt-32 px-12 text-left">
+    <div className="mt-32 md:px-12 lg:px-40 text-left">
       <h1 className="text-xl font-semibold">Impressum</h1>
       <p className="mt-2">Angaben gemäß § 5 TMG</p>
       <p className="mt-2">
@@ -25,6 +25,7 @@ export default function Impressum() {
           <strong>Haftungsausschluss: </strong>
           <br />
           <br />
+
           <strong>Datenschutz</strong>
           <br />
           <br />

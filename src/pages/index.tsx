@@ -11,19 +11,21 @@ import DesignIcon from "../components/icons/DesignIcon";
 import BlockchainIcon from "../components/icons/BlockchainIcon";
 import { SocialList } from "../components/Sidebar";
 import ContactForm from "../components/ContactForm";
+import InfoBanner from "../components/InfoBanner";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex w-full max-w-5xl flex-1 flex-col">
+    <div className="flex w-full max-w-5xl flex-1 flex-col pt-[50px] md:pt-[100px]">
       <div className="flex h-full flex-col justify-between md:h-screen">
-        <div className="relative mt-12 w-full text-left md:mt-56">
+        <div className="relative flex w-full flex-col space-y-4 text-left">
+          <InfoBanner />
           <Fade cascade damping={0.2} triggerOnce className="">
-            <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full" />
-            <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] -right-12 top-52 h-[400px] w-[400px] rounded-full " />
-            <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full" />
+            <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+            <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] " />
+            <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
             <span className="flex-nowrap text-lg font-extralight uppercase tracking-wide md:text-xl">
               Hi, my name is{" "}
-              <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] whitespace-nowrap bg-clip-text font-semibold text-transparent">
+              <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
                 Waldemar Panin
               </span>
             </span>
@@ -102,6 +104,8 @@ function MyWork() {
     projectTitle,
     description,
     techStack,
+    users,
+    award,
     counter,
     year,
     pinned = false,
@@ -114,6 +118,8 @@ function MyWork() {
     projectTitle?: string;
     description?: string;
     techStack?: string[];
+    users?: string;
+    award?: string;
     counter: number;
     year: string;
     pinned?: boolean;
@@ -141,13 +147,61 @@ function MyWork() {
                   </svg>
                 </span>
               )}
-              <span className="text-xl font-light uppercase tracking-widest text-violet-500">
+
+              <span className="mt-4 text-xl font-light uppercase tracking-widest text-violet-500">
                 {projectTitle}
               </span>
               <span className="text-4xl font-black text-gray-900 dark:text-gray-300">
                 {title}
               </span>
-              <span className="mt-4 text-lg font-medium text-gray-900 dark:text-gray-300">
+              {!!users && (
+                <div
+                  className={classNames(
+                    "relative mt-4 flex max-w-fit flex-row items-center justify-center space-x-2  rounded-[32px] border border-violet-900 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-violet-800/40 dark:text-violet-300"
+                  )}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    className="h-5 w-5 fill-violet-600 dark:fill-violet-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                    />
+                  </svg>
+                  <span className="text-violet-600 dark:text-violet-500">
+                    {users} monthly users
+                  </span>
+                </div>
+              )}
+              {!!award && (
+                <div
+                  className={classNames(
+                    "relative mt-4 flex max-w-fit flex-row items-center justify-center space-x-2  rounded-[32px] border border-violet-900 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-violet-800/40 dark:text-violet-300"
+                  )}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    className="h-5 w-5 fill-violet-600 dark:fill-violet-500"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"
+                    />
+                  </svg>
+
+                  <span className="text-violet-600 dark:text-violet-500">
+                    {award}
+                  </span>
+                </div>
+              )}
+              <span className="mt-2 text-lg font-medium text-gray-900 dark:text-gray-300">
                 {description}{" "}
                 <span className="ml-2 text-violet-500">{year}</span>
               </span>
@@ -164,6 +218,7 @@ function MyWork() {
                   ))}
                 </div>
               )} */}
+
               {tags && (
                 <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto] flex-row gap-3 xs:grid-cols-[_auto_auto_auto] md:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => {
@@ -184,7 +239,7 @@ function MyWork() {
                 </div>
               )}
             </div>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-row items-center space-x-6">
               <Link href={href}>
                 <a
                   rel="noreferrer"
@@ -244,6 +299,7 @@ function MyWork() {
             "TailwindCSS",
             "Blockchain",
           ]}
+          users="150 000+"
           href="https://cashrain.com"
           image="/images/cashrain.png"
           counter={1}
@@ -255,6 +311,7 @@ function MyWork() {
           title="Your Social Crypto Wallet - The Future of Tipping"
           projectTitle="CoinKit"
           description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
+          users="60 000+"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
           image="/images/coinkit_app.png"
@@ -264,12 +321,25 @@ function MyWork() {
           pinned
         />
         <Project
+          title="Decentralized Freelance Hiring Platform"
+          projectTitle="Decentralance"
+          description="Built during the EthMunich 2023 Hackathon, Winner of the Starknet Bounty. Decentralance is a decentralized freelance hiring platform that allows you to post jobs on-chain. Freelancers can send proposals through our smart contract. It is built on the Polygon blockchain and uses smart contracts to ensure that both parties are satisfied with the work."
+          techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
+          award="Starknet Bounty Winner"
+          href="https://decentralance.vercel.app"
+          image="/images/decentralance.png"
+          counter={3}
+          year="2023"
+          tags={["Frontend", "Blockchain"]}
+          pinned
+        />
+        <Project
           title="My Portfolio"
           projectTitle="waldemar.dev"
           description="My portfolio website (the one you are currently at). I built & designed this website to showcase my work and connect with clients."
           techStack={["React", "Next.js", "TypeScript", "TailwindCSS"]}
           href="https://waldemar.dev"
-          counter={3}
+          counter={4}
           year="2023"
           tags={["Frontend", "Design"]}
           pinned
@@ -309,7 +379,7 @@ function AboutMe() {
         <div className="z-10 md:absolute md:-top-6 md:right-20">
           <div className="relative">
             <Fade triggerOnce delay={200}>
-              <BackgroundGlow className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full opacity-5" />
+              <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] opacity-5" />
               <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
               <Image
                 src="/images/walde_portrait.jpeg"
@@ -392,7 +462,7 @@ function Skillset() {
     return (
       <div className="relative flex flex-col items-center gap-4">
         <div className="relative flex h-20 w-20 flex-col items-center justify-center rounded-full ">
-          <div className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] absolute -inset-0.5 rounded-full border blur-sm" />
+          <div className="gradient absolute -inset-0.5 rounded-full border bg-gradient-to-r from-[#965de9] to-[#6358ee] blur-sm" />
           <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[hsl(235,44%,5%)]">
             <Image src={icon} alt={name} width={40} height={40} />
           </div>
@@ -459,7 +529,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
         </div>
-        <div className="mt-4 text-left dark:text-gray-200 text-gray-800 font-medium dark:font-normal md:w-1/2">
+        <div className="mt-4 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
