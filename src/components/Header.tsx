@@ -19,7 +19,7 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className="glass-bg fixed top-0 z-50 flex w-full overflow-hidden px-2 md:px-20">
+    <header className="glass-bg border-b border-gray-800/40 fixed top-0 z-50 flex w-full overflow-hidden px-2 md:px-20">
       <Fade
         big
         cascade

@@ -254,16 +254,18 @@ function MyWork() {
           {!!image && (
             <div
               className={classNames(
-                "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg lg:mb-0  lg:w-[450px]",
+                "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg hover:cursor-pointer lg:mb-0  lg:w-[450px]",
                 imageClassName
               )}
             >
-              <Image
-                src={image}
-                alt={title + "_image"}
-                layout="fill"
-                className="rounded-2xl object-cover opacity-60 transition-all duration-300 ease-in-out group-hover:opacity-100"
-              />
+              <a href={href} rel="noopener noreferrer" target="_blank">
+                <Image
+                  src={image}
+                  alt={title + "_image"}
+                  layout="fill"
+                  className="rounded-2xl object-cover opacity-60 transition-all duration-300 ease-in-out group-hover:opacity-100"
+                />
+              </a>
             </div>
           )}
         </div>
