@@ -333,7 +333,7 @@ function MyWork() {
           tags={["Frontend", "Blockchain"]}
           pinned
         />
-        <Project
+        {/* <Project
           title="My Portfolio"
           projectTitle="waldemar.dev"
           description="My portfolio website (the one you are currently at). I built & designed this website to showcase my work and connect with clients."
@@ -343,7 +343,7 @@ function MyWork() {
           year="2023"
           tags={["Frontend", "Design"]}
           pinned
-        />
+        /> */}
         <Project
           title="The First Web3 Winestore"
           projectTitle="Cryptograpes"
