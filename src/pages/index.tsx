@@ -278,7 +278,7 @@ function MyWork() {
       id="work"
       className="relative mb-40 flex flex-col justify-center md:scroll-m-20"
     >
-      <div className="relative rounded-xl pb-12 pt-6">
+      <div className="relative rounded-xl pb-1 pt-6">
         <Fade triggerOnce>
           <div className="flex flex-row items-center md:w-3/4">
             <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
@@ -288,6 +288,7 @@ function MyWork() {
           </div>
         </Fade>
       </div>
+
       <div className="flex flex-col space-y-12">
         {/* <Project title="Personal Portfolio" href="https://waldemar.dev" /> */}
         <Project
@@ -367,6 +368,18 @@ function MyWork() {
           pinned
         />
       </div>
+      <hr className="mx-12 mt-12  opacity-10" />
+      <span className="mt-8 text-left text-gray-600 dark:text-gray-400">
+        For design ideas, prototypes & concepts you can check out my{" "}
+        <a
+          href="https://layers.to/walde"
+          rel="noreferrer noopener"
+          target="_blank"
+          className="decoration group inline underline decoration-violet-500 underline-offset-2 hover:text-black dark:hover:text-white"
+        >
+          layers.to profile
+        </a>
+      </span>
     </div>
   );
 }
