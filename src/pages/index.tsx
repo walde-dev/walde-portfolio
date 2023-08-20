@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         </a>
       </div>
 
-      <div className="mt-[128px] flex flex-col gap-4">
+      <div className="mt-[128px] flex flex-col gap-24">
         <Fade cascade damping={0.2} triggerOnce>
           <MyWork />
           <AboutMe />
@@ -127,7 +127,7 @@ function MyWork() {
   }) {
     return (
       <Fade cascade damping={0.5} delay={100 * counter} triggerOnce>
-        <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl py-8  lg:flex-row lg:space-x-5">
+        <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl pt-8  lg:flex-row lg:space-x-5">
           <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
             <div className="flex max-w-full flex-col">
               {pinned && (
@@ -148,7 +148,7 @@ function MyWork() {
                 </span>
               )}
 
-              <span className="mt-4 text-xl font-light uppercase tracking-widest text-violet-500">
+              <span className="mt-4 text-xl font-light uppercase tracking-wide text-violet-500">
                 {projectTitle}
               </span>
               <span className="text-4xl font-black text-gray-900 dark:text-gray-300">
@@ -281,10 +281,10 @@ function MyWork() {
       <div className="relative rounded-xl pb-1 pt-6">
         <Fade triggerOnce>
           <div className="flex flex-row items-center md:w-3/4">
-            <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
+            <span className="min-w-fit text-right text-xl font-semibold  uppercase md:text-3xl">
               My Work
             </span>
-            <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
+            <hr className="ml-12 w-4/5 border border-violet-500/20" />
           </div>
         </Fade>
       </div>
@@ -395,7 +395,7 @@ function AboutMe() {
           <div className="relative">
             <Fade triggerOnce delay={200}>
               <BackgroundGlow className="gradient animation-delay-2000 inset-x-44 h-[200px] w-[200px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] opacity-5" />
-              <div className="absolute inset-x-6 h-full w-full rounded-full border-2 border-violet-500/20 " />
+              <div className="absolute inset-x-6 h-full w-full rounded-full border border-violet-500/20 " />
               <Image
                 src="/images/walde_portrait.jpeg"
                 alt="Waldemar Panin"
@@ -408,10 +408,10 @@ function AboutMe() {
         </div>
         <Fade triggerOnce>
           <div className="flex flex-row items-center md:w-3/4">
-            <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
+            <span className="min-w-fit text-right text-xl font-semibold uppercase md:text-3xl">
               About me
             </span>
-            <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
+            <hr className="ml-12 w-4/5 border border-violet-500/20" />
           </div>
         </Fade>
         <Fade
@@ -419,43 +419,42 @@ function AboutMe() {
           cascade
           damping={0.1}
           delay={300}
-          className="mt-8 flex flex-col gap-4 text-left text-lg font-normal md:w-1/2"
+          className="mt-8 text-left text-lg font-normal md:w-1/2"
         >
           <p>
-            Hey! My name is{" "}
-            <span className="font-normal text-black dark:text-white">
-              Waldemar
-            </span>
-            . I&apos;m a{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-900 dark:text-gray-200">
-              full-stack web developer
-            </span>{" "}
+            Hey! My name is Waldemar. I&apos;m a full-stack web developer
             located in Munich, Germany. I have a huge passion for creating
-            intuitive and interactive{" "}
-            <span className="underline-gradient-no-hover whitespace-nowrap px-1 font-semibold text-gray-900 dark:text-gray-200">
-              user experiences
-            </span>
-            .
+            intuitive and interactive user experiences.
           </p>
           <p>
-            From solo-projects to working in a team, I have experience in all
-            aspects of the development cycle. I&apos;m always looking for
-            opportunities to work on{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-900 dark:text-gray-200">
-              meaningful projects
-            </span>{" "}
-            with{" "}
-            <span className="underline-gradient-no-hover px-1 font-semibold text-gray-900 dark:text-gray-200">
-              like minded people
-            </span>
-            .
+            I have designed, built and launched multiple web projects for
+            clients and myself. Many of these projects are being used by tens of
+            thousands of people every month.
           </p>
-          <p>
+          {/* <p>
             I take a collaborative approach to my work, and I&apos;m always
             looking for ways to bring value to my clients and their users.
             Whether you&apos;re looking for a new website, a redesign, or just
             want to improve the user experience of your existing site, I&apos;m
             ready to help you achieve your goals.
+          </p> */}
+          <p>
+            Additionally, I am very passionate about blockchain technology and
+            the future of the web. I&apos;m currently working on a few projects
+            in the blockchain space, and I&apos;m always looking for new
+            opportunities to learn and grow. I think that the UX aspect of
+            current web3 projects is lacking, and I want to change that. One
+            rectangle at a time.
+          </p>
+          <p>
+            On one hand, I am way more passionate and skilled in the UI/UX
+            aspect of a web project than the average frontend developer.
+          </p>
+          <p>
+            On the other hand, I am a lot more skilled and experienced in the
+            frontend developing aspect of a web project than the average UI/UX
+            designer. This combination creates a unique skillset that is very
+            valuable for any web project.
           </p>
           <p>
             When I&apos;m not coding and/or designing, you&apos;ll find me
@@ -495,7 +494,7 @@ function Skillset() {
       className="relative flex flex-col items-end justify-center md:scroll-m-20"
     >
       <div className="flex w-full flex-row items-center">
-        <hr className="mr-12 w-4/5 border-2 border-violet-500/30" />
+        <hr className="mr-12 w-4/5 border border-violet-500/30" />
         <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
           SKILLS
         </span>
@@ -539,10 +538,10 @@ function Contact() {
         className="relative flex flex-col justify-center md:scroll-m-20"
       >
         <div className="flex flex-row items-center md:w-3/4">
-          <span className="min-w-fit text-right text-xl font-light uppercase tracking-widest md:text-3xl">
+          <span className="min-w-fit text-right text-xl font-semibold  uppercase md:text-3xl">
             Contact
           </span>
-          <hr className="ml-12 w-4/5 border-2 border-violet-500/20" />
+          <hr className="ml-12 w-4/5 border border-violet-500/20" />
         </div>
         <div className="mt-4 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
           <p>
