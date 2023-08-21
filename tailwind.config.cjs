@@ -12,7 +12,7 @@ module.exports = {
         wiggle: "wiggle 7s ease-in-out infinite",
       },
       screens: {
-        "xs": "400px",
+        xs: "400px",
         "2xs": "350px",
       },
       keyframes: {
@@ -30,5 +30,9 @@ module.exports = {
       },
     },
   },
-  plugins: ["postcss-import", "tailwindcss/nesting"],
+  plugins: [
+    "postcss-import",
+    "tailwindcss/nesting",
+    require("@tailwindcss/container-queries"),
+  ],
 };

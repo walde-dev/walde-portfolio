@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@headlessui/react": "^1.7.15",
+    "@tailwindcss/container-queries": "^0.1.1",
     "@tanstack/react-query": "^4.32.0",
     "@vercel/analytics": "^1.0.1",
     "classnames": "^2.3.2",
