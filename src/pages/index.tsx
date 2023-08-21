@@ -101,6 +101,7 @@ function MyWork() {
     href,
     image,
     imageClassName,
+    extraImage,
     projectTitle,
     description,
     techStack,
@@ -115,6 +116,7 @@ function MyWork() {
     href: string;
     image?: string;
     imageClassName?: string;
+    extraImage?: string;
     projectTitle?: string;
     description?: string;
     techStack?: string[];
@@ -125,9 +127,10 @@ function MyWork() {
     pinned?: boolean;
     tags?: Tag[];
   }) {
+    const isVideo = image?.endsWith(".mp4");
     return (
       <Fade cascade damping={0.5} delay={100 * counter} triggerOnce>
-        <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl pt-8  lg:flex-row lg:space-x-5">
+        <div className="project-card group relative flex w-full flex-col-reverse justify-between space-x-0 rounded-xl pt-8 lg:flex-row lg:space-x-5">
           <div className=" flex w-full flex-col items-start  pb-4 text-left lg:w-2/3">
             <div className="flex max-w-full flex-col">
               {pinned && (
@@ -239,34 +242,85 @@ function MyWork() {
                 </div>
               )}
             </div>
+            {!!extraImage && (
+              <div className="relative h-[500px] w-full ">
+                <Image
+                  layout="fill"
+                  objectFit="contain"
+                  src={extraImage}
+                  alt={title + "_extra"}
+                />
+              </div>
+            )}
             <div className="mt-8 flex flex-row items-center space-x-6">
               <Link href={href}>
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient pb-2  text-2xl hover:text-black dark:hover:text-white"
+                  className="underline-gradient-on-group-hover underline-gradient-only underline-gradient flex flex-row items-center space-x-2 pb-2  text-2xl hover:text-black dark:hover:text-white"
                 >
-                  View Project
+                  <span>View Project</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="h-6 w-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                    />
+                  </svg>
                 </a>
               </Link>
             </div>
           </div>
-          {!!image && (
-            <div
-              className={classNames(
-                "relative mb-8 flex h-[300px] w-full items-center justify-center rounded-lg hover:cursor-pointer lg:mb-0  lg:w-[450px]",
-                imageClassName
-              )}
+          {!!image && !isVideo && (
+            <a
+              href={href}
+              className="relative my-8 flex h-[300px]  w-full items-center justify-center rounded-lg hover:cursor-pointer lg:mb-0  lg:w-[450px]"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <a href={href} rel="noopener noreferrer" target="_blank">
+              <div
+                className={classNames(
+                  "relative h-full w-full ",
+                  imageClassName
+                )}
+              >
                 <Image
                   src={image}
                   alt={title + "_image"}
                   layout="fill"
-                  className="rounded-2xl object-cover opacity-60 transition-all duration-300 ease-in-out group-hover:opacity-100"
+                  className="rounded-md object-cover transition-all duration-300 ease-in-out"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
+          )}
+
+          {!!image && isVideo && (
+            <a
+              href={href}
+              className="relative my-8 flex w-full items-center justify-center rounded-lg hover:cursor-pointer lg:mb-0  lg:w-[450px]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={classNames(
+                  "relative rounded-lg",
+                  imageClassName
+                )}
+              >
+                <source src={image} className="" type="video/mp4" />
+              </video>
+            </a>
           )}
         </div>
       </Fade>
@@ -304,7 +358,8 @@ function MyWork() {
           ]}
           users="150 000+"
           href="https://cashrain.com"
-          image="/images/cashrain.png"
+          image="/images/cashrain/cashrain_main.png"
+          // extraImage="/images/cashrain/cashrain_extra.png"
           counter={1}
           year="2022"
           tags={["Frontend", "Design", "Blockchain"]}
@@ -317,7 +372,7 @@ function MyWork() {
           users="60 000+"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
-          image="/images/coinkit_app.png"
+          image="/images/coinkit.mp4"
           counter={2}
           year="2021"
           tags={["Frontend", "Blockchain"]}
