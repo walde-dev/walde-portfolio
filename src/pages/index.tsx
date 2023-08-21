@@ -30,15 +30,15 @@ const Home: NextPage = () => {
               </span>
             </span>
             <div className="font-bold">
-              <h2 className="text-3xl  sm:text-5xl md:text-6xl">
-                I built beautiful things <br /> for the{" "}
+              <h2 className="text-4xl  sm:text-5xl md:text-6xl">
+                I built beautiful things for the{" "}
                 <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text text-transparent">
                   web
                 </span>
                 <br />
               </h2>
-              <span className="-mt-2 text-2xl sm:text-3xl">
-                & I design them too.
+              <span className="-mt-2 text-3xl sm:text-4xl">
+                & design them too.
               </span>
             </div>
             <p className="mt-2 text-xl font-normal dark:font-light md:w-3/5">
