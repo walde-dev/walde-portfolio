@@ -133,7 +133,7 @@ function MyWork() {
     const isVideo = image?.endsWith(".mp4");
     return (
       <Fade cascade damping={0.5} delay={100 * counter} triggerOnce>
-        <div className="project-card group relative flex h-full w-full flex-col justify-between rounded-xl dark:bg-gray-400/10 bg-gray-300/20 px-6 pb-8 pt-8 @container">
+        <div className="project-card group relative flex h-full w-full flex-col justify-between rounded-xl bg-gray-300/20 px-6 pb-8 pt-8 @container dark:bg-gray-400/10">
           <div className="">
             {!!image && !isVideo && (
               <a
@@ -251,8 +251,7 @@ function MyWork() {
                   )}
                 </div>
                 <span className="mt-2 text-lg font-medium text-gray-900 dark:text-gray-300">
-                  {description}{" "}
-                  <span className="ml-2 text-violet-500">{year}</span>
+                  {description} <span className="text-violet-500">{year}</span>
                 </span>
 
                 {/* {techStack && (
@@ -267,26 +266,6 @@ function MyWork() {
                   ))}
                 </div>
               )} */}
-
-                {tags && (
-                  <div className="mt-2 grid w-full max-w-min grid-cols-[_auto_auto] gap-3 @sm:grid-cols-[_auto_auto_auto] @md:grid-cols-[_auto_auto_auto_auto]">
-                    {tags.map((tag) => {
-                      const icon = tagIcons[tag];
-
-                      return (
-                        <div
-                          key={tag}
-                          className={classNames(
-                            "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-zinc-800 dark:text-zinc-300"
-                          )}
-                        >
-                          {icon}
-                          <span>{tag}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
               </div>
               {!!extraImage && (
                 <div className="relative h-[500px] w-full ">
@@ -300,29 +279,53 @@ function MyWork() {
               )}
             </div>
           </div>
-          <Link href={href}>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              className="mt-12 underline-gradient-on-group-hover underline-gradient-only underline-gradient flex flex-row items-center space-x-2 pb-2  text-2xl hover:text-black dark:hover:text-white"
-            >
-              <span>View Project</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-6 w-6"
+          <div className="mt-12 space-y-6 lg:space-y-0 flex lg:flex-row flex-col lg:items-end lg:justify-between">
+            {tags && (
+              <div className="flex flex-col">
+                <span className="text-left text-lg text-violet-500">Role</span>
+                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] gap-3 @lg:grid-cols-[_auto_auto_auto] @xl:grid-cols-[_auto_auto_auto_auto]">
+                  {tags.map((tag) => {
+                    const icon = tagIcons[tag];
+
+                    return (
+                      <div
+                        key={tag}
+                        className={classNames(
+                          "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-zinc-800 dark:text-zinc-300"
+                        )}
+                      >
+                        {icon}
+                        <span>{tag}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+            <Link href={href}>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                className="flex w-full lg:max-w-fit flex-row justify-center items-center space-x-2 rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-2 py-1 text-lg font-semibold text-black opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 dark:text-white"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </a>
-          </Link>
+                <span>View Project</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={3}
+                  stroke="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  />
+                </svg>
+              </a>
+            </Link>
+          </div>
         </div>
       </Fade>
     );
@@ -363,7 +366,7 @@ function MyWork() {
           // extraImage="/images/cashrain/cashrain_extra.png"
           counter={1}
           year="2022"
-          tags={["Frontend", "Design", "Blockchain"]}
+          tags={["Frontend", "Design"]}
           pinned
         />
         <Project
@@ -376,7 +379,7 @@ function MyWork() {
           image="/images/coinkit.mp4"
           counter={2}
           year="2021"
-          tags={["Frontend", "Blockchain"]}
+          tags={["Frontend", "Design"]}
           pinned
         />
         <Project
@@ -389,7 +392,7 @@ function MyWork() {
           image="/images/decentralance.png"
           counter={3}
           year="2023"
-          tags={["Frontend", "Blockchain"]}
+          tags={["Frontend", "Design"]}
           pinned
         />
         {/* <Project
@@ -421,7 +424,7 @@ function MyWork() {
           award="0 -> 1 web3 store"
           counter={4}
           year="2022"
-          tags={["Frontend", "Design", "Backend", "Blockchain"]}
+          tags={["Frontend", "Design", "Backend"]}
           pinned
         />
       </div>
