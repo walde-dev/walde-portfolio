@@ -29,14 +29,17 @@ const Home: NextPage = () => {
                 Waldemar Panin
               </span>
             </span>
-            <div className="">
-              <h2 className="pb-6 text-4xl font-bold sm:text-5xl md:text-6xl">
-                I build things for the{" "}
+            <div className="font-bold">
+              <h2 className="text-3xl  sm:text-5xl md:text-6xl">
+                I built beautiful things <br /> for the{" "}
                 <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text text-transparent">
                   web
                 </span>
-                <span className="text-gray-300">.</span>
+                <br />
               </h2>
+              <span className="-mt-2 text-2xl sm:text-3xl">
+                & I design them too.
+              </span>
             </div>
             <p className="mt-2 text-xl font-normal dark:font-light md:w-3/5">
               I&apos;m a software engineer based in Munich, Germany. I
@@ -313,10 +316,7 @@ function MyWork() {
                 loop
                 muted
                 playsInline
-                className={classNames(
-                  "relative rounded-lg",
-                  imageClassName
-                )}
+                className={classNames("relative rounded-lg", imageClassName)}
               >
                 <source src={image} className="" type="video/mp4" />
               </video>
