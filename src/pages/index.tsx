@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] " />
             <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
-            <span className="flex-nowrap text-lg font-light uppercase tracking- md:text-xl">
+            <span className="tracking- flex-nowrap text-lg font-light uppercase md:text-xl">
               Hi, my name is{" "}
               <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
                 Waldemar Panin
@@ -493,15 +493,17 @@ function AboutMe() {
           className="mt-8 text-left text-lg font-normal lg:w-1/2"
         >
           <p>
-            Hey! My name is Waldemar. I&apos;m a full-stack web developer
-            located in Munich, Germany. I have a huge passion for creating
-            intuitive and interactive user experiences.
+            Hey! My name is Waldemar. I&apos;m a frontend web developer &
+            designer located in Munich, Germany. I have a huge passion for
+            creating intuitive and interactive user experiences.
           </p>
           <p>
             I have designed, built and launched multiple web projects for
             clients and myself. Many of these projects are being used by tens of
             thousands of people every month.
           </p>
+          <hr className="border border-violet-500/20 " />
+
           {/* <p>
             I take a collaborative approach to my work, and I&apos;m always
             looking for ways to bring value to my clients and their users.
@@ -514,9 +516,15 @@ function AboutMe() {
             the future of the web. I&apos;m currently working on a few projects
             in the blockchain space, and I&apos;m always looking for new
             opportunities to learn and grow. I think that the UX aspect of
-            current web3 projects is lacking, and I want to change that. One
-            rectangle at a time.
+            current web3 projects is lacking, and I want to change that.
+            <span className="bg-gradient-to-r from-[#965de9] to-[#695eff] bg-clip-text font-semibold text-transparent">
+              {" "}
+              One rectangle at a time
+            </span>
+            .
           </p>
+          <hr className="border border-violet-500/20 " />
+
           <p>
             On one hand, I am way more passionate and skilled in the UI/UX
             aspect of a web project than the average frontend developer.
