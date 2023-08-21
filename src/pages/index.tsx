@@ -41,14 +41,15 @@ const Home: NextPage = () => {
                 & design them too.
               </span>
             </div>
-            <p className="mt-2 text-xl font-normal dark:font-light md:w-3/5">
-              I&apos;m a software engineer based in Munich, Germany. I
-              specialize in building & designing exceptional websites,
+            <p className="mt-2 text-xl font-normal dark:font-light md:w-[65%]">
+              Designer & Developer based in Munich, Germany. <br />
+              Frontend Developer & UI/UX Designer at Blockcurators. <br />
+              <br />I specialize in building & designing exceptional websites,
               applications, and everything in between. <br /> <br />
               <span>Let&apos;s build something together. </span>
             </p>
             <div className="flex items-center justify-center md:block">
-              <button className="learn-more mt-10">
+              <button className="learn-more mt-4">
                 <span className="circle" aria-hidden="true">
                   <span className="icon arrow"></span>
                 </span>
@@ -161,7 +162,7 @@ function MyWork() {
             {!!image && isVideo && (
               <a
                 href={href}
-                className="relative flex h-[300px] w-full items-center  justify-center rounded-lg hover:cursor-pointer md:h-[250px]"
+                className="relative mx-auto flex h-[300px] w-full max-w-[700px] items-center justify-center rounded-lg hover:cursor-pointer md:h-[400px]"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -195,7 +196,7 @@ function MyWork() {
                     </svg>
                   </span>
                 )}
-                <div className="flex flex-col lg:h-[180px]">
+                <div className="flex flex-col xl:h-[180px]">
                   <span className="mt-4 text-xl font-light uppercase tracking-wide text-violet-500">
                     {projectTitle}
                   </span>
@@ -279,7 +280,7 @@ function MyWork() {
               )}
             </div>
           </div>
-          <div className="mt-12 space-y-6 lg:space-y-0 flex lg:flex-row flex-col lg:items-end lg:justify-between">
+          <div className="mt-12 flex flex-col space-y-6 xl:flex-row xl:items-end xl:justify-between xl:space-y-0">
             {tags && (
               <div className="flex flex-col">
                 <span className="text-left text-lg text-violet-500">Role</span>
@@ -306,7 +307,7 @@ function MyWork() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                className="flex w-full lg:max-w-fit flex-row justify-center items-center space-x-2 rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-2 py-1 text-lg font-semibold text-black opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 dark:text-white"
+                className="flex w-full flex-row items-center justify-center space-x-2 rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-6 py-2 text-lg font-semibold text-black opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 dark:text-white xl:max-w-fit"
               >
                 <span>View Project</span>
                 <svg
@@ -347,7 +348,7 @@ function MyWork() {
         </Fade>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
         {/* <Project title="Personal Portfolio" href="https://waldemar.dev" /> */}
         <Project
           title="Reward your followers with crypto"
@@ -448,7 +449,7 @@ function AboutMe() {
   return (
     <div
       id="aboutme"
-      className="relative flex flex-col justify-center md:scroll-m-20"
+      className="relative flex flex-col justify-center  md:scroll-m-20"
     >
       <div className="relative rounded-xl pb-12 pt-6">
         <div className="z-10 lg:absolute lg:-top-6 lg:right-20">
@@ -467,7 +468,7 @@ function AboutMe() {
           </div>
         </div>
         <Fade triggerOnce>
-          <div className="flex flex-row items-center md:w-3/4">
+          <div className="flex flex-row items-center lg:w-3/4">
             <span className="min-w-fit text-right text-xl font-semibold uppercase md:text-3xl">
               About me
             </span>
@@ -479,7 +480,7 @@ function AboutMe() {
           cascade
           damping={0.1}
           delay={300}
-          className="mt-8 text-left text-lg font-normal md:w-1/2"
+          className="mt-8 text-left text-lg font-normal lg:w-1/2"
         >
           <p>
             Hey! My name is Waldemar. I&apos;m a full-stack web developer
@@ -597,13 +598,13 @@ function Contact() {
         id="contact"
         className="relative flex flex-col justify-center md:scroll-m-20"
       >
-        <div className="flex flex-row items-center md:w-3/4">
+        <div className="flex flex-row items-center lg:w-3/4">
           <span className="min-w-fit text-right text-xl font-semibold  uppercase md:text-3xl">
             Contact
           </span>
           <hr className="ml-12 w-4/5 border border-violet-500/20" />
         </div>
-        <div className="mt-4 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
+        <div className="mt-4 w-2/3 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
@@ -614,10 +615,10 @@ function Contact() {
             me.
           </p>
         </div>
-        <div className="mt-8 w-full md:mt-12 md:w-1/2">
+        <div className="mt-8 w-full lg:mt-12 lg:w-1/2">
           <ContactForm />
         </div>
-        <div className="mt-12 flex w-full justify-center md:hidden">
+        <div className="mt-12 flex w-full justify-center lg:hidden">
           <SocialList className="flex-row" />
         </div>
       </div>
