@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] " />
             <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
-            <span className="flex-nowrap text-lg font-extralight uppercase tracking-wide md:text-xl">
+            <span className="flex-nowrap text-lg font-light uppercase tracking- md:text-xl">
               Hi, my name is{" "}
               <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
                 Waldemar Panin
@@ -42,8 +42,18 @@ const Home: NextPage = () => {
               </span>
             </div>
             <p className="mt-2 text-xl font-normal dark:font-light md:w-[65%]">
-              Designer & Developer based in Munich, Germany. <br />
-              Frontend Developer & UI/UX Designer at Blockcurators. <br />
+              <span className="font-medium">
+                Frontend Developer & UI/UX Designer at{" "}
+                <a
+                  href="https://blockcurators.com"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  className=" underline decoration-2 underline-offset-2"
+                >
+                  Blockcurators
+                </a>
+              </span>
+              <br />
               <br />I specialize in building & designing exceptional websites,
               applications, and everything in between. <br /> <br />
               <span>Let&apos;s build something together. </span>
@@ -162,7 +172,7 @@ function MyWork() {
             {!!image && isVideo && (
               <a
                 href={href}
-                className="relative mx-auto flex h-[300px] w-full max-w-[700px] items-center justify-center rounded-lg hover:cursor-pointer md:h-[400px]"
+                className="relative mx-auto h-[300px] w-full max-w-[700px] rounded-lg hover:cursor-pointer md:h-[300px]"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -348,7 +358,7 @@ function MyWork() {
         </Fade>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="group mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
         {/* <Project title="Personal Portfolio" href="https://waldemar.dev" /> */}
         <Project
           title="Reward your followers with crypto"
