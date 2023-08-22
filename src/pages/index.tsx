@@ -64,7 +64,7 @@ const Home: NextPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="group whitespace-nowrap hidden rotate-[3deg] flex-col items-center justify-center lg:flex">
+              <div className="group hidden rotate-[3deg] flex-col items-center justify-center whitespace-nowrap lg:flex">
                 <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
                   Hi, my name is{" "}
                   <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
@@ -127,10 +127,10 @@ type Tag = "Frontend" | "Backend" | "Design" | "Blockchain";
 
 //icon for each tag
 const tagIcons = {
-  Frontend: <FrontendIcon className="text-zinc-800 dark:text-zinc-300" />,
-  Backend: <BackendIcon className="text-zinc-800 dark:text-zinc-300" />,
-  Design: <DesignIcon className="text-zinc-800 dark:text-zinc-300" />,
-  Blockchain: <BlockchainIcon className="text-zinc-800 dark:text-zinc-300" />,
+  Frontend: <FrontendIcon className="text-white" />,
+  Backend: <BackendIcon className="text-white" />,
+  Design: <DesignIcon className="text-white" />,
+  Blockchain: <BlockchainIcon className="text-white" />,
 };
 
 function MyWork() {
@@ -148,11 +148,13 @@ function MyWork() {
     counter,
     year,
     pinned = false,
+    className,
     tags,
   }: {
     title: string;
     href: string;
     image?: string;
+    className?: string;
     imageClassName?: string;
     extraImage?: string;
     projectTitle?: string;
@@ -168,7 +170,12 @@ function MyWork() {
     const isVideo = image?.endsWith(".mp4");
     return (
       <Fade cascade damping={0.5} delay={100 * counter} triggerOnce>
-        <div className="project-card group relative flex h-full w-full flex-col justify-between rounded-xl bg-gray-300/20 px-6 pb-8 pt-8 @container dark:bg-gray-400/10">
+        <div
+          className={classNames(
+            className,
+            "project-card flex-1 group relative flex w-full flex-col rounded-[32px] px-6 pb-8 pt-8 text-white @container"
+          )}
+        >
           <div className="">
             {!!image && !isVideo && (
               <a
@@ -221,33 +228,33 @@ function MyWork() {
                       viewBox="0 0 12 20"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="rotate-45"
+                      className="rotate-45 fill-black dark:fill-white"
                     >
                       <path
                         d="M10 9L12 11V13H7V19L6 20L5 19V13H0V11L2 9V2H1V0H11V2H10V9Z"
-                        fill="rgb(139 92 246)"
+                        fill=""
                       />
                     </svg>
                   </span>
                 )}
-                <div className="flex flex-col xl:h-[180px]">
-                  <span className="mt-4 text-xl font-light uppercase tracking-wide text-violet-500">
+                <div className="flex flex-col">
+                  <span className="mt-4 text-xl font-medium uppercase tracking-wide text-white">
                     {projectTitle}
                   </span>
-                  <span className="text-4xl  font-black text-gray-900 dark:text-gray-300">
+                  <span className="text-4xl  font-black text-white">
                     {title}
                   </span>
                   {!!users && (
                     <div
                       className={classNames(
-                        "relative mt-4 flex  max-w-fit flex-row items-center justify-center space-x-2  rounded-[32px] border border-violet-900 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-violet-800/40 dark:text-violet-300"
+                        "relative mt-4 flex  max-w-fit flex-row items-center justify-center space-x-2  rounded-[32px] border border-black/60 bg-black/30 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg"
                       )}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
-                        className="h-5 w-5 fill-violet-600 dark:fill-violet-500"
+                        className="h-5 w-5 fill-white"
                       >
                         <path
                           strokeLinecap="round"
@@ -255,22 +262,20 @@ function MyWork() {
                           d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
                         />
                       </svg>
-                      <span className="text-violet-600 dark:text-violet-500">
-                        {users} monthly users
-                      </span>
+                      <span className="text-white">{users} monthly users</span>
                     </div>
                   )}
                   {!!award && (
                     <div
                       className={classNames(
-                        "relative mt-4 flex max-w-fit flex-row items-center justify-center space-x-2  rounded-[32px] border border-violet-900 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-violet-800/40 dark:text-violet-300"
+                        "relative mt-4 flex max-w-fit flex-row items-center justify-center space-x-2  rounded-[32px] border border-black/60  bg-black/30 px-2 py-1 text-sm font-medium text-white shadow-xl"
                       )}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
-                        className="h-5 w-5 fill-violet-600 dark:fill-violet-500"
+                        className="h-5 w-5 fill-white"
                       >
                         <path
                           stroke-linecap="round"
@@ -279,14 +284,13 @@ function MyWork() {
                         />
                       </svg>
 
-                      <span className="text-violet-600 dark:text-violet-500">
-                        {award}
-                      </span>
+                      <span className="text-white">{award}</span>
                     </div>
                   )}
                 </div>
-                <span className="mt-2 text-lg font-medium text-gray-900 dark:text-gray-300">
-                  {description} <span className="text-violet-500">{year}</span>
+                <span className="mt-2 text-lg font-medium text-white">
+                  {description}{" "}
+                  <span className="font-bold text-white">{year}</span>
                 </span>
 
                 {/* {techStack && (
@@ -314,10 +318,12 @@ function MyWork() {
               )}
             </div>
           </div>
-          <div className="mt-12 flex flex-col space-y-6 xl:flex-row xl:items-end xl:justify-between xl:space-y-0">
+          <div className="flex flex-col space-y-6">
             {tags && (
               <div className="flex flex-col">
-                <span className="text-left text-lg text-violet-500">Role</span>
+                <span className="text-left text-lg font-bold text-white">
+                  Role
+                </span>
                 <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] gap-3 @lg:grid-cols-[_auto_auto_auto] @xl:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => {
                     const icon = tagIcons[tag];
@@ -326,7 +332,7 @@ function MyWork() {
                       <div
                         key={tag}
                         className={classNames(
-                          "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-opacity-60 px-2 py-1 text-sm font-medium text-zinc-800 shadow-xl backdrop-blur-lg dark:bg-zinc-800 dark:text-zinc-300"
+                          "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg border border-zinc-700 bg-black/30 px-2 py-1 text-sm font-medium text-white shadow-xl backdrop-blur-lg "
                         )}
                       >
                         {icon}
@@ -341,7 +347,7 @@ function MyWork() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                className="flex w-full flex-row items-center justify-center space-x-2 rounded-md bg-gradient-to-r from-[#965de9] to-[#6358ee] px-6 py-2 text-lg font-semibold text-black opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 dark:text-white xl:max-w-fit"
+                className="flex w-full flex-row items-center justify-center space-x-2 rounded-md  px-6 py-2 text-lg font-semibold text-white transition-all duration-300 ease-in-out hover:opacity-100 "
               >
                 <span>View Project</span>
                 <svg
@@ -373,16 +379,25 @@ function MyWork() {
     >
       <div className="relative rounded-xl pb-1 pt-6">
         <Fade triggerOnce>
-          <div className="flex flex-row items-center md:w-3/4">
+          <div className="flex flex-row items-center ">
             <span className="min-w-fit text-right text-xl font-semibold  uppercase md:text-3xl">
               My Work
             </span>
-            <hr className="ml-12 w-4/5 border border-violet-500/20" />
+            <hr className="ml-12 w-full border border-violet-500/20" />
+            <div className="">
+              <Image
+                className="object-contain"
+                src="/images/kiss.png"
+                width={500}
+                height={500}
+                alt="hello"
+              />
+            </div>
           </div>
         </Fade>
       </div>
 
-      <div className="group mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="group grid gap-4 grid-flow-dense grid-cols-1 md:grid-cols-[repeat(2,_1fr)]">
         {/* <Project title="Personal Portfolio" href="https://waldemar.dev" /> */}
         <Project
           title="Reward your followers with crypto"
@@ -395,6 +410,7 @@ function MyWork() {
             "TailwindCSS",
             "Blockchain",
           ]}
+          className="bg-gradient-to-b from-[#15D9A5] to-[#5FC7CE]"
           users="150 000+"
           href="https://cashrain.com"
           image="/images/cashrain/cashrain_main.png"
@@ -409,6 +425,7 @@ function MyWork() {
           projectTitle="CoinKit"
           description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
           users="60 000+"
+          className="bg-gradient-to-b from-[#10B2DD] to-[#7E7BFF]"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
           image="/images/coinkit.mp4"
@@ -423,6 +440,7 @@ function MyWork() {
           description="Built during the EthMunich 2023 Hackathon, Winner of the Starknet Bounty. Decentralance is a decentralized freelance hiring platform on the polygon chain."
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           award="Starknet Bounty Winner"
+          className="bg-[#8565EE]"
           href="https://decentralance.vercel.app"
           image="/images/decentralance.png"
           counter={3}
@@ -458,6 +476,7 @@ function MyWork() {
           image="/images/cryptograpes_club.png"
           award="0 -> 1 web3 store"
           counter={4}
+          className="bg-[#EE3F71]"
           year="2022"
           tags={["Frontend", "Design", "Backend"]}
           pinned

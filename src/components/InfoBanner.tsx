@@ -9,7 +9,7 @@ export default function InfoBanner() {
       delay={100}
       className="-mt-2 flex max-w-[450px] items-center justify-center md:justify-start"
     >
-      <div className="mb-4 flex flex-col items-center space-y-4 rounded-[32px] border border-zinc-700 bg-opacity-60 bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-200 px-8 py-4  text-center  text-lg shadow-xl transition-all duration-150 ease-in-out dark:from-[#242427] dark:via-zinc-800 dark:to-[#242427]  sm:mb-0">
+      <div className="mb-4 flex flex-col items-center space-y-4 rounded-[32px] border border-zinc-700 bg-opacity-60 bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-200 px-4 py-2  text-center  text-lg shadow-xl transition-all duration-150 ease-in-out dark:from-[#242427] dark:via-zinc-800 dark:to-[#242427]  sm:mb-0">
         <span className="flex flex-row items-center space-x-3 whitespace-nowrap text-lg font-bold">
           <svg height="15" width="15">
             <circle
