@@ -18,55 +18,79 @@ const Home: NextPage = () => {
     <div className="flex w-full max-w-5xl flex-1 flex-col pt-[50px] md:pt-[100px]">
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
-          <InfoBanner />
-          <Fade cascade damping={0.2} triggerOnce className="">
+          <Fade cascade damping={0.2} triggerOnce className="relative">
             <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
             <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] " />
             <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
-            <span className="tracking- flex-nowrap text-lg font-light uppercase md:text-xl">
-              Hi, my name is{" "}
-              <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
-                Waldemar Panin
-              </span>
-            </span>
-            <div className="font-bold">
-              <h2 className="text-4xl  sm:text-5xl md:text-6xl">
-                I built beautiful things for the{" "}
-                <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text text-transparent">
-                  web
+            <div className="flex  items-center justify-between md:flex-row">
+              <div className="">
+                <div className="font-bold">
+                  <h2 className="text-4xl  sm:text-5xl md:text-6xl">
+                    I built beautiful <br />
+                    things for the{" "}
+                    <span className="gradient bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text text-transparent">
+                      web
+                    </span>
+                    <br />
+                  </h2>
+                  <span className="-mt-2 text-3xl sm:text-4xl">
+                    & design them too.
+                  </span>
+                </div>
+                <p className="mt-8 text-xl font-normal dark:font-light md:w-[85%]">
+                  <span className="font-semibold">
+                    Frontend Developer & UI/UX Designer at{" "}
+                    <a
+                      href="https://blockcurators.com"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                      className=" underline decoration-2 underline-offset-2"
+                    >
+                      Blockcurators
+                    </a>
+                  </span>
+                  <br />I specialize in building & designing exceptional
+                  websites, applications, and everything in between. <br />{" "}
+                  <br />
+                </p>
+                <div className="flex items-center justify-center md:block">
+                  <button className="learn-more mt-4">
+                    <span className="circle" aria-hidden="true">
+                      <span className="icon arrow"></span>
+                    </span>
+                    <a href="#work" className="button-text text-violet-400">
+                      View my work
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div className="group whitespace-nowrap hidden rotate-[3deg] flex-col items-center justify-center lg:flex">
+                <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
+                  Hi, my name is{" "}
+                  <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
+                    Waldemar Panin
+                  </span>
                 </span>
-                <br />
-              </h2>
-              <span className="-mt-2 text-3xl sm:text-4xl">
-                & design them too.
-              </span>
-            </div>
-            <p className="mt-2 text-xl font-normal dark:font-light md:w-[65%]">
-              <span className="font-medium">
-                Frontend Developer & UI/UX Designer at{" "}
-                <a
-                  href="https://blockcurators.com"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className=" underline decoration-2 underline-offset-2"
-                >
-                  Blockcurators
-                </a>
-              </span>
-              <br />
-              <br />I specialize in building & designing exceptional websites,
-              applications, and everything in between. <br /> <br />
-              <span>Let&apos;s build something together. </span>
-            </p>
-            <div className="flex items-center justify-center md:block">
-              <button className="learn-more mt-4">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <a href="#work" className="button-text text-violet-400">
-                  View my work
-                </a>
-              </button>
+                <div className="relative scale-100 object-contain transition-all duration-500 ease-in-out group-hover:absolute group-hover:scale-0 group-hover:opacity-0  group-hover:duration-100">
+                  <Image
+                    className="object-contain"
+                    src="/images/hello.png"
+                    width={300}
+                    height={300}
+                    alt="hello"
+                  />
+                </div>
+                <div className="absolute scale-0 transition-all duration-100 ease-in-out group-hover:relative group-hover:block group-hover:scale-100 group-hover:duration-500">
+                  <Image
+                    className="object-contain"
+                    src="/images/mac.png"
+                    width={300}
+                    height={300}
+                    alt="hello"
+                  />
+                </div>
+                <InfoBanner />
+              </div>
             </div>
           </Fade>
         </div>

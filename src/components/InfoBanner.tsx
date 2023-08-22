@@ -7,18 +7,27 @@ export default function InfoBanner() {
       cascade
       triggerOnce
       delay={100}
-      className="flex w-full max-w-5xl items-center justify-center md:justify-start"
+      className="-mt-2 flex max-w-[450px] items-center justify-center md:justify-start"
     >
-      <div className="mb-4 flex flex-col items-center space-x-2 space-y-3 rounded-[32px] border border-zinc-700 bg-opacity-60 bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-200  px-3 py-2 text-lg shadow-xl backdrop-blur-lg transition-all duration-150 ease-in-out hover:opacity-100 dark:from-[#242427] dark:via-zinc-800 dark:to-[#242427] dark:opacity-80 sm:mb-0 lg:max-w-[800px] lg:flex-row lg:justify-start lg:space-x-3 lg:space-y-0 xl:max-w-fit">
-        <span className="text-center md:text-left ">
-          🚀 currently looking for 1-2 extra projects, ui/ux & frontend work.
+      <div className="mb-4 flex flex-col items-center space-y-4 rounded-[32px] border border-zinc-700 bg-opacity-60 bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-200 px-8 py-4  text-center  text-lg shadow-xl transition-all duration-150 ease-in-out dark:from-[#242427] dark:via-zinc-800 dark:to-[#242427]  sm:mb-0">
+        <span className="flex flex-row items-center space-x-3 whitespace-nowrap text-lg font-bold">
+          <svg height="15" width="15">
+            <circle
+              cx="7"
+              cy="7"
+              r="6"
+              className="animate-pulse"
+              fill="green"
+            />
+          </svg>{" "}
+          <span>Available for new projects</span>
         </span>
-        <a
+        {/* <a
           href="#contact"
-          className="gradient bg-clip-text text-transparent transition-all duration-150 ease-in-out hover:font-semibold hover:underline"
+          className="peer w-full rounded-xl bg-violet-600 py-2 font-medium text-white transition-all duration-150 ease-in-out hover:bg-violet-500"
         >
-          contact me →
-        </a>
+          Contact Me
+        </a> */}
       </div>
     </Fade>
   );

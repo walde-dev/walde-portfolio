@@ -19,7 +19,7 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className="glass-bg border-b border-gray-800/40 fixed top-0 z-50 flex w-full overflow-hidden px-2 md:px-20">
+    <header className="glass-bg fixed top-0 z-50 flex w-full overflow-hidden border-b border-gray-800/40 px-2 md:px-20">
       <Fade
         big
         cascade
@@ -39,7 +39,7 @@ export default function Header() {
               </a>
             </Link>
           </h1>
-          <div className="text-sm xs:text-base flex flex-row items-center gap-2 font-light text-zinc-800 dark:text-zinc-200 sm:gap-6">
+          <div className="space-x-8">
             <a
               href="#work"
               className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
@@ -52,6 +52,8 @@ export default function Header() {
             >
               Contact
             </a>
+          </div>
+          <div className="flex flex-row items-center gap-2 text-sm font-light text-zinc-800 dark:text-zinc-200 xs:text-base sm:gap-6">
             <ThemeButton shrink={animateHeader} />
           </div>
         </div>
