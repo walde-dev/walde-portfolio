@@ -319,7 +319,7 @@ function MyWork() {
                 <span className="text-left text-lg font-bold text-white">
                   Role
                 </span>
-                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto_auto] gap-2 @xl:grid-cols-[_auto_auto_auto_auto]">
+                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] md:grid-cols-[_auto_auto_auto] gap-2 @xl:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => {
                     const icon = tagIcons[tag];
 
@@ -481,7 +481,7 @@ function MyWork() {
           award="0 -> 1 web3 store"
           counter={4}
           className="bg-[#ed5681]"
-          accentClassName="bg-[#EE3F71] shadow-xl border border-black/30 text-white"
+          accentClassName="bg-[#EE3F71] shadow-xl border border-black/40 text-white"
           iconClassName="fill-white"
           year="2022"
           tags={["Frontend", "Design", "Backend"]}
