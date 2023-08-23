@@ -64,33 +64,35 @@ const Home: NextPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="group hidden rotate-[3deg] flex-col items-center justify-center whitespace-nowrap lg:flex">
-                <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
-                  Hi, my name is{" "}
-                  <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
-                    Waldemar Panin
+              <Zoom delay={600} triggerOnce>
+                <div className="group hidden rotate-[3deg] flex-col items-center justify-center whitespace-nowrap lg:flex">
+                  <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
+                    Hi, my name is{" "}
+                    <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
+                      Waldemar Panin
+                    </span>
                   </span>
-                </span>
-                <div className="relative scale-100 object-contain transition-all duration-500 ease-in-out group-hover:absolute group-hover:scale-0 group-hover:opacity-0  group-hover:duration-100">
-                  <Image
-                    className="object-contain"
-                    src="/images/hello.png"
-                    width={300}
-                    height={300}
-                    alt="hello"
-                  />
+                  <div className="relative scale-100 object-contain transition-all duration-500 ease-in-out group-hover:absolute group-hover:scale-0 group-hover:opacity-0  group-hover:duration-100">
+                    <Image
+                      className="object-contain"
+                      src="/images/hello.png"
+                      width={300}
+                      height={300}
+                      alt="hello"
+                    />
+                  </div>
+                  <div className="absolute scale-0 transition-all duration-100 ease-in-out group-hover:relative group-hover:block group-hover:scale-100 group-hover:duration-500">
+                    <Image
+                      className="object-contain"
+                      src="/images/mac.png"
+                      width={300}
+                      height={300}
+                      alt="hello"
+                    />
+                  </div>
+                  <InfoBanner />
                 </div>
-                <div className="absolute scale-0 transition-all duration-100 ease-in-out group-hover:relative group-hover:block group-hover:scale-100 group-hover:duration-500">
-                  <Image
-                    className="object-contain"
-                    src="/images/mac.png"
-                    width={300}
-                    height={300}
-                    alt="hello"
-                  />
-                </div>
-                <InfoBanner />
-              </div>
+              </Zoom>
             </div>
           </Fade>
         </div>
@@ -173,14 +175,14 @@ function MyWork() {
   }) {
     const isVideo = image?.endsWith(".mp4");
     return (
-      <Fade cascade damping={0.5} delay={100 * counter} triggerOnce>
+      <Zoom cascade damping={0.8} delay={120 * counter} triggerOnce>
         <div
           className={classNames(
             className,
-            "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] px-6 pt-8 text-white shadow-xl @container"
+            "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] border border-black/40 px-6 pt-8 text-white shadow-xl @container dark:border-white/40"
           )}
         >
-          <span className="text-left text-4xl md:text-6xl font-bold text-white">
+          <span className="text-left text-4xl font-bold text-white md:text-6xl">
             {projectTitle}
           </span>
           <div className="mb-4 mt-4 flex flex-col">
@@ -210,7 +212,7 @@ function MyWork() {
               <div
                 className={classNames(
                   accentClassName,
-                  "rounded-[32px] px-2 relative mt-4 flex max-w-fit flex-row items-center justify-center  space-x-2 py-1 text-sm font-medium shadow-md"
+                  "relative mt-4 flex max-w-fit flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-medium shadow-md"
                 )}
               >
                 <svg
@@ -309,13 +311,13 @@ function MyWork() {
               )}
             </div>
           </div>
-          <div className="flex flex-col space-y-6">
+          <div className="mb-12 flex flex-col space-y-6">
             {tags && (
               <div className="flex flex-col">
                 <span className="text-left text-lg font-bold text-white">
                   Role
                 </span>
-                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] gap-3 @lg:grid-cols-[_auto_auto_auto] @xl:grid-cols-[_auto_auto_auto_auto]">
+                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto_auto] gap-2 @xl:grid-cols-[_auto_auto_auto_auto]">
                   {tags.map((tag) => {
                     const icon = tagIcons[tag];
 
@@ -335,32 +337,32 @@ function MyWork() {
                 </div>
               </div>
             )}
-            <Link href={href} className="">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                className="mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-md  px-6 py-2 text-lg font-semibold text-white transition-all duration-300 ease-in-out hover:opacity-100 "
-              >
-                <span>View Project</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={3}
-                  stroke="currentColor"
-                  className="h-4 w-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                  />
-                </svg>
-              </a>
-            </Link>
           </div>
+          <Link href={href} className="">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className="mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-200/80 px-6 py-2 text-lg font-semibold text-gray-900/80 transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:opacity-100 md:mx-0 md:ml-auto md:max-w-fit "
+            >
+              <span>View Project</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+                stroke="currentColor"
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </a>
+          </Link>
         </div>
-      </Fade>
+      </Zoom>
     );
   }
 
