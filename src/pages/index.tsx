@@ -313,7 +313,7 @@ function MyWork() {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-6 mb-4">
             {tags && (
               <div className="flex flex-col">
                 <span className="text-left text-lg font-bold text-white">
