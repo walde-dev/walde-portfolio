@@ -187,7 +187,7 @@ function MyWork() {
               <div
                 className={classNames(
                   accentClassName,
-                  "relative flex max-w-fit  flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-medium shadow-md backdrop-blur-lg"
+                  "relative flex max-w-fit  flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-bold shadow-md backdrop-blur-lg"
                 )}
               >
                 <svg
@@ -209,7 +209,7 @@ function MyWork() {
               <div
                 className={classNames(
                   accentClassName,
-                  "relative flex max-w-fit flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-medium shadow-md"
+                  "relative flex max-w-fit flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-bold shadow-md"
                 )}
               >
                 <svg
@@ -328,7 +328,7 @@ function MyWork() {
                         key={tag}
                         className={classNames(
                           accentClassName,
-                          "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg px-2 py-1 text-sm font-medium shadow-md backdrop-blur-lg "
+                          "relative flex w-full min-w-max max-w-[250px] flex-row items-center justify-center space-x-2  rounded-lg px-2 py-1 text-sm font-bold shadow-md backdrop-blur-lg "
                         )}
                       >
                         {icon}
@@ -442,7 +442,7 @@ function MyWork() {
           description="Built during the EthMunich 2023 Hackathon, Winner of the Starknet Bounty. Decentralance is a decentralized freelance hiring platform on the polygon chain."
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           award="Starknet Bounty Winner"
-          className="bg-[#8565EE]"
+          className="bg-[#8f72ec]"
           accentClassName="bg-[#8565EE] shadow-xl border border-black/30 text-white"
           iconClassName="fill-white"
           href="https://decentralance.vercel.app"
@@ -480,7 +480,7 @@ function MyWork() {
           image="/images/cryptograpes_club.png"
           award="0 -> 1 web3 store"
           counter={4}
-          className="bg-[#EE3F71]"
+          className="bg-[#ed5681]"
           accentClassName="bg-[#EE3F71] shadow-xl border border-black/30 text-white"
           iconClassName="fill-white"
           year="2022"
