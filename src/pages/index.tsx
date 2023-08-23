@@ -179,13 +179,10 @@ function MyWork() {
         <div
           className={classNames(
             className,
-            "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] border border-black/40 px-6 pt-8 text-white shadow-xl @container dark:border-white/40"
+            "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] border border-black/40 px-6 pt-6 text-white shadow-xl @container dark:border-white/40"
           )}
         >
-          <span className="text-left  font-bold text-white text-6xl md:text-4xl lg:text-5xl xl:text-6xl">
-            {projectTitle}
-          </span>
-          <div className="mb-4 mt-4 flex flex-col">
+          <div className="absolute -top-5 left-1/2 z-10 mx-auto flex -translate-x-1/2 flex-col">
             {!!users && (
               <div
                 className={classNames(
@@ -205,14 +202,14 @@ function MyWork() {
                     d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
                   />
                 </svg>
-                <span className="text-white">{users} monthly users</span>
+                <span className="">{users} monthly users</span>
               </div>
             )}
             {!!award && (
               <div
                 className={classNames(
                   accentClassName,
-                  "relative mt-4 flex max-w-fit flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-medium shadow-md"
+                  "relative flex max-w-fit flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-medium shadow-md"
                 )}
               >
                 <svg
@@ -228,7 +225,7 @@ function MyWork() {
                   />
                 </svg>
 
-                <span className="text-white">{award}</span>
+                <span className="">{award}</span>
               </div>
             )}
           </div>
@@ -274,10 +271,14 @@ function MyWork() {
                 </video>
               </a>
             )}
+
             <div className="mt-4 flex w-full flex-col items-start  pb-4 text-left">
               <div className="flex max-w-full flex-col">
-                <div className="flex flex-col">
-                  <span className="text-center text-4xl font-black text-white">
+                <span className="w-full text-left text-6xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
+                  {projectTitle}
+                </span>
+                <div className="mt-2 flex flex-col">
+                  <span className="text-left text-2xl font-black text-gray-100">
                     {title}
                   </span>
                 </div>
@@ -311,7 +312,8 @@ function MyWork() {
               )}
             </div>
           </div>
-          <div className="mb-12 flex flex-col space-y-6">
+
+          <div className="flex flex-col space-y-6">
             {tags && (
               <div className="flex flex-col">
                 <span className="text-left text-lg font-bold text-white">
@@ -342,23 +344,25 @@ function MyWork() {
             <a
               rel="noreferrer"
               target="_blank"
-              className="mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-200/80 px-6 py-2 text-lg font-semibold text-gray-900/80 transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:opacity-100 md:mx-0 md:ml-auto md:max-w-fit "
+              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl  bg-white px-6 py-2 text-lg font-semibold text-gray-900 transition-all duration-300 ease-in-out md:mx-0 md:ml-auto md:max-w-fit "
             >
               <span>View Project</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={3}
-                stroke="currentColor"
-                className="h-4 w-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
+              <div className="group-hover/button:max-w-full scale-0 w-0 transition-all duration-500 ease-in-out opacity-80 group-hover/button:w-auto group-hover/button:scale-100 group-hover/button:opacity-100">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={3}
+                  stroke="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  />
+                </svg>
+              </div>
             </a>
           </Link>
         </div>
@@ -391,7 +395,7 @@ function MyWork() {
         </Fade>
       </div>
 
-      <div className="group grid grid-flow-dense grid-cols-1 gap-4 md:grid-cols-[repeat(2,_1fr)]">
+      <div className="group grid grid-flow-dense grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-[repeat(2,_1fr)]">
         {/* <Project title="Personal Portfolio" href="https://waldemar.dev" /> */}
         <Project
           title="Reward your followers with crypto"
@@ -404,9 +408,9 @@ function MyWork() {
             "TailwindCSS",
             "Blockchain",
           ]}
-          className="bg-gradient-to-b from-[#15D9A5] to-[#5FC7CE]"
-          accentClassName="bg-black/90 text-[#35ECBB]"
-          iconClassName="fill-[#35ECBB]"
+          className="bg-gradient-to-b  from-[#15D9A5] to-[#5FC7CE]"
+          accentClassName="bg-[#15D9A5] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          iconClassName="fill-white"
           users="150 000+"
           href="https://cashrain.com"
           image="/images/cashrain/cashrain_main.png"
@@ -422,8 +426,8 @@ function MyWork() {
           description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
           users="60 000+"
           className="bg-gradient-to-b from-[#10B2DD] to-[#7E7BFF]"
-          accentClassName="bg-black/90 text-[#10B2DD]"
-          iconClassName="fill-[#10B2DD]"
+          accentClassName="bg-[#10B2DD] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          iconClassName="fill-white"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
           image="/images/coinkit.mp4"
@@ -439,8 +443,8 @@ function MyWork() {
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           award="Starknet Bounty Winner"
           className="bg-[#8565EE]"
-          accentClassName="bg-black/90 text-[#8565EE]"
-          iconClassName="fill-[#8565EE]"
+          accentClassName="bg-[#8565EE] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          iconClassName="fill-white"
           href="https://decentralance.vercel.app"
           image="/images/decentralance.png"
           counter={3}
@@ -477,8 +481,8 @@ function MyWork() {
           award="0 -> 1 web3 store"
           counter={4}
           className="bg-[#EE3F71]"
-          accentClassName="bg-black/90 text-[#EE3F71]"
-          iconClassName="fill-[#EE3F71]"
+          accentClassName="bg-[#EE3F71] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          iconClassName="fill-white"
           year="2022"
           tags={["Frontend", "Design", "Backend"]}
           pinned
