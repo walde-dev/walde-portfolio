@@ -409,7 +409,7 @@ function MyWork() {
             "Blockchain",
           ]}
           className="bg-gradient-to-b  from-[#15D9A5] to-[#5FC7CE]"
-          accentClassName="bg-[#15D9A5] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          accentClassName="bg-[#15D9A5] shadow-xl border border-black/30 text-white"
           iconClassName="fill-white"
           users="150 000+"
           href="https://cashrain.com"
@@ -426,7 +426,7 @@ function MyWork() {
           description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
           users="60 000+"
           className="bg-gradient-to-b from-[#10B2DD] to-[#7E7BFF]"
-          accentClassName="bg-[#10B2DD] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          accentClassName="bg-[#10B2DD] shadow-xl border border-black/30 text-white"
           iconClassName="fill-white"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
@@ -443,7 +443,7 @@ function MyWork() {
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           award="Starknet Bounty Winner"
           className="bg-[#8565EE]"
-          accentClassName="bg-[#8565EE] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          accentClassName="bg-[#8565EE] shadow-xl border border-black/30 text-white"
           iconClassName="fill-white"
           href="https://decentralance.vercel.app"
           image="/images/decentralance.png"
@@ -481,7 +481,7 @@ function MyWork() {
           award="0 -> 1 web3 store"
           counter={4}
           className="bg-[#EE3F71]"
-          accentClassName="bg-[#EE3F71] shadow-xl border dark:border-white/30  border-black/30 text-white"
+          accentClassName="bg-[#EE3F71] shadow-xl border border-black/30 text-white"
           iconClassName="fill-white"
           year="2022"
           tags={["Frontend", "Design", "Backend"]}
