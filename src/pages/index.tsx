@@ -180,7 +180,7 @@ function MyWork() {
             "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] px-6 pt-8 text-white shadow-xl @container"
           )}
         >
-          <span className="text-left text-6xl font-bold text-white">
+          <span className="text-left text-4xl md:text-6xl font-bold text-white">
             {projectTitle}
           </span>
           <div className="mb-4 mt-4 flex flex-col">
