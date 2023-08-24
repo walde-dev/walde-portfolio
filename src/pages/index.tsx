@@ -12,7 +12,6 @@ import BlockchainIcon from "../components/icons/BlockchainIcon";
 import { SocialList } from "../components/Sidebar";
 import ContactForm from "../components/ContactForm";
 import InfoBanner from "../components/InfoBanner";
-import { twMerge } from "tailwind-merge";
 
 const Home: NextPage = () => {
   return (
