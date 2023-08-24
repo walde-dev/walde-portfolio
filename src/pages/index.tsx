@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
-            <div className="fixed h-screen w-screen">
+            <div className="fixed h-screen w-screen z-[-10]">
               <BackgroundGlow className="gradient -left-1/4 h-[500px] w-[500px] animate-wiggle rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
               <BackgroundGlow className="gradient left-1/4 h-[400px] w-[400px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#85FFBD] to-[#FFFB7D] " />
               <BackgroundGlow className="gradient animation-delay-2000 right-1/4 h-[450px]  w-[450px] animate-wiggle rounded-full bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]" />
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           </Fade>
         </div>
         {/** animated scroll indicator */}
-        <a href="#work" className="group">
+        <a href="#work" className="group/scroll z-10">
           <Zoom
             cascade
             damping={0.3}
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
             className="mt-12 flex flex-col items-center justify-center gap-4 md:mb-24 md:mt-0"
           >
             <span className="font-light uppercase tracking-widest">Scroll</span>
-            <div className="mx-auto h-[48px] border-l border-violet-500 transition-all duration-300 ease-in-out group-hover:h-[128px]" />
+            <div className="mx-auto h-[48px] border-l border-violet-500 transition-all duration-300 ease-in-out group-hover/scroll:h-[128px]" />
           </Zoom>
         </a>
       </div>
