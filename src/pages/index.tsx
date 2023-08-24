@@ -15,7 +15,7 @@ import InfoBanner from "../components/InfoBanner";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex w-full max-w-5xl flex-1 flex-col pt-[50px] md:pt-[100px]">
+    <div className="flex w-full max-w-5xl flex-1 flex-col md:pt-[100px]">
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
@@ -202,7 +202,7 @@ function MyWork() {
                     d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
                   />
                 </svg>
-                <span className="">{users} monthly users</span>
+                <span className="whitespace-nowrap">{users} monthly users</span>
               </div>
             )}
             {!!award && (
@@ -274,11 +274,11 @@ function MyWork() {
 
             <div className="mt-4 flex w-full flex-col items-start  pb-4 text-left">
               <div className="flex max-w-full flex-col">
-                <span className="w-full text-left text-6xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
+                <span className="w-full text-left text-4xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
                   {projectTitle}
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <span className="text-left text-2xl font-black text-gray-100">
+                  <span className="text-left text-xl md:text-2xl font-black text-gray-100">
                     {title}
                   </span>
                 </div>
