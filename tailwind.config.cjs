@@ -9,7 +9,8 @@ module.exports = {
       },
       animation: {
         "flip-once": "flip 350ms linear normal",
-        wiggle: "wiggle 7s ease-in-out infinite",
+        wiggle: "wiggle 20s ease-in-out infinite",
+        wiggle2: "wiggle2 20s ease-in-out infinite",
       },
       screens: {
         xs: "400px",
@@ -23,8 +24,14 @@ module.exports = {
         },
         wiggle: {
           "0%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(30px, -50px) scale(0.9)" },
-          "66%": { transform: "translate(-20px, 20px) scale(1.1)" },
+          "33%": { transform: "translate(300px, -500px) scale(0.6)" },
+          "66%": { transform: "translate(-200px, 200px) scale(1.4)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        wiggle2: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(-300px, -500px) scale(0.6)" },
+          "66%": { transform: "translate(200px, 200px) scale(1.4)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         },
       },

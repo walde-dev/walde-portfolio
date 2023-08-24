@@ -19,9 +19,14 @@ const Home: NextPage = () => {
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
-            <BackgroundGlow className="gradient animation-delay-2000 -right-60 top-24 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
-            <BackgroundGlow className="gradient -right-12 top-52 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] " />
-            <BackgroundGlow className="gradient animation-delay-4000 -right-28 -top-24 h-[450px] w-[450px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+            <div className="fixed h-screen w-screen">
+              <BackgroundGlow className="gradient animation-delay-2000 top-24 right-24  h-[500px] w-[500px] animate-wiggle rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+              <BackgroundGlow className="gradient top-52 h-[400px] w-[400px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] " />
+              <BackgroundGlow className="gradient animation-delay-4000 h-[450px] bottom-24 left-24  w-[450px] animate-wiggle rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+              <BackgroundGlow className="gradient animation-delay-4000 h-[450px]  w-[450px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+              <BackgroundGlow className="gradient animation-delay-4000 h-[450px] bottom-24 right-24  w-[450px] animate-wiggle rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+              <BackgroundGlow className="gradient animation-delay-4000 h-[450px]  w-[450px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+            </div>
             <div className="flex  items-center justify-between md:flex-row">
               <div className="">
                 <div className="font-bold">
@@ -64,35 +69,7 @@ const Home: NextPage = () => {
                   </button>
                 </div>
               </div>
-              <Zoom delay={600} triggerOnce>
-                <div className="group hidden rotate-[3deg] flex-col items-center justify-center whitespace-nowrap lg:flex">
-                  <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
-                    Hi, my name is{" "}
-                    <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
-                      Waldemar Panin
-                    </span>
-                  </span>
-                  <div className="relative scale-100 object-contain transition-all duration-500 ease-in-out group-hover:absolute group-hover:scale-0 group-hover:opacity-0  group-hover:duration-100">
-                    <Image
-                      className="object-contain"
-                      src="/images/hello.png"
-                      width={300}
-                      height={300}
-                      alt="hello"
-                    />
-                  </div>
-                  <div className="absolute scale-0 transition-all duration-100 ease-in-out group-hover:relative group-hover:block group-hover:scale-100 group-hover:duration-500">
-                    <Image
-                      className="object-contain"
-                      src="/images/mac.png"
-                      width={300}
-                      height={300}
-                      alt="hello"
-                    />
-                  </div>
-                  <InfoBanner />
-                </div>
-              </Zoom>
+              <WelcomeInfo className="hidden lg:flex" />
             </div>
           </Fade>
         </div>
@@ -110,6 +87,8 @@ const Home: NextPage = () => {
           </Zoom>
         </a>
       </div>
+
+      <WelcomeInfo className="mt-[200px] flex lg:hidden" />
 
       <div className="mt-[128px] flex flex-col gap-24">
         <Fade cascade damping={0.2} triggerOnce>
@@ -278,7 +257,7 @@ function MyWork() {
                   {projectTitle}
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <span className="text-left text-xl md:text-2xl font-black text-gray-100">
+                  <span className="text-left text-xl font-black text-gray-100 md:text-2xl">
                     {title}
                   </span>
                 </div>
@@ -313,13 +292,13 @@ function MyWork() {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-6 mb-4">
+          <div className="mb-4 flex flex-col space-y-6">
             {tags && (
               <div className="flex flex-col">
                 <span className="text-left text-lg font-bold text-white">
                   Role
                 </span>
-                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] md:grid-cols-[_auto_auto_auto] gap-2 @xl:grid-cols-[_auto_auto_auto_auto]">
+                <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] gap-2 @xl:grid-cols-[_auto_auto_auto_auto] md:grid-cols-[_auto_auto_auto]">
                   {tags.map((tag) => {
                     const icon = tagIcons[tag];
 
@@ -347,7 +326,7 @@ function MyWork() {
               className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl  bg-white px-6 py-2 text-lg font-semibold text-gray-900 transition-all duration-300 ease-in-out md:mx-0 md:ml-auto md:max-w-fit "
             >
               <span>View Project</span>
-              <div className="group-hover/button:max-w-full scale-0 w-0 transition-all duration-500 ease-in-out opacity-80 group-hover/button:w-auto group-hover/button:scale-100 group-hover/button:opacity-100">
+              <div className="w-0 scale-0 opacity-80 transition-all duration-500 ease-in-out group-hover/button:w-auto group-hover/button:max-w-full group-hover/button:scale-100 group-hover/button:opacity-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -694,8 +673,45 @@ function Contact() {
 }
 export function BackgroundGlow({ className }: { className?: string }) {
   return (
-    <div
-      className={`absolute hidden opacity-20 blur-xl lg:flex ${className}`}
-    />
+    <div className={`absolute hidden opacity-20 blur-[100px] lg:flex ${className}`} />
+  );
+}
+
+function WelcomeInfo({ className }: { className?: string }) {
+  return (
+    <Zoom delay={600} triggerOnce>
+      <div
+        className={classNames(
+          "group rotate-[3deg] flex-col items-center justify-center whitespace-nowrap",
+          className
+        )}
+      >
+        <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
+          Hi, my name is{" "}
+          <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
+            Waldemar Panin
+          </span>
+        </span>
+        <div className="relative scale-100 object-contain transition-all duration-500 ease-in-out group-hover:absolute group-hover:scale-0 group-hover:opacity-0  group-hover:duration-100">
+          <Image
+            className="object-contain"
+            src="/images/hello.png"
+            width={300}
+            height={300}
+            alt="hello"
+          />
+        </div>
+        <div className="absolute scale-0 transition-all duration-100 ease-in-out group-hover:relative group-hover:block group-hover:scale-100 group-hover:duration-500">
+          <Image
+            className="object-contain"
+            src="/images/mac.png"
+            width={300}
+            height={300}
+            alt="hello"
+          />
+        </div>
+        <InfoBanner />
+      </div>
+    </Zoom>
   );
 }
