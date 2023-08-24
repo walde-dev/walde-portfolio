@@ -31,15 +31,15 @@ export default function Header() {
             : "py-3 dark:bg-[#2a2f6b]/5 sm:py-5 sm:text-lg"
         }`}
       >
-        <div className="flex w-full flex-row  items-center justify-between md:max-w-5xl">
-          <h1 className="text-sm xs:text-lg">
+        <div className="flex w-full flex-row  items-center md:justify-between justify-around md:max-w-5xl">
+          <h1 className="text-sm xs:text-lg hidden xs:block">
             <Link href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">
                 waldemar.dev
               </a>
             </Link>
           </h1>
-          <div className="space-x-8">
+          <div className="space-x-6 md:space-x-8">
             <a
               href="#work"
               className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
