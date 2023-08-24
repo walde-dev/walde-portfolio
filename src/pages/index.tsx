@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
-            <div className="fixed h-screen w-screen z-[-10]">
+            <div className="fixed z-[-10] h-screen w-screen">
               <BackgroundGlow className="gradient -left-1/4 h-[500px] w-[500px] animate-wiggle rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
               <BackgroundGlow className="gradient left-1/4 h-[400px] w-[400px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#85FFBD] to-[#FFFB7D] " />
               <BackgroundGlow className="gradient animation-delay-2000 right-1/4 h-[450px]  w-[450px] animate-wiggle rounded-full bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]" />
@@ -157,8 +157,8 @@ function MyWork() {
       <Zoom cascade damping={0.8} delay={120 * counter} triggerOnce>
         <div
           className={classNames(
-            className,
-            "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] border border-black/40 px-6 pt-6 text-white shadow-xl @container dark:border-white/40"
+            "project-card group relative flex h-full w-full flex-1 flex-col rounded-[32px] border border-black/20 px-6 pt-6 text-white shadow-xl @container dark:border-white/20",
+            className
           )}
         >
           <div className="absolute -top-5 left-1/2 z-10 mx-auto flex -translate-x-1/2 flex-col">
@@ -253,11 +253,11 @@ function MyWork() {
 
             <div className="mt-4 flex w-full flex-col items-start  pb-4 text-left">
               <div className="flex max-w-full flex-col">
-                <span className="w-full text-left text-4xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
+                <span className="w-full text-left text-4xl font-bold text-gray-800 dark:text-gray-200 md:text-4xl lg:text-5xl xl:text-6xl">
                   {projectTitle}
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <span className="text-left text-xl font-black text-gray-100 md:text-2xl">
+                  <span className="text-left text-xl font-semibold text-gray-800  dark:text-gray-200 md:text-2xl">
                     {title}
                   </span>
                 </div>
@@ -295,7 +295,7 @@ function MyWork() {
           <div className="mb-4 flex flex-col space-y-6">
             {tags && (
               <div className="flex flex-col">
-                <span className="text-left text-lg font-bold text-white">
+                <span className="text-left text-lg font-bold text-gray-800 dark:text-gray-200">
                   Role
                 </span>
                 <div className="mt-1 grid w-full max-w-min grid-cols-[_auto_auto] gap-2 @xl:grid-cols-[_auto_auto_auto_auto] md:grid-cols-[_auto_auto_auto]">
@@ -323,7 +323,7 @@ function MyWork() {
             <a
               rel="noreferrer"
               target="_blank"
-              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl  bg-white px-6 py-2 text-lg font-semibold text-gray-900 transition-all duration-300 ease-in-out md:mx-0 md:ml-auto md:max-w-fit "
+              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-800 dark:bg-gray-200 px-6 py-2 text-lg font-semibold dark:text-gray-900 text-gray-200 transition-all duration-300 ease-in-out md:mx-0 md:ml-auto md:max-w-fit "
             >
               <span>View Project</span>
               <div className="w-0 scale-0 opacity-80 transition-all duration-500 ease-in-out group-hover/button:w-auto group-hover/button:max-w-full group-hover/button:scale-100 group-hover/button:opacity-100">
@@ -387,8 +387,8 @@ function MyWork() {
             "TailwindCSS",
             "Blockchain",
           ]}
-          className="bg-gradient-to-b  from-[#15D9A5] to-[#5FC7CE]"
-          accentClassName="bg-[#15D9A5] shadow-xl border border-black/30 text-white"
+          className="border-[#15d9a5] bg-gradient-to-b from-[#15D9A5]/20 to-[#5FC7CE]/20"
+          accentClassName="bg-[#15D9A5] shadow-xl border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           users="150 000+"
           href="https://cashrain.com"
@@ -404,8 +404,8 @@ function MyWork() {
           projectTitle="CoinKit"
           description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
           users="60 000+"
-          className="bg-gradient-to-b from-[#10B2DD] to-[#7E7BFF]"
-          accentClassName="bg-[#10B2DD] shadow-xl border border-black/30 text-white"
+          className="bg-gradient-to-b from-[#10B2DD]/20 to-[#7E7BFF]/20"
+          accentClassName="bg-[#10B2DD] border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
@@ -421,8 +421,8 @@ function MyWork() {
           description="Built during the EthMunich 2023 Hackathon, Winner of the Starknet Bounty. Decentralance is a decentralized freelance hiring platform on the polygon chain."
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           award="Starknet Bounty Winner"
-          className="bg-[#8f72ec]"
-          accentClassName="bg-[#8565EE] shadow-xl border border-black/30 text-white"
+          className="bg-[#8f72ec]/20"
+          accentClassName="bg-[#8565EE] border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           href="https://decentralance.vercel.app"
           image="/images/decentralance.png"
@@ -459,8 +459,8 @@ function MyWork() {
           image="/images/cryptograpes_club.png"
           award="0 -> 1 web3 store"
           counter={4}
-          className="bg-[#ed5681]"
-          accentClassName="bg-[#EE3F71] shadow-xl border border-black/40 text-white"
+          className="bg-[#ed5681]/20"
+          accentClassName="bg-[#EE3F71] border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           year="2022"
           tags={["Frontend", "Design", "Backend"]}
@@ -687,7 +687,7 @@ export function BackgroundGlow({ className }: { className?: string }) {
   return (
     <div
       style={{ marginBottom: `${scrollY * 0.03}vh` }}
-      className={`dark:blur-[100px] blur-[70px]  absolute hidden border opacity-30 dark:opacity-[15%] bg-blend-multiply lg:flex ${className}`}
+      className={`absolute hidden  border opacity-30 bg-blend-multiply blur-[70px] dark:opacity-[15%] dark:blur-[100px] lg:flex ${className}`}
     />
   );
 }
