@@ -24,14 +24,14 @@ module.exports = {
         },
         wiggle: {
           "0%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(300px, -500px) scale(0.6)" },
-          "66%": { transform: "translate(-200px, 200px) scale(1.4)" },
+          "33%": { transform: "translate(600px, -600px) scale(0.9)" },
+          "66%": { transform: "translate(-600px, 600px) scale(1.8)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         },
         wiggle2: {
           "0%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(-300px, -500px) scale(0.6)" },
-          "66%": { transform: "translate(200px, 200px) scale(1.4)" },
+          "33%": { transform: "translate(-600px, -600px) scale(1.8)" },
+          "66%": { transform: "translate(600px, 600px) scale(0.9)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         },
       },

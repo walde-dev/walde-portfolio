@@ -20,12 +20,12 @@ const Home: NextPage = () => {
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
             <div className="fixed z-[-10] h-screen w-screen">
-              <BackgroundGlow className="gradient -left-1/4 h-[500px] w-[500px] animate-wiggle rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
-              <BackgroundGlow className="gradient left-1/4 h-[400px] w-[400px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#85FFBD] to-[#FFFB7D] " />
-              <BackgroundGlow className="gradient animation-delay-2000 right-1/4 h-[450px]  w-[450px] animate-wiggle rounded-full bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]" />
-              <BackgroundGlow className="gradient animation-delay-2000 bottom-0 left-0 h-[450px] w-[450px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#c81d77] to-[#6710c2]" />
-              <BackgroundGlow className="gradient animation-delay-4000 bottom-0  right-1/4 h-[450px] w-[450px] animate-wiggle rounded-full bg-gradient-to-r from-[#4facfe] to-[#00f2fe]" />
-              <BackgroundGlow className="gradient animation-delay-4000 right-1/2 top-1/2 h-[450px] w-[450px] animate-wiggle2 rounded-full bg-gradient-to-r from-[#ff758c] to-[#ff7eb3]" />
+              <BackgroundGlow className="gradient animate-[wiggle_10s_linear_infinite] -left-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
+              <BackgroundGlow className="gradient left-1/4 h-[400px] w-[400px] animate-[wiggle2_9s_linear_infinite] rounded-full bg-gradient-to-r from-[#85FFBD] to-[#FFFB7D] " />
+              <BackgroundGlow className="gradient right-1/4 h-[450px]  w-[450px] animate-[wiggle_15s_linear_infinite] rounded-full bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]" />
+              <BackgroundGlow className="gradient bottom-0 left-0 h-[450px] w-[450px] animate-[wiggle2_20s_linear_infinite] rounded-full bg-gradient-to-r from-[#c81d77] to-[#6710c2]" />
+              <BackgroundGlow className="gradient bottom-0  right-1/4 h-[450px] w-[450px] animate-[wiggle_10s_linear_infinite] rounded-full bg-gradient-to-r from-[#4facfe] to-[#00f2fe]" />
+              <BackgroundGlow className="gradient right-1/2 top-1/2 h-[450px] w-[450px] animate-[wiggle2_10s_linear_infinite] rounded-full bg-gradient-to-r from-[#ff758c] to-[#ff7eb3]" />
             </div>
             <div className="flex  items-center justify-between md:flex-row">
               <div className="">
