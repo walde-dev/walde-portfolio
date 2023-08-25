@@ -672,21 +672,10 @@ function Contact() {
   );
 }
 export function BackgroundGlow({ className }: { className?: string }) {
-  //track scroll y position
-  const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
-    function handleScroll() {
-      setScrollY(window.scrollY);
-    }
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  console.log(scrollY);
+  
 
   return (
     <div
-      style={{ marginBottom: `${scrollY * 0.03}vh` }}
       className={`absolute hidden  border opacity-30 bg-blend-multiply blur-[70px] dark:opacity-[15%] dark:blur-[100px] lg:flex ${className}`}
     />
   );
