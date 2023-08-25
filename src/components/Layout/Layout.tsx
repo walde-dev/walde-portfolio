@@ -9,29 +9,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex min-h-screen w-screen max-w-full flex-col items-center overflow-hidden text-gray-900 dark:bg-[#000000] dark:text-gray-300">
       <Head>
-        <title>Waldemar Panin - Web Developement &amp; UI/UX Design</title>
+        <title>Waldemar Panin - Web Developement and UI/UX Design</title>
         <meta
           name="description"
-          content="I specialize in building &amp; designing exceptional websites & applications, mainly for web3 projects"
+          content="I specialize in building and designing exceptional websites and applications, mainly for web3 projects"
         />
 
         <meta property="og:image" content="https://waldemar.dev/api/og" />
 
-        <title>Waldemar Panin - Web Developement &amp; UI/UX Design</title>
+        <title>Waldemar Panin - Web Developement and UI/UX Design</title>
         <meta
           name="description"
-          content="I specialize in building &amp; designing exceptional websites &amp; applications, mainly for web3 projects"
+          content="I specialize in building and designing exceptional websites and applications, mainly for web3 projects"
         />
 
         <meta property="og:url" content="https://waldemar.dev" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Waldemar Panin - Web Developement &amp;& UI/UX Design"
+          content="Waldemar Panin - Web Developement and and UI/UX Design"
         />
         <meta
           property="og:description"
-          content="I specialize in building &amp; designing exceptional websites &amp; applications, mainly for web3 projects"
+          content="I specialize in building and designing exceptional websites and applications, mainly for web3 projects"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -39,11 +39,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta property="twitter:url" content="https://waldemar.dev" />
         <meta
           name="twitter:title"
-          content="Waldemar Panin - Web Developement &amp; UI/UX Design"
+          content="Waldemar Panin - Web Developement and UI/UX Design"
         />
         <meta
           name="twitter:description"
-          content="I specialize in building an designing exceptional websites &amp; applications, mainly for web3 projects"
+          content="I specialize in building an designing exceptional websites and applications, mainly for web3 projects"
         />
         <meta name="twitter:image" content="https://waldemar.dev/api/og" />
 
