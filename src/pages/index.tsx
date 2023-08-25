@@ -666,7 +666,7 @@ function Contact() {
 export function BackgroundGlow({ className }: { className?: string }) {
   return (
     <div
-      className={`absolute hidden opacity-30 mix-blend-difference blur-[50px] dark:opacity-[30%] dark:blur-[50px] lg:flex ${className}`}
+      className={`absolute hidden  border opacity-30 bg-blend-multiply blur-[70px] dark:opacity-[15%] dark:blur-[100px] lg:flex ${className}`}
     />
   );
 }
