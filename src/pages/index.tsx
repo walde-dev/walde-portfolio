@@ -15,7 +15,7 @@ import InfoBanner from "../components/InfoBanner";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex w-full max-w-5xl flex-1 flex-col md:pt-[100px]">
+    <div className="flex w-full max-w-5xl flex-1 flex-col pt-12 md:pt-[100px]">
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
@@ -666,7 +666,7 @@ function Contact() {
 export function BackgroundGlow({ className }: { className?: string }) {
   return (
     <div
-      className={`absolute hidden opacity-60 mix-blend-multiply blur-[30px] dark:opacity-[30%] dark:blur-[40px] lg:flex ${className}`}
+      className={`absolute opacity-20 md:opacity-60 mix-blend-multiply blur-[30px] md:dark:opacity-[30%] dark:blur-[40px] ${className}`}
     />
   );
 }
