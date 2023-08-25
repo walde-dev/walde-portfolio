@@ -9,10 +9,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex min-h-screen w-screen max-w-full flex-col items-center overflow-hidden text-gray-900 dark:bg-[#000000] dark:text-gray-300">
       <Head>
-        <title>Waldemar Panin - Freelance Full Stack Web Developer</title>
+        <title>Waldemar Panin - Web Developement & UI/UX Design</title>
         <meta
           name="description"
-          content="I'm a software engineer based in Munich, Germany. I specialize in building & designing exceptional websites & applications"
+          content="I specialize in building & designing exceptional websites & applications, mainly for web3 projects"
         />
 
         <link rel="icon" href="/favicon.ico" />
