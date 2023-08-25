@@ -33,7 +33,7 @@ export default function Header() {
       >
         <div className="flex w-full flex-row  items-center md:justify-between justify-around md:max-w-5xl">
           <h1 className="text-sm xs:text-lg hidden xs:block">
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">
                 waldemar.dev
               </a>

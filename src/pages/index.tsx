@@ -311,7 +311,7 @@ function MyWork() {
               </div>
             )}
           </div>
-          <Link href={href} className="">
+          <Link legacyBehavior href={href} className="">
             <a
               rel="noreferrer"
               target="_blank"
