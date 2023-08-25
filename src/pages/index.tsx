@@ -659,7 +659,7 @@ function Contact() {
             href="https://cal.com/walde"
             rel="noreferrer"
             target="_blank"
-            className="underline-gradient-only underline-gradient w-full max-w-fit text-left text-2xl font-medium text-gray-800 hover:cursor-pointer hover:text-black dark:text-gray-200 dark:hover:text-white"
+            className="underline-gradient-only underline-gradient w-full md:max-w-fit text-center md:text-left text-2xl font-medium text-gray-800 hover:cursor-pointer hover:text-black dark:text-gray-200 dark:hover:text-white"
           >
             Or schedule a call --&gt;
           </a>

@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="fixed h-screen w-screen border">
+      <div className="fixed h-screen w-screen">
         <BackgroundGlow className="gradient left-0 h-[150px] w-[150px] rotate-45 animate-[wiggleLeft_10s_linear_infinite] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee] md:h-[300px] md:w-[300px]" />
         <BackgroundGlow className="gradient animation-delay-2000 left-0 top-1/4 h-[175px] w-[175px] rotate-90 animate-[wiggleLeft_9s_linear_infinite] rounded-full bg-gradient-to-r from-[#85FFBD] to-[#FFFB7D] md:h-[250px] md:w-[250px] " />
         <BackgroundGlow className="gradient animation-delay-4000 -left-40 top-1/2 h-[250px] w-[250px] rotate-12 animate-[wiggleLeft_15s_linear_infinite]  rounded-full bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70] md:h-[500px] md:w-[500px]" />
