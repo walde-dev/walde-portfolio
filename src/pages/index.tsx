@@ -653,8 +653,16 @@ function Contact() {
             me.
           </p>
         </div>
-        <div className="mt-8 w-full lg:mt-12 lg:w-1/2">
+        <div className="mt-8 flex w-full flex-col lg:mt-12 lg:w-1/2">
           <ContactForm />
+          <a
+            href="https://cal.com/walde"
+            rel="noreferrer"
+            target="_blank"
+            className="underline-gradient-only underline-gradient w-full max-w-fit text-left text-2xl font-medium text-gray-800 hover:cursor-pointer hover:text-black dark:text-gray-200 dark:hover:text-white"
+          >
+            Or schedule a call --&gt;
+          </a>
         </div>
         <div className="mt-12 flex w-full justify-center lg:hidden">
           <SocialList className="flex-row" />
@@ -666,7 +674,7 @@ function Contact() {
 export function BackgroundGlow({ className }: { className?: string }) {
   return (
     <div
-      className={`absolute opacity-20 md:opacity-60 mix-blend-multiply blur-[30px] md:dark:opacity-[30%] dark:blur-[40px] ${className}`}
+      className={`absolute opacity-20 mix-blend-multiply blur-[30px] dark:blur-[40px] md:opacity-60 md:dark:opacity-[30%] ${className}`}
     />
   );
 }
