@@ -26,48 +26,40 @@ module.exports = {
           "0%": {
             transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg) ",
             borderRadius: "9999px 9999px 9999px 9999px",
-            width: "200px",
           },
           "33%": {
             transform:
               "translate(-40px, -20px) scale(0.9) rotate(90deg) skew(10deg)",
             borderRadius: "400px 9999px 9999px 2000px",
-            width: "100px",
           },
           "66%": {
             transform:
               "translate(-20px, 20px) scale(1.5) rotate(180deg) skew(-10deg)",
             borderRadius: "1000px 200px 3000px 9999px",
-            width: "300px",
           },
           "100%": {
             transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg)",
             borderRadius: "9999px 9999px 9999px 9999px",
-            width: "200px",
           },
         },
         wiggleRight: {
           "0%": {
             transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg)  ",
             borderRadius: "9999px 9999px 9999px 9999px",
-            width: "200px",
           },
           "33%": {
             transform:
               "translate(50px, -200px) scale(1.5) rotate(90deg) skew(0deg) ",
             borderRadius: "9999px 4000px 9999px 2000px",
-            width: "100px",
           },
           "66%": {
             transform:
               "translate(60px, 200px) scale(0.9) rotate(180deg) skew(0deg) ",
             borderRadius: "1000px 9999px 3000px 4000px",
-            width: "300px",
           },
           "100%": {
             transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg) ",
             borderRadius: "9999px 9999px 9999px 9999px",
-            width: "200px",
           },
         },
       },
