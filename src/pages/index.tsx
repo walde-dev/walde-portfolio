@@ -19,14 +19,6 @@ const Home: NextPage = () => {
       <div className="flex h-full flex-col justify-between md:h-screen">
         <div className="relative flex w-full flex-col space-y-4 text-left">
           <Fade cascade damping={0.2} triggerOnce className="relative">
-            <div className="fixed z-[-10] h-screen w-screen">
-              <BackgroundGlow className="gradient animate-[wiggle_10s_linear_infinite] -left-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-[#965de9] to-[#6358ee]" />
-              <BackgroundGlow className="gradient left-1/4 h-[400px] w-[400px] animate-[wiggle2_9s_linear_infinite] rounded-full bg-gradient-to-r from-[#85FFBD] to-[#FFFB7D] " />
-              <BackgroundGlow className="gradient right-1/4 h-[450px]  w-[450px] animate-[wiggle_15s_linear_infinite] rounded-full bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]" />
-              <BackgroundGlow className="gradient bottom-0 left-0 h-[450px] w-[450px] animate-[wiggle2_20s_linear_infinite] rounded-full bg-gradient-to-r from-[#c81d77] to-[#6710c2]" />
-              <BackgroundGlow className="gradient bottom-0  right-1/4 h-[450px] w-[450px] animate-[wiggle_10s_linear_infinite] rounded-full bg-gradient-to-r from-[#4facfe] to-[#00f2fe]" />
-              <BackgroundGlow className="gradient right-1/2 top-1/2 h-[450px] w-[450px] animate-[wiggle2_10s_linear_infinite] rounded-full bg-gradient-to-r from-[#ff758c] to-[#ff7eb3]" />
-            </div>
             <div className="flex  items-center justify-between md:flex-row">
               <div className="">
                 <div className="font-bold">
@@ -323,7 +315,7 @@ function MyWork() {
             <a
               rel="noreferrer"
               target="_blank"
-              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-800 dark:bg-gray-200 px-6 py-2 text-lg font-semibold dark:text-gray-900 text-gray-200 transition-all duration-300 ease-in-out md:mx-0 md:ml-auto md:max-w-fit "
+              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-800 px-6 py-2 text-lg font-semibold text-gray-200 transition-all duration-300 ease-in-out dark:bg-gray-200 dark:text-gray-900 md:mx-0 md:ml-auto md:max-w-fit "
             >
               <span>View Project</span>
               <div className="w-0 scale-0 opacity-80 transition-all duration-500 ease-in-out group-hover/button:w-auto group-hover/button:max-w-full group-hover/button:scale-100 group-hover/button:opacity-100">
@@ -672,11 +664,9 @@ function Contact() {
   );
 }
 export function BackgroundGlow({ className }: { className?: string }) {
-  
-
   return (
     <div
-      className={`absolute hidden  border opacity-30 bg-blend-multiply blur-[70px] dark:opacity-[15%] dark:blur-[100px] lg:flex ${className}`}
+      className={`absolute hidden opacity-30 mix-blend-difference blur-[50px] dark:opacity-[30%] dark:blur-[50px] lg:flex ${className}`}
     />
   );
 }

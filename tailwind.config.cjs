@@ -9,8 +9,8 @@ module.exports = {
       },
       animation: {
         "flip-once": "flip 350ms linear normal",
-        wiggle: "wiggle 20s ease-in-out infinite",
-        wiggle2: "wiggle2 20s ease-in-out infinite",
+        wiggleLeft: "wiggleLeft 20s ease-in-out infinite",
+        wiggleRight: "wiggleRight 20s ease-in-out infinite",
       },
       screens: {
         xs: "400px",
@@ -22,17 +22,53 @@ module.exports = {
           "50%": { transform: "rotateY(180deg)" },
           "100%": { transform: "rotateY(360deg)" },
         },
-        wiggle: {
-          "0%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(600px, -600px) scale(0.9)" },
-          "66%": { transform: "translate(-600px, 600px) scale(1.8)" },
-          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        wiggleLeft: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg) ",
+            borderRadius: "9999px 9999px 9999px 9999px",
+            width: "400px",
+          },
+          "33%": {
+            transform:
+              "translate(-40px, -20px) scale(0.9) rotate(90deg) skew(10deg)",
+            borderRadius: "400px 9999px 9999px 2000px",
+            width: "200px",
+          },
+          "66%": {
+            transform:
+              "translate(-20px, 20px) scale(1.5) rotate(180deg) skew(-10deg)",
+            borderRadius: "1000px 200px 3000px 9999px",
+            width: "300px",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg)",
+            borderRadius: "9999px 9999px 9999px 9999px",
+            width: "400px",
+          },
         },
-        wiggle2: {
-          "0%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(-600px, -600px) scale(1.8)" },
-          "66%": { transform: "translate(600px, 600px) scale(0.9)" },
-          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        wiggleRight: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg)  ",
+            borderRadius: "9999px 9999px 9999px 9999px",
+            width: "400px",
+          },
+          "33%": {
+            transform:
+              "translate(50px, -200px) scale(1.5) rotate(90deg) skew(0deg) ",
+            borderRadius: "9999px 4000px 9999px 2000px",
+            width: "200px",
+          },
+          "66%": {
+            transform:
+              "translate(60px, 200px) scale(0.9) rotate(180deg) skew(0deg) ",
+            borderRadius: "1000px 9999px 3000px 4000px",
+            width: "300px",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1) rotate(0deg) skew(0deg) ",
+            borderRadius: "9999px 9999px 9999px 9999px",
+            width: "400px",
+          },
         },
       },
     },
