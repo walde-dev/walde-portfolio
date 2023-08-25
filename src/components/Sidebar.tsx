@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function Sidebar() {
   return (
-    <div className="fixed z-[60] left-0 hidden h-full w-full max-w-[128px] flex-col justify-end py-2 lg:flex">
+    <div className="fixed left-0 z-[60] hidden h-full w-full max-w-[128px] flex-col justify-end py-2 lg:flex">
       <div className="flex h-full flex-col items-center justify-center">
         <div className="mx-auto mb-12 h-full border-l border-violet-500" />
         <Fade direction="left" delay={1500} triggerOnce cascade damping={0.5}>
@@ -37,6 +37,8 @@ function SocialLogo({
     <a
       href={href}
       className="logo-wrapper group relative flex h-8 w-8 flex-row items-center"
+      rel="noreferrer"
+      target="_blank"
     >
       <>{logo}</>
       <div className="hover-box hidden md:block">
