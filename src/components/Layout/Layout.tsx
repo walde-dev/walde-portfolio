@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>Waldemar Panin - Web Developement & UI/UX Design</title>
         <meta
           name="description"
-          content="I specialize in building & designing exceptional websites & applications, mainly for web3 projects"
+          content="I specialize in building and designing exceptional websites & applications, mainly for web3 projects"
         />
 
         <meta property="og:image" content="https://waldemar.dev/api/og" />
@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>Waldemar Panin - Web Developement & UI/UX Design</title>
         <meta
           name="description"
-          content="I specialize in building & designing exceptional websites & applications, mainly for web3 projects"
+          content="I specialize in building and designing exceptional websites & applications, mainly for web3 projects"
         />
 
         <meta property="og:url" content="https://waldemar.dev" />
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta
           property="og:description"
-          content="I specialize in building & designing exceptional websites & applications, mainly for web3 projects"
+          content="I specialize in building and designing exceptional websites & applications, mainly for web3 projects"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -43,7 +43,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta
           name="twitter:description"
-          content="I specialize in building & designing exceptional websites & applications, mainly for web3 projects"
+          content="I specialize in building an designing exceptional websites & applications, mainly for web3 projects"
         />
         <meta name="twitter:image" content="https://waldemar.dev/api/og" />
 
