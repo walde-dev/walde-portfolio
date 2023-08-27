@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-montreal)"],
       },
       animation: {
         "flip-once": "flip 350ms linear normal",

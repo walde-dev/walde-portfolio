@@ -22,7 +22,7 @@ export default function InfoBanner() {
           </svg>{" "}
           <span>Available for new projects</span>
         </span>
-        <div className="flex flex-col text-left">
+        <div className="flex flex-col text-left font-medium">
           <span>-&gt; full-stack development </span>
           <span>-&gt; ui/ux design </span>
           <span>-&gt; web design </span>

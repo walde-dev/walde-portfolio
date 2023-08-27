@@ -4,16 +4,20 @@ import Header from "../Header";
 import Sidebar from "../Sidebar";
 import InfoBanner from "../InfoBanner";
 import { BackgroundGlow } from "../../pages";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 const montreal = localFont({
   src: [
     {
-      path: "/fonts/PPNeueMontreal-Book.otf",
+      path: "../../../public/fonts/PPNeueMontreal-Book.otf",
       weight: "400",
     },
     {
-      path: "/fonts/PPNeueMontreal-Bold.otf",
+      path: "../../../public/fonts/PPNeueMontreal-Medium.otf",
+      weight: "500",
+    },
+    {
+      path: "../../../public/fonts/PPNeueMontreal-Bold.otf",
       weight: "700",
     },
   ],
@@ -22,7 +26,9 @@ const montreal = localFont({
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative flex min-h-screen w-screen max-w-full flex-col items-center overflow-hidden text-gray-900 dark:bg-[#000000] dark:text-gray-300">
+    <div
+      className={`${montreal.variable} relative flex min-h-screen w-screen max-w-full flex-col items-center overflow-hidden font-sans text-gray-900 dark:bg-[#000000] dark:text-gray-300`}
+    >
       <Head>
         <title>Waldemar Panin - Web Developement and UI/UX Design</title>
         <meta

@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                   </span>
                 </div>
                 <p className="mt-8 text-xl font-normal dark:font-light md:w-[85%]">
-                  <span className="font-semibold">
+                  <span className="font-medium">
                     Frontend Developer & UI/UX Designer at{" "}
                     <a
                       href="https://blockcurators.com"
@@ -180,7 +180,7 @@ function MyWork() {
               <div
                 className={classNames(
                   accentClassName,
-                  "relative flex max-w-fit flex-row items-center justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-bold shadow-md"
+                  "relative flex max-w-fit flex-row items-center whitespace-nowrap justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-bold shadow-md"
                 )}
               >
                 <svg
@@ -249,7 +249,7 @@ function MyWork() {
                   {projectTitle}
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <span className="text-left text-xl font-semibold text-gray-800  dark:text-gray-200 md:text-2xl">
+                  <span className="text-left text-xl font-medium text-gray-800  dark:text-gray-200 md:text-2xl">
                     {title}
                   </span>
                 </div>
@@ -380,7 +380,7 @@ function MyWork() {
             "Blockchain",
           ]}
           className="border-[#15d9a5] bg-gradient-to-b from-[#15D9A5]/20 to-[#5FC7CE]/20"
-          accentClassName="bg-[#15D9A5] shadow-xl border border-black/30 dark:border-white/30 text-gray-200"
+          accentClassName="bg-[#0B7357] shadow-xl border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           users="150 000+"
           href="https://cashrain.com"
@@ -397,7 +397,7 @@ function MyWork() {
           description="CoinKit is a social crypto wallet that allows you to send and receive crypto tips on social media, which is used by 400.000+ people in developing countries to send and retrieve money."
           users="60 000+"
           className="bg-gradient-to-b from-[#10B2DD]/20 to-[#7E7BFF]/20"
-          accentClassName="bg-[#10B2DD] border border-black/30 dark:border-white/30 text-gray-200"
+          accentClassName="bg-[#085E74] border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           href="https://app.coinkit.de"
@@ -414,7 +414,7 @@ function MyWork() {
           techStack={["React", "Next.js", "JavaScript", "TailwindCSS"]}
           award="Starknet Bounty Winner"
           className="bg-[#8f72ec]/20"
-          accentClassName="bg-[#8565EE] border border-black/30 dark:border-white/30 text-gray-200"
+          accentClassName="bg-[#4117CC] border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           href="https://decentralance.vercel.app"
           image="/images/decentralance.png"
@@ -452,7 +452,7 @@ function MyWork() {
           award="0 -> 1 web3 store"
           counter={4}
           className="bg-[#ed5681]/20"
-          accentClassName="bg-[#EE3F71] border border-black/30 dark:border-white/30 text-gray-200"
+          accentClassName="bg-[#BF1445] border border-black/30 dark:border-white/30 text-gray-200"
           iconClassName="fill-white"
           year="2022"
           tags={["Frontend", "Design", "Backend"]}
@@ -510,7 +510,7 @@ function AboutMe() {
           cascade
           damping={0.1}
           delay={300}
-          className="mt-8 text-left text-lg font-normal lg:w-1/2"
+          className="mt-8 text-left text-xl font-normal lg:w-1/2"
         >
           <p>
             Hey! My name is Waldemar. I&apos;m a frontend web developer &
@@ -642,7 +642,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border border-violet-500/20" />
         </div>
-        <div className="mt-4 w-2/3 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
+        <div className="mt-4 text-xl w-2/3 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
@@ -690,7 +690,7 @@ function WelcomeInfo({ className }: { className?: string }) {
       >
         <span className="flex-nowrap text-lg font-light uppercase md:text-xl">
           Hi, my name is{" "}
-          <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-semibold text-transparent">
+          <span className="gradient whitespace-nowrap bg-gradient-to-r from-[#965de9] to-[#6358ee] bg-clip-text font-medium text-transparent">
             Waldemar Panin
           </span>
         </span>
