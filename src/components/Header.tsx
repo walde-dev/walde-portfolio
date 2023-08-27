@@ -31,8 +31,8 @@ export default function Header() {
             : "py-3 dark:bg-[#2a2f6b]/5 sm:py-5 sm:text-lg"
         }`}
       >
-        <div className="flex w-full flex-row  items-center md:justify-between justify-around md:max-w-5xl">
-          <h1 className="text-sm xs:text-lg hidden xs:block">
+        <div className="flex w-full flex-row  items-center justify-around md:max-w-5xl md:justify-between">
+          <h1 className="hidden text-sm xs:block xs:text-lg">
             <Link legacyBehavior href="/">
               <a className="underline-gradient gradient cursor-pointer px-3 py-1">
                 waldemar.dev
@@ -40,18 +40,18 @@ export default function Header() {
             </Link>
           </h1>
           <div className="space-x-6 md:space-x-8">
-            <a
-              href="#work"
+            <Link
+              href="/#work"
               className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
             >
               My Work
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/#contact"
               className="underline-gradient-only underline-gradient hover:text-black hover:dark:text-white"
             >
               Contact
-            </a>
+            </Link>
           </div>
           <div className="flex flex-row items-center gap-2 text-sm font-light text-zinc-800 dark:text-zinc-200 xs:text-base sm:gap-6">
             <ThemeButton shrink={animateHeader} />

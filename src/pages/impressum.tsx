@@ -15,7 +15,7 @@ export default function Impressum() {
         Waldemar Panin
         <br />
       </p>
-      <p className="mt-2">
+      <div className="mt-2">
         <strong>Kontakt:</strong> <br />
         Telefon: Kein Telefonsupport
         <br />
@@ -47,7 +47,7 @@ export default function Impressum() {
           von Werbeinformationen, etwa durch Spam-Mails, vor.
           <br />
         </p>{" "}
-      </p>
+      </div>
       <br />
     </div>
   );
