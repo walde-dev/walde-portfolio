@@ -4,6 +4,21 @@ import Header from "../Header";
 import Sidebar from "../Sidebar";
 import InfoBanner from "../InfoBanner";
 import { BackgroundGlow } from "../../pages";
+import localFont from "@next/font/local";
+
+const montreal = localFont({
+  src: [
+    {
+      path: "/fonts/PPNeueMontreal-Book.otf",
+      weight: "400",
+    },
+    {
+      path: "/fonts/PPNeueMontreal-Bold.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-montreal",
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
