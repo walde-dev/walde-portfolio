@@ -315,7 +315,7 @@ function MyWork() {
             <a
               rel="noreferrer"
               target="_blank"
-              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-800 px-6 py-2 text-lg font-semibold text-gray-200 transition-all duration-300 ease-in-out dark:bg-gray-200 dark:text-gray-900 md:mx-0 md:ml-auto md:max-w-fit "
+              className="group/button mx-auto mb-4 mt-auto flex w-full flex-row items-center justify-center space-x-2 rounded-2xl bg-gray-800 px-6 py-2 text-lg font-medium text-gray-200 transition-all duration-300 ease-in-out dark:bg-gray-200 dark:text-gray-900 md:mx-0 md:ml-auto md:max-w-fit "
             >
               <span>View Project</span>
               <div className="w-0 scale-0 opacity-80 transition-all duration-500 ease-in-out group-hover/button:w-auto group-hover/button:max-w-full group-hover/button:scale-100 group-hover/button:opacity-100">
