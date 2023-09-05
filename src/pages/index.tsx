@@ -180,7 +180,7 @@ function MyWork() {
               <div
                 className={classNames(
                   accentClassName,
-                  "relative flex max-w-fit flex-row items-center whitespace-nowrap justify-center space-x-2 rounded-[32px]  px-2 py-1 text-sm font-bold shadow-md"
+                  "relative flex max-w-fit flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-[32px]  px-2 py-1 text-sm font-bold shadow-md"
                 )}
               >
                 <svg
@@ -249,7 +249,7 @@ function MyWork() {
                   {projectTitle}
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <span className="text-left text-xl font-medium text-gray-800  dark:text-gray-200 md:text-2xl">
+                  <span className="h-[4rem] text-left text-xl font-medium text-gray-800  dark:text-gray-200 md:text-2xl">
                     {title}
                   </span>
                 </div>
@@ -522,6 +522,14 @@ function AboutMe() {
             clients and myself. Many of these projects are being used by tens of
             thousands of people every month.
           </p>
+          <p>
+            With a background in both design and development, I offer a rare
+            blend of skills that can supercharge any project.
+          </p>
+          <p>
+            I&apos;ve been able to seamlessly merge the worlds of creativity and
+            functionality, consistently delivering exceptional results.
+          </p>
           <hr className="border border-violet-500/20 " />
 
           {/* <p>
@@ -534,27 +542,14 @@ function AboutMe() {
           <p>
             Additionally, I am very passionate about blockchain technology and
             the future of the web. I&apos;m currently working on a few projects
-            in the blockchain space, and I&apos;m always looking for new
-            opportunities to learn and grow. I think that the UX aspect of
-            current web3 projects is lacking, and I want to change that.
+            in the blockchain space. <br /> <br />
+            Always trying to improve web3 UX. <br />
             <span className="bg-gradient-to-r from-[#965de9] to-[#695eff] bg-clip-text font-semibold text-transparent">
               {" "}
-              One rectangle at a time
+              One rectangle at a time ✨
             </span>
-            .
           </p>
           <hr className="border border-violet-500/20 " />
-
-          <p>
-            On one hand, I am way more passionate and skilled in the UI/UX
-            aspect of a web project than the average frontend developer.
-          </p>
-          <p>
-            On the other hand, I am a lot more skilled and experienced in the
-            frontend developing aspect of a web project than the average UI/UX
-            designer. This combination creates a unique skillset that is very
-            valuable for any web project.
-          </p>
           <p>
             When I&apos;m not coding and/or designing, you&apos;ll find me
             working on some hip-hop beats, inside the gym, or trying to rank up
@@ -642,7 +637,7 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border border-violet-500/20" />
         </div>
-        <div className="mt-4 text-xl w-2/3 text-left font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
+        <div className="mt-4 w-2/3 text-left text-xl font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
           <p>
             I&apos;m excited to hear from you! Whether you have a question or
             just want to say hi, I&apos;ll try my best to get back to you!
