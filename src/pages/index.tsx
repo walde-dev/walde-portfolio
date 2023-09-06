@@ -546,8 +546,9 @@ function AboutMe() {
             Always trying to improve web3 UX. <br />
             <span className="bg-gradient-to-r from-[#965de9] to-[#695eff] bg-clip-text font-semibold text-transparent">
               {" "}
-              One rectangle at a time ✨
-            </span>
+              One rectangle at a time
+            </span>{" "}
+            ✨
           </p>
           <hr className="border border-violet-500/20 " />
           <p>
