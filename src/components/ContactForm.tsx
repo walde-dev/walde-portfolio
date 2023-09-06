@@ -53,7 +53,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex min-h-[300px] flex-col items-center">
+    <div className="flex min-h-[250px] flex-col items-center">
       <span
         className={`${
           emailSent && !rateLimited ? "opacity-100" : "-mt-4 opacity-0"

@@ -544,7 +544,7 @@ function AboutMe() {
             the future of the web. I&apos;m currently working on a few projects
             in the blockchain space. <br /> <br />
             Always trying to improve web3 UX. <br />
-            <span className="bg-gradient-to-r from-[#965de9] to-[#695eff] bg-clip-text font-semibold text-transparent">
+            <span className="bg-gradient-to-r from-[#965de9] to-[#695eff] bg-clip-text font-medium text-transparent">
               {" "}
               One rectangle at a time
             </span>{" "}
@@ -638,18 +638,8 @@ function Contact() {
           </span>
           <hr className="ml-12 w-4/5 border border-violet-500/20" />
         </div>
-        <div className="mt-4 w-2/3 text-left text-xl font-medium text-gray-800 dark:font-normal dark:text-gray-200 md:w-1/2">
-          <p>
-            I&apos;m excited to hear from you! Whether you have a question or
-            just want to say hi, I&apos;ll try my best to get back to you!
-          </p>
-          <p className="mt-4">
-            If you have any problems that I can help you solve or if you have a
-            project that you want to discuss, please feel free to reach out to
-            me.
-          </p>
-        </div>
-        <div className="mt-8 flex w-full flex-col lg:mt-12 lg:w-1/2">
+
+        <div className="flex w-full flex-col lg:mt-12 lg:w-1/2">
           <ContactForm />
           <a
             href="https://cal.com/walde"
@@ -657,7 +647,23 @@ function Contact() {
             target="_blank"
             className="underline-gradient-only underline-gradient w-full text-center text-2xl font-medium text-gray-800 hover:cursor-pointer hover:text-black dark:text-gray-200 dark:hover:text-white md:max-w-fit md:text-left"
           >
-            Or schedule a call --&gt;
+            <span className="flex justify-center md:justify-start flex-row items-center space-x-1 whitespace-nowrap">
+              <span>Or schedule a call </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </span>
           </a>
         </div>
         <div className="mt-12 flex w-full justify-center lg:hidden">
