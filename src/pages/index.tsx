@@ -543,7 +543,7 @@ function AboutMe() {
             Additionally, I am very passionate about blockchain technology and
             the future of the web. I&apos;m currently working on a few projects
             in the blockchain space. <br /> <br />
-            Always trying to improve web3 UX. <br />
+            Always working on improving web3 UX. <br />
             <span className="bg-gradient-to-r from-[#965de9] to-[#695eff] bg-clip-text font-medium text-transparent">
               {" "}
               One rectangle at a time
