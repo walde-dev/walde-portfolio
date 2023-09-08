@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                   </span>
                 </div>
                 <p className="mt-8 text-xl font-normal dark:font-light md:w-[85%]">
-                  <span className="font-medium">
+                  <span className="">
                     Frontend Developer & UI/UX Designer at{" "}
                     <a
                       href="https://blockcurators.com"
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                       className=" underline decoration-2 underline-offset-2"
                     >
                       Blockcurators
-                    </a>
+                    </a>.
                   </span>
                   <br />I specialize in building & designing exceptional
                   websites, applications, and everything in between. <br />{" "}
