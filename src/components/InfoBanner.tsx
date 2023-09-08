@@ -23,10 +23,10 @@ export default function InfoBanner() {
           <span>Available for new projects</span>
         </span>
         <div className="flex flex-col text-left font-medium">
-          <span>-&gt; full-stack development </span>
-          <span>-&gt; ui/ux design </span>
-          <span>-&gt; web design </span>
-          <span>-&gt; app design </span>
+          <Service title="full-stack development" />
+          <Service title="ui/ux design" />
+          <Service title="web design" />
+          <Service title="app design" />
         </div>
 
         {/* <a
@@ -37,5 +37,27 @@ export default function InfoBanner() {
         </a> */}
       </div>
     </Fade>
+  );
+}
+
+function Service({ title }: { title: string }) {
+  return (
+    <div className="flex flex-row items-center space-x-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+        />
+      </svg>{" "}
+      <span>{title}</span>
+    </div>
   );
 }
