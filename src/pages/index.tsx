@@ -35,20 +35,20 @@ const Home: NextPage = () => {
                   </span>
                 </div>
                 <p className="mt-8 text-xl font-normal dark:font-light md:w-[85%]">
+                  I specialize in building & designing exceptional websites,
+                  applications, and everything in between. <br /> <br />
+                  <span>Frontend Engineer @ </span>
                   <span className="">
-                    Frontend Developer & UI/UX Designer at{" "}
                     <a
-                      href="https://blockcurators.com"
+                      href="https://predium.de"
                       rel="noreferrer noopener"
                       target="_blank"
-                      className=" underline decoration-2 underline-offset-2"
+                      className="underline decoration-2 underline-offset-2 transition-all hover:text-white"
                     >
-                      Blockcurators
-                    </a>.
-                  </span>
-                  <br />I specialize in building & designing exceptional
-                  websites, applications, and everything in between. <br />{" "}
-                  <br />
+                      Predium
+                    </a>
+                    .
+                  </span>{" "}
                 </p>
                 <div className="flex items-center justify-center md:block">
                   <button className="learn-more mt-4">
@@ -647,7 +647,7 @@ function Contact() {
             target="_blank"
             className="underline-gradient-only underline-gradient w-full text-center text-2xl font-medium text-gray-800 hover:cursor-pointer hover:text-black dark:text-gray-200 dark:hover:text-white md:max-w-fit md:text-left"
           >
-            <span className="flex justify-center md:justify-start flex-row items-center space-x-1 whitespace-nowrap">
+            <span className="flex flex-row items-center justify-center space-x-1 whitespace-nowrap md:justify-start">
               <span>Or schedule a call </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

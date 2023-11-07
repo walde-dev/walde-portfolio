@@ -16,11 +16,11 @@ export default function InfoBanner() {
               cx="7"
               cy="7"
               r="6"
-              className="animate-pulse"
-              fill="green"
+              className="#animate-pulse"
+              fill="red"
             />
           </svg>{" "}
-          <span>Available for new projects</span>
+          <span>Currently not available</span>
         </span>
         <div className="flex flex-col text-left font-medium">
           <Service title="full-stack development" />
